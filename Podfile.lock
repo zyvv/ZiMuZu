@@ -1,0 +1,50 @@
+PODS:
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
+  - AFNetworking/UIKit (3.0.4):
+    - AFNetworking/NSURLSession
+  - AHKSpringActionSheet (0.5.5)
+  - SFNetworking (0.1.1):
+    - AFNetworking (~> 3.0)
+  - YYCache (1.0.1)
+  - YYCategories (1.0.1):
+    - YYCategories/no-arc (= 1.0.1)
+  - YYCategories/no-arc (1.0.1)
+  - YYImage (1.0.1):
+    - YYImage/Core (= 1.0.1)
+  - YYImage/Core (1.0.1)
+  - YYModel (1.0.2)
+  - YYWebImage (1.0.1):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - AHKSpringActionSheet
+  - SFNetworking
+  - YYCache
+  - YYCategories
+  - YYModel
+  - YYWebImage
+
+SPEC CHECKSUMS:
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  AHKSpringActionSheet: be1e9e06cf0b4b8e8260a160aed2ca548500455e
+  SFNetworking: 2a6b999e147c49b56e5f749f38d77ec9d2f9425a
+  YYCache: e0c7321955a0a112a7daaf7b3e42a8dd110bafab
+  YYCategories: ebd2d2d473de67a29fbfb83e812c350966cc256f
+  YYImage: b41b45bc5f32bfcdf67bdfb9c09da9e9832357c0
+  YYModel: 7a467eff45ae3641c33efb136c262d33b6f48c1a
+  YYWebImage: 8a22da9ec4d95064afa75a5c756c5d6f19d1b660
+
+COCOAPODS: 0.39.0

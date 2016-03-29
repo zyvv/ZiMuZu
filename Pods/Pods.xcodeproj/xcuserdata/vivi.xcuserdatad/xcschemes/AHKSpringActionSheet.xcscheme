@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DEA3275510D7BBA4391432DC'
+               BlueprintIdentifier = 'E26EBAFF7BF65B965ACC8EA4'
                BlueprintName = 'AHKSpringActionSheet'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'AHKSpringActionSheet.framework'>

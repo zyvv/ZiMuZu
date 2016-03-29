@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/AFNetworking.framework"
   install_framework "Pods/AHKSpringActionSheet.framework"
+  install_framework "Pods/RDVTabBarController.framework"
   install_framework "Pods/SFNetworking.framework"
   install_framework "Pods/YYCache.framework"
   install_framework "Pods/YYCategories.framework"
@@ -96,6 +97,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/AFNetworking.framework"
   install_framework "Pods/AHKSpringActionSheet.framework"
+  install_framework "Pods/RDVTabBarController.framework"
   install_framework "Pods/SFNetworking.framework"
   install_framework "Pods/YYCache.framework"
   install_framework "Pods/YYCategories.framework"

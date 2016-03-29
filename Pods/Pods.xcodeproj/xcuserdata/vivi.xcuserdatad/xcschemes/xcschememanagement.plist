@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RDVTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,7 +57,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>10F8C497961A9A20B61D27A689572F89</key>
+		<key>08CF66630CDD866310D1B6CC9F5EA603</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,37 +67,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>2FFC27AA2130E07857198EEC2EADA23B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5B03882BC934C382D2B89EF20077D912</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6099E2B9A29C75A3859A79EAE88DD922</key>
+		<key>A18365E770057A272CE5E9475AD35876</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>688BDBA86A9E48AF744A596150758165</key>
+		<key>B1BF4B4A859D0E7C4A2195C05E67F6E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9378E19E9CFDB3AC13A9F59DDA1D9A15</key>
+		<key>B89D3FCE5B3161055627D4D1EDFEA470</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D400523D60631C3E8FFB43C548B4BB35</key>
+		<key>DB31423CD1ADFD52F209FC1F80DA0F54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7BCF693FD205582CFB7EA6D7E77D410</key>
+		<key>E505868392868316EC7926D6482F0C6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF788E50865EAB95AEF95060DF1863C1</key>
+		<key>E6054AEF7ED42C7BCB5D2F1DAB4CE529</key>
 		<dict>
 			<key>primary</key>
 			<true/>

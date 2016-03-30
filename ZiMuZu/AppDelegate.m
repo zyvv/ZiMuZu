@@ -16,7 +16,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    UIColor *normalColor = [UIColor whiteColor];
+    UIColor *selectedColor = kZMZRedColor;
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                       normalColor,
+                                                       NSForegroundColorAttributeName,
+                                                       nil]
+                                             forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                       selectedColor,
+                                                       NSForegroundColorAttributeName,
+                                                       nil]
+                                             forState:UIControlStateSelected];
     return YES;
 }
 

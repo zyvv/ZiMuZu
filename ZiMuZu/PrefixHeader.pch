@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  ZiMuZu
+//
+//  Created by 张洋威 on 16/3/30.
+//  Copyright © 2016年 YangWei Zhang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import <YYCategories/YYCategories.h>
+
+#define kCustomFontWithSize(s) ([UIFont fontWithName:@"Proxima Nova" size:s])
+#define kZMZRedColor [UIColor colorWithRGB:0xF7204A]
+#endif /* PrefixHeader_pch */

@@ -10,12 +10,32 @@
 		232CE59B674CFC53680C6259 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3951A997C499EF291DC193A /* Pods.framework */; };
 		4448F8331CA75BBF00F0470F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F8321CA75BBF00F0470F /* main.m */; };
 		4448F8361CA75BBF00F0470F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F8351CA75BBF00F0470F /* AppDelegate.m */; };
-		4448F8391CA75BBF00F0470F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F8381CA75BBF00F0470F /* ViewController.m */; };
 		4448F83C1CA75BBF00F0470F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4448F83A1CA75BBF00F0470F /* Main.storyboard */; };
 		4448F83E1CA75BBF00F0470F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4448F83D1CA75BBF00F0470F /* Assets.xcassets */; };
 		4448F8411CA75BBF00F0470F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4448F83F1CA75BBF00F0470F /* LaunchScreen.storyboard */; };
 		4448F84C1CA75BBF00F0470F /* ZiMuZuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F84B1CA75BBF00F0470F /* ZiMuZuTests.m */; };
 		4448F8571CA75BBF00F0470F /* ZiMuZuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F8561CA75BBF00F0470F /* ZiMuZuUITests.m */; };
+		44AB405C1CAC0DFD0089CBB9 /* DramaLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AB405B1CAC0DFD0089CBB9 /* DramaLayout.m */; };
+		44CAABAD1CABF69A00FF1EA7 /* DramaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CAABAB1CABF69A00FF1EA7 /* DramaCell.m */; };
+		44CAABAE1CABF69A00FF1EA7 /* DramaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CAABAC1CABF69A00FF1EA7 /* DramaCell.xib */; };
+		DB02E9481CABCF880017A1E6 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9401CABCF880017A1E6 /* ProximaNova-Bold.otf */; };
+		DB02E9491CABCF880017A1E6 /* ProximaNova-BoldT100.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9411CABCF880017A1E6 /* ProximaNova-BoldT100.otf */; };
+		DB02E94A1CABCF880017A1E6 /* ProximaNova-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9421CABCF880017A1E6 /* ProximaNova-Reg.otf */; };
+		DB02E94B1CABCF880017A1E6 /* ProximaNova-Sbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9431CABCF880017A1E6 /* ProximaNova-Sbold.otf */; };
+		DB02E94C1CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9441CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf */; };
+		DB02E94D1CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9451CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf */; };
+		DB02E94E1CABCF880017A1E6 /* ProximaNova-T100.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9461CABCF880017A1E6 /* ProximaNova-T100.otf */; };
+		DB02E94F1CABCF880017A1E6 /* ProximaNova-T50.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9471CABCF880017A1E6 /* ProximaNova-T50.otf */; };
+		DB02E9681CABD0510017A1E6 /* ZMZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9531CABD0510017A1E6 /* ZMZNavigationController.m */; };
+		DB02E9691CABD0510017A1E6 /* ZMZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9551CABD0510017A1E6 /* ZMZTabBarController.m */; };
+		DB02E96A1CABD0510017A1E6 /* ZMZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9571CABD0510017A1E6 /* ZMZViewController.m */; };
+		DB02E96B1CABD0510017A1E6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E95A1CABD0510017A1E6 /* HomeViewController.m */; };
+		DB02E96C1CABD0510017A1E6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E95D1CABD0510017A1E6 /* ProfileViewController.m */; };
+		DB02E96D1CABD0510017A1E6 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9601CABD0510017A1E6 /* ScheduleViewController.m */; };
+		DB02E96E1CABD0510017A1E6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9631CABD0510017A1E6 /* SearchViewController.m */; };
+		DB02E96F1CABD0510017A1E6 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9661CABD0510017A1E6 /* SettingViewController.m */; };
+		DB02E9741CABD5F90017A1E6 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9721CABD5F90017A1E6 /* HomeCell.m */; };
+		DB02E9751CABD5F90017A1E6 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9731CABD5F90017A1E6 /* HomeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +60,6 @@
 		4448F8321CA75BBF00F0470F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4448F8341CA75BBF00F0470F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4448F8351CA75BBF00F0470F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4448F8371CA75BBF00F0470F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4448F8381CA75BBF00F0470F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4448F83B1CA75BBF00F0470F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4448F83D1CA75BBF00F0470F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4448F8401CA75BBF00F0470F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,9 +70,42 @@
 		4448F8521CA75BBF00F0470F /* ZiMuZuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4448F8561CA75BBF00F0470F /* ZiMuZuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZiMuZuUITests.m; sourceTree = "<group>"; };
 		4448F8581CA75BBF00F0470F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44AB405A1CAC0DFD0089CBB9 /* DramaLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DramaLayout.h; sourceTree = "<group>"; };
+		44AB405B1CAC0DFD0089CBB9 /* DramaLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DramaLayout.m; sourceTree = "<group>"; };
+		44CAABAA1CABF69A00FF1EA7 /* DramaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DramaCell.h; sourceTree = "<group>"; };
+		44CAABAB1CABF69A00FF1EA7 /* DramaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DramaCell.m; sourceTree = "<group>"; };
+		44CAABAC1CABF69A00FF1EA7 /* DramaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DramaCell.xib; sourceTree = "<group>"; };
 		A3951A997C499EF291DC193A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20F30F2DFEF1688072A1E8B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C2A4C629FB04238B143BAD29 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DB02E9151CABB5DF0017A1E6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DB02E9401CABCF880017A1E6 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		DB02E9411CABCF880017A1E6 /* ProximaNova-BoldT100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-BoldT100.otf"; sourceTree = "<group>"; };
+		DB02E9421CABCF880017A1E6 /* ProximaNova-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Reg.otf"; sourceTree = "<group>"; };
+		DB02E9431CABCF880017A1E6 /* ProximaNova-Sbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Sbold.otf"; sourceTree = "<group>"; };
+		DB02E9441CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-SemiBoldT100.otf"; sourceTree = "<group>"; };
+		DB02E9451CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-SemiBoldT50.otf"; sourceTree = "<group>"; };
+		DB02E9461CABCF880017A1E6 /* ProximaNova-T100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-T100.otf"; sourceTree = "<group>"; };
+		DB02E9471CABCF880017A1E6 /* ProximaNova-T50.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-T50.otf"; sourceTree = "<group>"; };
+		DB02E9521CABD0510017A1E6 /* ZMZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMZNavigationController.h; sourceTree = "<group>"; };
+		DB02E9531CABD0510017A1E6 /* ZMZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMZNavigationController.m; sourceTree = "<group>"; };
+		DB02E9541CABD0510017A1E6 /* ZMZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMZTabBarController.h; sourceTree = "<group>"; };
+		DB02E9551CABD0510017A1E6 /* ZMZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMZTabBarController.m; sourceTree = "<group>"; };
+		DB02E9561CABD0510017A1E6 /* ZMZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMZViewController.h; sourceTree = "<group>"; };
+		DB02E9571CABD0510017A1E6 /* ZMZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMZViewController.m; sourceTree = "<group>"; };
+		DB02E9591CABD0510017A1E6 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DB02E95A1CABD0510017A1E6 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		DB02E95C1CABD0510017A1E6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		DB02E95D1CABD0510017A1E6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		DB02E95F1CABD0510017A1E6 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		DB02E9601CABD0510017A1E6 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		DB02E9621CABD0510017A1E6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		DB02E9631CABD0510017A1E6 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		DB02E9651CABD0510017A1E6 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		DB02E9661CABD0510017A1E6 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		DB02E9711CABD5F90017A1E6 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		DB02E9721CABD5F90017A1E6 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		DB02E9731CABD5F90017A1E6 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,13 +161,15 @@
 			children = (
 				4448F8341CA75BBF00F0470F /* AppDelegate.h */,
 				4448F8351CA75BBF00F0470F /* AppDelegate.m */,
-				4448F8371CA75BBF00F0470F /* ViewController.h */,
-				4448F8381CA75BBF00F0470F /* ViewController.m */,
+				DB02E9501CABD0510017A1E6 /* ViewControllers */,
+				DB02E9671CABD0510017A1E6 /* Views */,
+				DB02E93E1CABCF880017A1E6 /* Sources */,
 				4448F83A1CA75BBF00F0470F /* Main.storyboard */,
 				4448F83D1CA75BBF00F0470F /* Assets.xcassets */,
 				4448F83F1CA75BBF00F0470F /* LaunchScreen.storyboard */,
 				4448F8421CA75BBF00F0470F /* Info.plist */,
 				4448F8311CA75BBF00F0470F /* Supporting Files */,
+				DB02E9151CABB5DF0017A1E6 /* PrefixHeader.pch */,
 			);
 			path = ZiMuZu;
 			sourceTree = "<group>";
@@ -162,6 +215,123 @@
 				A3951A997C499EF291DC193A /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB02E93E1CABCF880017A1E6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E93F1CABCF880017A1E6 /* Font */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DB02E93F1CABCF880017A1E6 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E9401CABCF880017A1E6 /* ProximaNova-Bold.otf */,
+				DB02E9411CABCF880017A1E6 /* ProximaNova-BoldT100.otf */,
+				DB02E9421CABCF880017A1E6 /* ProximaNova-Reg.otf */,
+				DB02E9431CABCF880017A1E6 /* ProximaNova-Sbold.otf */,
+				DB02E9441CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf */,
+				DB02E9451CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf */,
+				DB02E9461CABCF880017A1E6 /* ProximaNova-T100.otf */,
+				DB02E9471CABCF880017A1E6 /* ProximaNova-T50.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		DB02E9501CABD0510017A1E6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E9511CABD0510017A1E6 /* Base */,
+				DB02E9581CABD0510017A1E6 /* Home */,
+				DB02E95B1CABD0510017A1E6 /* Profile */,
+				DB02E95E1CABD0510017A1E6 /* Schedule */,
+				DB02E9611CABD0510017A1E6 /* Search */,
+				DB02E9641CABD0510017A1E6 /* Setting */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DB02E9511CABD0510017A1E6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E9521CABD0510017A1E6 /* ZMZNavigationController.h */,
+				DB02E9531CABD0510017A1E6 /* ZMZNavigationController.m */,
+				DB02E9541CABD0510017A1E6 /* ZMZTabBarController.h */,
+				DB02E9551CABD0510017A1E6 /* ZMZTabBarController.m */,
+				DB02E9561CABD0510017A1E6 /* ZMZViewController.h */,
+				DB02E9571CABD0510017A1E6 /* ZMZViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DB02E9581CABD0510017A1E6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E9591CABD0510017A1E6 /* HomeViewController.h */,
+				DB02E95A1CABD0510017A1E6 /* HomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DB02E95B1CABD0510017A1E6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E95C1CABD0510017A1E6 /* ProfileViewController.h */,
+				DB02E95D1CABD0510017A1E6 /* ProfileViewController.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DB02E95E1CABD0510017A1E6 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E95F1CABD0510017A1E6 /* ScheduleViewController.h */,
+				DB02E9601CABD0510017A1E6 /* ScheduleViewController.m */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		DB02E9611CABD0510017A1E6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E9621CABD0510017A1E6 /* SearchViewController.h */,
+				DB02E9631CABD0510017A1E6 /* SearchViewController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DB02E9641CABD0510017A1E6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E9651CABD0510017A1E6 /* SettingViewController.h */,
+				DB02E9661CABD0510017A1E6 /* SettingViewController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		DB02E9671CABD0510017A1E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E9701CABD5E00017A1E6 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB02E9701CABD5E00017A1E6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB02E9711CABD5F90017A1E6 /* HomeCell.h */,
+				DB02E9721CABD5F90017A1E6 /* HomeCell.m */,
+				DB02E9731CABD5F90017A1E6 /* HomeCell.xib */,
+				44CAABAA1CABF69A00FF1EA7 /* DramaCell.h */,
+				44CAABAB1CABF69A00FF1EA7 /* DramaCell.m */,
+				44CAABAC1CABF69A00FF1EA7 /* DramaCell.xib */,
+				44AB405A1CAC0DFD0089CBB9 /* DramaLayout.h */,
+				44AB405B1CAC0DFD0089CBB9 /* DramaLayout.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +440,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB02E94C1CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf in Resources */,
 				4448F8411CA75BBF00F0470F /* LaunchScreen.storyboard in Resources */,
+				DB02E94A1CABCF880017A1E6 /* ProximaNova-Reg.otf in Resources */,
+				DB02E9481CABCF880017A1E6 /* ProximaNova-Bold.otf in Resources */,
 				4448F83E1CA75BBF00F0470F /* Assets.xcassets in Resources */,
 				4448F83C1CA75BBF00F0470F /* Main.storyboard in Resources */,
+				DB02E94D1CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf in Resources */,
+				DB02E94E1CABCF880017A1E6 /* ProximaNova-T100.otf in Resources */,
+				DB02E9491CABCF880017A1E6 /* ProximaNova-BoldT100.otf in Resources */,
+				44CAABAE1CABF69A00FF1EA7 /* DramaCell.xib in Resources */,
+				DB02E94B1CABCF880017A1E6 /* ProximaNova-Sbold.otf in Resources */,
+				DB02E9751CABD5F90017A1E6 /* HomeCell.xib in Resources */,
+				DB02E94F1CABCF880017A1E6 /* ProximaNova-T50.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,9 +525,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4448F8391CA75BBF00F0470F /* ViewController.m in Sources */,
 				4448F8361CA75BBF00F0470F /* AppDelegate.m in Sources */,
+				DB02E9691CABD0510017A1E6 /* ZMZTabBarController.m in Sources */,
+				DB02E9741CABD5F90017A1E6 /* HomeCell.m in Sources */,
+				DB02E9681CABD0510017A1E6 /* ZMZNavigationController.m in Sources */,
 				4448F8331CA75BBF00F0470F /* main.m in Sources */,
+				DB02E96E1CABD0510017A1E6 /* SearchViewController.m in Sources */,
+				DB02E96C1CABD0510017A1E6 /* ProfileViewController.m in Sources */,
+				DB02E96A1CABD0510017A1E6 /* ZMZViewController.m in Sources */,
+				DB02E96B1CABD0510017A1E6 /* HomeViewController.m in Sources */,
+				DB02E96D1CABD0510017A1E6 /* ScheduleViewController.m in Sources */,
+				DB02E96F1CABD0510017A1E6 /* SettingViewController.m in Sources */,
+				44AB405C1CAC0DFD0089CBB9 /* DramaLayout.m in Sources */,
+				44CAABAD1CABF69A00FF1EA7 /* DramaCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +677,7 @@
 			baseConfigurationReference = C2A4C629FB04238B143BAD29 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZiMuZu/PrefixHeader.pch";
 				INFOPLIST_FILE = ZiMuZu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -500,6 +691,7 @@
 			baseConfigurationReference = B20F30F2DFEF1688072A1E8B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZiMuZu/PrefixHeader.pch";
 				INFOPLIST_FILE = ZiMuZu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

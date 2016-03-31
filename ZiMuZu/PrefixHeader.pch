@@ -9,6 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 #import <YYCategories/YYCategories.h>
+#import "ZMZHelper.h"
 
 #define kCustomFontWithSize(s) ([UIFont fontWithName:@"Proxima Nova" size:s])
 #define kZMZRedColor [UIColor colorWithRGB:0xF7204A]

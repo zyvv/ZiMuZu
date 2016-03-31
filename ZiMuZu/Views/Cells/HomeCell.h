@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DramaLayout.h"
+
+#define kHomeCellInnerCellWidth ((kScreenWidth - 2 * kDLMinimumInteritemSpacing - 2 * kDLCellMargin) / 2)
+#define kHomeCellHeight (kHomeCellInnerCellWidth * kDLImageAspectRaido + kDLCellTextHeight + 45)
 
 @interface HomeCell : UITableViewCell
 

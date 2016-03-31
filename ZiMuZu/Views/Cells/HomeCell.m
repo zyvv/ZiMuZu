@@ -8,7 +8,7 @@
 
 #import "HomeCell.h"
 #import "DramaCell.h"
-#import "DramaLayout.h"
+#import "FBShimmeringView.h"
 
 @interface HomeCell ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -18,6 +18,7 @@
 {
     __weak IBOutlet UILabel *_rowTitleLabel;
     __weak IBOutlet UICollectionView *_rowCollectionView;
+    __weak IBOutlet FBShimmeringView *_shimmeringView;
     
 }
 
@@ -30,8 +31,15 @@ static NSString *cellID = @"DramaCell";
     _rowCollectionView.collectionViewLayout = layout;
     _rowCollectionView.delegate = self;
     _rowCollectionView.dataSource = self;
+    _rowCollectionView.scrollsToTop = NO;
+    NSLog(@"collHeight: %.2f, layout.Hight: %.2f", _rowCollectionView.height, layout.itemSize.height);
     
+    _shimmeringView.shimmering = YES;
+    _shimmeringView.shimmeringOpacity = 0.7;
+    _shimmeringView.shimmeringPauseDuration = 10;
+    _shimmeringView.contentView = _rowTitleLabel;
 }
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

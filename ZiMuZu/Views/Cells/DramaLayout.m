@@ -14,10 +14,10 @@
     self = [super init];
     self.minimumInteritemSpacing = kDLMinimumInteritemSpacing;
     self.minimumLineSpacing = kDLMinimumLineSpacing;
-    self.sectionInset = UIEdgeInsetsMake(0, kDLCellMargin, 0, kDLCellMargin);
+    self.sectionInset = UIEdgeInsetsMake(1, kDLCellMargin, 1, kDLCellMargin);
     CGFloat cellWidth = (kScreenWidth - 2 * kDLMinimumInteritemSpacing - 2 * kDLCellMargin) / 2;
-    self.itemSize = CGSizeMake(cellWidth, cellWidth * kDLImageAspectRaido + kDLCellTextHeight);
     
+    self.itemSize = CGSizeMake(cellWidth, [ZMZHelper dramaCellHeight] - 2);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     return self;
 }

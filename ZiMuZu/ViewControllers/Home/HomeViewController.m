@@ -28,7 +28,6 @@ static NSString *cellID = @"HomeCell";
     
     _rowTitleArray = @[@"Top 10", @"United States", @"United Kingdom", @"Japan", @"Movie", @"Other"];
     [_tableView registerNib:[UINib nibWithNibName:cellID bundle:nil] forCellReuseIdentifier:cellID];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +42,7 @@ static NSString *cellID = @"HomeCell";
     actionSheet.blurRadius = 12.0f;
     actionSheet.buttonHeight = 60.0f;
     actionSheet.cancelButtonHeight = 70.0f;
-    actionSheet.animationDuration = 0.35f;
+    actionSheet.animationDuration = 0.25f;
     actionSheet.cancelButtonShadowColor = [UIColor colorWithWhite:0.0f alpha:0.1f];
     actionSheet.separatorColor = [UIColor colorWithWhite:1.0f alpha:0.3f];
     actionSheet.selectedBackgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
@@ -88,19 +87,32 @@ static NSString *cellID = @"HomeCell";
 
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return _rowTitleArray.count;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    cell.rowTitle = _rowTitleArray[indexPath.row];
+    cell.rowTitle = _rowTitleArray[indexPath.section];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat cellWidth = (kScreenWidth - 2 * kDLMinimumInteritemSpacing - 2 * kDLCellMargin) / 2;
-    return cellWidth * kDLImageAspectRaido + kDLCellTextHeight + 45;
+    return [ZMZHelper dramaCellHeight] + 47;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 30;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
 }
 
 /*

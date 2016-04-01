@@ -32,7 +32,6 @@ static NSString *cellID = @"DramaCell";
     _rowCollectionView.delegate = self;
     _rowCollectionView.dataSource = self;
     _rowCollectionView.scrollsToTop = NO;
-    NSLog(@"collHeight: %.2f, layout.Hight: %.2f", _rowCollectionView.height, layout.itemSize.height);
     
     _shimmeringView.shimmering = YES;
     _shimmeringView.shimmeringOpacity = 0.7;

@@ -10,7 +10,7 @@
 #import "HomeCell.h"
 #import "DramaLayout.h"
 #import "AHKActionSheet.h"
-
+#import "SDHeaderView.h"
 
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -40,12 +40,17 @@ static NSString *cellID = @"HomeCell";
     
     actionSheet.blurTintColor = [UIColor colorWithWhite:0.0f alpha:0.85f];
     actionSheet.blurRadius = 12.0f;
-    actionSheet.buttonHeight = 60.0f;
+    actionSheet.buttonHeight = 0.0f;
     actionSheet.cancelButtonHeight = 70.0f;
     actionSheet.animationDuration = 0.25f;
     actionSheet.cancelButtonShadowColor = [UIColor colorWithWhite:0.0f alpha:0.1f];
     actionSheet.separatorColor = [UIColor colorWithWhite:1.0f alpha:0.3f];
     actionSheet.selectedBackgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
+    
+    
+    actionSheet.headerView = [[[NSBundle mainBundle] loadNibNamed:@"SDHeaderView" owner:self options:nil] lastObject];
+    
+    
     UIFont *defaultFont = kCustomFontWithSize(17);
     actionSheet.buttonTextAttributes = @{ NSFontAttributeName : defaultFont,
                                           NSForegroundColorAttributeName : [UIColor whiteColor] };
@@ -55,27 +60,27 @@ static NSString *cellID = @"HomeCell";
                                                      NSForegroundColorAttributeName : [UIColor redColor] };
     actionSheet.cancelButtonTextAttributes = @{ NSFontAttributeName : defaultFont,
                                                 NSForegroundColorAttributeName : [UIColor whiteColor] };
-    [actionSheet addButtonWithTitle:NSLocalizedString(@"Info", nil)
-                              image:[UIImage imageNamed:@"Icon1"]
-                               type:AHKActionSheetButtonTypeDefault
-                            handler:^(AHKActionSheet *as) {
-                                NSLog(@"Info tapped");
-                            }];
-    
-    [actionSheet addButtonWithTitle:NSLocalizedString(@"Add to Favorites", nil)
-                              image:[UIImage imageNamed:@"Icon2"]
-                               type:AHKActionSheetButtonTypeDefault
-                            handler:^(AHKActionSheet *as) {
-                                NSLog(@"Favorite tapped");
-                            }];
-    
-    [actionSheet addButtonWithTitle:NSLocalizedString(@"Share", nil)
-                              image:[UIImage imageNamed:@"Icon3"]
-                               type:AHKActionSheetButtonTypeDefault
-                            handler:^(AHKActionSheet *as) {
-                                NSLog(@"Share tapped");
-                            }];
-    
+//    [actionSheet addButtonWithTitle:NSLocalizedString(@"Info", nil)
+//                              image:[UIImage imageNamed:@"Icon1"]
+//                               type:AHKActionSheetButtonTypeDefault
+//                            handler:^(AHKActionSheet *as) {
+//                                NSLog(@"Info tapped");
+//                            }];
+//    
+//    [actionSheet addButtonWithTitle:NSLocalizedString(@"Add to Favorites", nil)
+//                              image:[UIImage imageNamed:@"Icon2"]
+//                               type:AHKActionSheetButtonTypeDefault
+//                            handler:^(AHKActionSheet *as) {
+//                                NSLog(@"Favorite tapped");
+//                            }];
+//    
+//    [actionSheet addButtonWithTitle:NSLocalizedString(@"Share", nil)
+//                              image:[UIImage imageNamed:@"Icon3"]
+//                               type:AHKActionSheetButtonTypeDefault
+//                            handler:^(AHKActionSheet *as) {
+//                                NSLog(@"Share tapped");
+//                            }];
+//    
     [actionSheet addButtonWithTitle:NSLocalizedString(@"Delete", nil)
                               image:[UIImage imageNamed:@"Icon4"]
                                type:AHKActionSheetButtonTypeDestructive

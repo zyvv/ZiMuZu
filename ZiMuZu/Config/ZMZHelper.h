@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, DramaCellLayoutType) {
+    DramaCellLayoutTypeVertical = 0,
+    DramaCellLayoutTypeHorizontal,
+};
+
 @interface ZMZHelper : NSObject
 
-+ (CGFloat)dramaCellHeight;
++ (CGFloat)dramaCellHeightWithType:(DramaCellLayoutType)dramaCellLayoutType;
 
 @end

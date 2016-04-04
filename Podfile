@@ -13,5 +13,6 @@ pod 'SFNetworking'
 pod 'AHKSpringActionSheet'
 pod 'RDVTabBarController'
 pod 'Shimmer'
+pod 'BLKFlexibleHeightBar'
 
 end

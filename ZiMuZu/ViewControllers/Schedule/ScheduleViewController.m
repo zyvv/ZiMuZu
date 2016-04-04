@@ -33,9 +33,13 @@ static NSString *homeCellID = @"HomeCell";
 
 }
 
+- (IBAction)showCalendarView:(UIBarButtonItem *)sender {
+    
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 5;
 }
 
 
@@ -44,45 +48,22 @@ static NSString *homeCellID = @"HomeCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:homeCellID];
-        cell.rowTitle = @"Today";
-        return cell;
-    }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] init];
-    }
+    HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:homeCellID];
+//    cell.rowTitle = _rowTitleArray[indexPath.section];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    if (indexPath.section == 0) {
-        return [ZMZHelper dramaCellHeight] + 47;
-    }
-    return 1000;
+    return [ZMZHelper dramaCellHeight] + 47;
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return CGFLOAT_MIN;
+    return 30;
 }
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 1) {
-        return 100;
-    }
     return CGFLOAT_MIN;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (section == 1) {
-        SDDatePickerView *dataPickerView = [[[NSBundle mainBundle] loadNibNamed:@"SDDatePickerView" owner:self options:nil] lastObject];
-//        dataPickerView.frame = CGRectMake(0, 0, kScreenWidth, 100);
-        return dataPickerView;
-    }
-    return nil;
 }
 
 /*

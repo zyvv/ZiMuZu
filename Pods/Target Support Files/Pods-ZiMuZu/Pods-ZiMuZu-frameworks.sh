@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-ZiMuZu/AFNetworking.framework"
   install_framework "Pods-ZiMuZu/AHKSpringActionSheet.framework"
+  install_framework "Pods-ZiMuZu/BLKFlexibleHeightBar.framework"
   install_framework "Pods-ZiMuZu/RDVTabBarController.framework"
   install_framework "Pods-ZiMuZu/SFNetworking.framework"
   install_framework "Pods-ZiMuZu/Shimmer.framework"
@@ -98,6 +99,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-ZiMuZu/AFNetworking.framework"
   install_framework "Pods-ZiMuZu/AHKSpringActionSheet.framework"
+  install_framework "Pods-ZiMuZu/BLKFlexibleHeightBar.framework"
   install_framework "Pods-ZiMuZu/RDVTabBarController.framework"
   install_framework "Pods-ZiMuZu/SFNetworking.framework"
   install_framework "Pods-ZiMuZu/Shimmer.framework"

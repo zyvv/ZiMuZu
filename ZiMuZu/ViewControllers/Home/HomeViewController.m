@@ -11,8 +11,9 @@
 #import "DramaLayout.h"
 #import "AHKActionSheet.h"
 #import "SDHeaderView.h"
+#import "MoreViewController.h"
 
-@interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate, HomeCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, copy) NSArray *rowTitleArray;
@@ -103,6 +104,7 @@ static NSString *cellID = @"HomeCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    cell.delegate = self;
     cell.rowTitle = _rowTitleArray[indexPath.section];
     return cell;
 }
@@ -118,6 +120,12 @@ static NSString *cellID = @"HomeCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return CGFLOAT_MIN;
+}
+
+- (void)clickHomeCell:(HomeCell *)cell {
+    UIStoryboard *more = [UIStoryboard storyboardWithName:@"More" bundle:nil];
+    MoreViewController *moreVC = [more instantiateViewControllerWithIdentifier:@"MoreViewController"];
+    [self.navigationController pushViewController:moreVC animated:YES];
 }
 
 /*

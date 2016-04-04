@@ -14,6 +14,10 @@
 		4448F8411CA75BBF00F0470F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4448F83F1CA75BBF00F0470F /* LaunchScreen.storyboard */; };
 		4448F84C1CA75BBF00F0470F /* ZiMuZuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F84B1CA75BBF00F0470F /* ZiMuZuTests.m */; };
 		4448F8571CA75BBF00F0470F /* ZiMuZuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F8561CA75BBF00F0470F /* ZiMuZuUITests.m */; };
+		4476DA561CB0210800FC0656 /* ProfileViewTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4476DA551CB0210800FC0656 /* ProfileViewTopBar.m */; };
+		4476DA5A1CB123DF00FC0656 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4476DA591CB123DF00FC0656 /* MoreViewController.m */; };
+		4476DA5C1CB123F800FC0656 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4476DA5B1CB123F800FC0656 /* More.storyboard */; };
+		4476DA5F1CB125D200FC0656 /* MoreLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4476DA5E1CB125D200FC0656 /* MoreLayout.m */; };
 		44AB405C1CAC0DFD0089CBB9 /* DramaLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AB405B1CAC0DFD0089CBB9 /* DramaLayout.m */; };
 		44AB407A1CAD646E0089CBB9 /* ZMZHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AB40791CAD646E0089CBB9 /* ZMZHelper.m */; };
 		44CAABAD1CABF69A00FF1EA7 /* DramaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CAABAB1CABF69A00FF1EA7 /* DramaCell.m */; };
@@ -77,6 +81,13 @@
 		4448F8521CA75BBF00F0470F /* ZiMuZuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4448F8561CA75BBF00F0470F /* ZiMuZuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZiMuZuUITests.m; sourceTree = "<group>"; };
 		4448F8581CA75BBF00F0470F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4476DA541CB0210800FC0656 /* ProfileViewTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewTopBar.h; sourceTree = "<group>"; };
+		4476DA551CB0210800FC0656 /* ProfileViewTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewTopBar.m; sourceTree = "<group>"; };
+		4476DA581CB123DF00FC0656 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		4476DA591CB123DF00FC0656 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		4476DA5B1CB123F800FC0656 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		4476DA5D1CB125D200FC0656 /* MoreLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreLayout.h; sourceTree = "<group>"; };
+		4476DA5E1CB125D200FC0656 /* MoreLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreLayout.m; sourceTree = "<group>"; };
 		44AB405A1CAC0DFD0089CBB9 /* DramaLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DramaLayout.h; sourceTree = "<group>"; };
 		44AB405B1CAC0DFD0089CBB9 /* DramaLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DramaLayout.m; sourceTree = "<group>"; };
 		44AB40781CAD646E0089CBB9 /* ZMZHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMZHelper.h; sourceTree = "<group>"; };
@@ -215,6 +226,18 @@
 			path = ZiMuZuUITests;
 			sourceTree = "<group>";
 		};
+		4476DA571CB123BD00FC0656 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				4476DA581CB123DF00FC0656 /* MoreViewController.h */,
+				4476DA591CB123DF00FC0656 /* MoreViewController.m */,
+				4476DA5B1CB123F800FC0656 /* More.storyboard */,
+				4476DA5D1CB125D200FC0656 /* MoreLayout.h */,
+				4476DA5E1CB125D200FC0656 /* MoreLayout.m */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		44AB40771CAD646E0089CBB9 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +282,7 @@
 		DB02E9501CABD0510017A1E6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4476DA571CB123BD00FC0656 /* More */,
 				DB02E9511CABD0510017A1E6 /* Base */,
 				DB02E9581CABD0510017A1E6 /* Home */,
 				DB02E95B1CABD0510017A1E6 /* Profile */,
@@ -332,6 +356,8 @@
 			children = (
 				DB1BC8F11CAD190B0023C200 /* HeaderViews */,
 				DB02E9701CABD5E00017A1E6 /* Cells */,
+				4476DA541CB0210800FC0656 /* ProfileViewTopBar.h */,
+				4476DA551CB0210800FC0656 /* ProfileViewTopBar.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -488,6 +514,7 @@
 				DB02E94D1CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf in Resources */,
 				DB02E94E1CABCF880017A1E6 /* ProximaNova-T100.otf in Resources */,
 				DB02E9491CABCF880017A1E6 /* ProximaNova-BoldT100.otf in Resources */,
+				4476DA5C1CB123F800FC0656 /* More.storyboard in Resources */,
 				44CAABAE1CABF69A00FF1EA7 /* DramaCell.xib in Resources */,
 				DB1BC8F61CAD190B0023C200 /* SDHeaderView.xib in Resources */,
 				DB1BC8FB1CAD27640023C200 /* SDDatePickerView.xib in Resources */,
@@ -579,7 +606,10 @@
 				DB02E96B1CABD0510017A1E6 /* HomeViewController.m in Sources */,
 				DB02E96D1CABD0510017A1E6 /* ScheduleViewController.m in Sources */,
 				DB02E96F1CABD0510017A1E6 /* SettingViewController.m in Sources */,
+				4476DA5F1CB125D200FC0656 /* MoreLayout.m in Sources */,
+				4476DA5A1CB123DF00FC0656 /* MoreViewController.m in Sources */,
 				44AB405C1CAC0DFD0089CBB9 /* DramaLayout.m in Sources */,
+				4476DA561CB0210800FC0656 /* ProfileViewTopBar.m in Sources */,
 				DB1BC8F91CAD26300023C200 /* SDDatePickerView.m in Sources */,
 				44CAABAD1CABF69A00FF1EA7 /* DramaCell.m in Sources */,
 			);

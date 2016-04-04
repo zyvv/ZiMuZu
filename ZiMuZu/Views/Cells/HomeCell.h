@@ -12,10 +12,20 @@
 #define kHomeCellInnerCellWidth ((kScreenWidth - 2 * kDLMinimumInteritemSpacing - 2 * kDLCellMargin) / 2)
 #define kHomeCellHeight (kHomeCellInnerCellWidth * kDLImageAspectRaido + kDLCellTextHeight + 45)
 
+@protocol HomeCellDelegate;
 @interface HomeCell : UITableViewCell
 
 @property (nonatomic, copy) NSString *rowTitle;
 
 @property (nonatomic, copy) NSArray *rowDataArray;
+@property (nonatomic, weak) id<HomeCellDelegate> delegate;
+
+@end
+
+
+@protocol HomeCellDelegate <NSObject>
+
+@optional
+-(void)clickHomeCell:(HomeCell *)cell;
 
 @end

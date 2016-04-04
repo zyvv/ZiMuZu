@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DramaCellDelegate;
 @interface DramaCell : UICollectionViewCell
 
+@property (nonatomic, weak)id<DramaCellDelegate>delegete;
+
 @end
+
+

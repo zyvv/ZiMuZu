@@ -11,7 +11,12 @@
 
 @implementation ZMZHelper
 
-+ (CGFloat)dramaCellHeight {
++ (CGFloat)dramaCellHeightWithType:(DramaCellLayoutType)dramaCellLayoutType {
+    if (dramaCellLayoutType == DramaCellLayoutTypeVertical) {
+        
+    } else {
+        
+    }
     CGFloat width = ((kScreenWidth - 2 * kDLMinimumInteritemSpacing - 2 * kDLCellMargin) / 2);
     return (width * kDLImageAspectRaido + kDLCellTextHeight);
 }

@@ -72,6 +72,11 @@ static NSString *cellID = @"DramaCell";
     
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([_delegate respondsToSelector:@selector(clickHomeCell:)]) {
+        [_delegate clickHomeCell:self];
+    }
+}
 
 
 @end

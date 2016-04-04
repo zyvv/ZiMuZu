@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XAe-vw-UZG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XAe-vw-UZG">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--HOME-->
@@ -88,8 +88,28 @@
                     <view key="view" contentMode="scaleToFill" id="efD-Rn-1L7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C4b-LV-NIl">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8PO-gc-uON" id="Xbd-kK-YOa"/>
+                                    <outlet property="delegate" destination="8PO-gc-uON" id="T1L-qJ-iKY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="s1W-tR-p9j" firstAttribute="top" secondItem="C4b-LV-NIl" secondAttribute="bottom" id="9S7-V1-1mP"/>
+                            <constraint firstItem="C4b-LV-NIl" firstAttribute="leading" secondItem="efD-Rn-1L7" secondAttribute="leading" id="Dvm-ZR-7Tq"/>
+                            <constraint firstItem="C4b-LV-NIl" firstAttribute="top" secondItem="sMR-Rb-Niw" secondAttribute="bottom" id="qdt-JU-QuS"/>
+                            <constraint firstAttribute="trailing" secondItem="C4b-LV-NIl" secondAttribute="trailing" id="xvJ-Js-Vd4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PROFILE" id="oFT-0D-ef1"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="C4b-LV-NIl" id="yfQ-mN-j8z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNL-Km-1h6" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,7 +146,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ws6-CF-Jhc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ws6-CF-Jhc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -143,7 +163,18 @@
                             <constraint firstItem="ws6-CF-Jhc" firstAttribute="top" secondItem="BKh-Ps-ts5" secondAttribute="top" id="umi-NP-lB1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SCHEDULE" id="Ox6-eP-SLM"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="LYb-cM-d9K"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="SCHEDULE" id="Ox6-eP-SLM">
+                        <barButtonItem key="rightBarButtonItem" image="icon_more" id="27h-3t-jZT">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="showCalendarView:" destination="VMN-LQ-6NE" id="LJ6-Ca-sIc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ws6-CF-Jhc" id="xm0-nu-blh"/>
                     </connections>

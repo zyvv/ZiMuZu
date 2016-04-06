@@ -62,11 +62,6 @@
 }
 
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
 - (void)closeViewController:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];

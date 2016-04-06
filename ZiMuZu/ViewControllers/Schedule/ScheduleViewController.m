@@ -54,7 +54,7 @@ static NSString *homeCellID = @"HomeCell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [ZMZHelper dramaCellHeight] + 47;
+    return [ZMZHelper dramaCellSizeWithType:DramaCellLayoutTypeHorizontal].height + 47;
 }
 
 

@@ -11,14 +11,14 @@
 
 @implementation ZMZHelper
 
-+ (CGFloat)dramaCellHeightWithType:(DramaCellLayoutType)dramaCellLayoutType {
++ (CGSize)dramaCellSizeWithType:(DramaCellLayoutType)dramaCellLayoutType {
+    CGFloat width = 0;
     if (dramaCellLayoutType == DramaCellLayoutTypeVertical) {
-        
+        width = ((kScreenWidth - 2 * kDLMinimumInteritemSpacing - 2 * kDLCellMargin) / 2);
     } else {
-        
+        width = ((kScreenWidth - 3 * kDLMinimumInteritemSpacing) / 2);
     }
-    CGFloat width = ((kScreenWidth - 2 * kDLMinimumInteritemSpacing - 2 * kDLCellMargin) / 2);
-    return (width * kDLImageAspectRaido + kDLCellTextHeight);
+    return CGSizeMake(width, (width * kDLImageAspectRaido + kDLCellTextHeight));
 }
 
 @end

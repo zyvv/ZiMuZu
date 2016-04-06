@@ -51,12 +51,12 @@
     
     
     // Add and configure profile image
-    UIImageView *profileImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ProfilePicture.png"]];
+    UIImageView *profileImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"640 960.png"]];
     profileImageView.contentMode = UIViewContentModeScaleAspectFill;
-    profileImageView.clipsToBounds = YES;
-    profileImageView.layer.cornerRadius = 35.0;
-    profileImageView.layer.borderWidth = 2.0;
-    profileImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+//    profileImageView.clipsToBounds = YES;
+//    profileImageView.layer.cornerRadius = 35.0;
+//    profileImageView.layer.borderWidth = 2.0;
+//    profileImageView.layer.borderColor = [UIColor whiteColor].CGColor;
     
     BLKFlexibleHeightBarSubviewLayoutAttributes *initialProfileImageViewLayoutAttributes = [[BLKFlexibleHeightBarSubviewLayoutAttributes alloc] init];
     initialProfileImageViewLayoutAttributes.size = CGSizeMake(70.0, 70.0);

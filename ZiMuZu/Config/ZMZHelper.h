@@ -15,6 +15,6 @@ typedef NS_ENUM(NSUInteger, DramaCellLayoutType) {
 
 @interface ZMZHelper : NSObject
 
-+ (CGFloat)dramaCellHeightWithType:(DramaCellLayoutType)dramaCellLayoutType;
++ (CGSize)dramaCellSizeWithType:(DramaCellLayoutType)dramaCellLayoutType;
 
 @end

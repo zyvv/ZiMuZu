@@ -45,6 +45,7 @@
 		DB1BC8F61CAD190B0023C200 /* SDHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1BC8F41CAD190B0023C200 /* SDHeaderView.xib */; };
 		DB1BC8F91CAD26300023C200 /* SDDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1BC8F81CAD26300023C200 /* SDDatePickerView.m */; };
 		DB1BC8FB1CAD27640023C200 /* SDDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1BC8FA1CAD27640023C200 /* SDDatePickerView.xib */; };
+		DBAAD0511CB3696A00FCB262 /* 640 960.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAAD0501CB3696A00FCB262 /* 640 960.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		DB1BC8F71CAD26300023C200 /* SDDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDatePickerView.h; sourceTree = "<group>"; };
 		DB1BC8F81CAD26300023C200 /* SDDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDatePickerView.m; sourceTree = "<group>"; };
 		DB1BC8FA1CAD27640023C200 /* SDDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDDatePickerView.xib; sourceTree = "<group>"; };
+		DBAAD0501CB3696A00FCB262 /* 640 960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "640 960.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		4448F8301CA75BBF00F0470F /* ZiMuZu */ = {
 			isa = PBXGroup;
 			children = (
+				DBAAD0501CB3696A00FCB262 /* 640 960.png */,
 				4448F8341CA75BBF00F0470F /* AppDelegate.h */,
 				4448F8351CA75BBF00F0470F /* AppDelegate.m */,
 				44AB40771CAD646E0089CBB9 /* Config */,
@@ -505,6 +508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBAAD0511CB3696A00FCB262 /* 640 960.png in Resources */,
 				DB02E94C1CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf in Resources */,
 				4448F8411CA75BBF00F0470F /* LaunchScreen.storyboard in Resources */,
 				DB02E94A1CABCF880017A1E6 /* ProximaNova-Reg.otf in Resources */,

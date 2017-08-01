@@ -3,155 +3,68 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4448F8331CA75BBF00F0470F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F8321CA75BBF00F0470F /* main.m */; };
-		4448F8361CA75BBF00F0470F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F8351CA75BBF00F0470F /* AppDelegate.m */; };
-		4448F83C1CA75BBF00F0470F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4448F83A1CA75BBF00F0470F /* Main.storyboard */; };
-		4448F83E1CA75BBF00F0470F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4448F83D1CA75BBF00F0470F /* Assets.xcassets */; };
-		4448F8411CA75BBF00F0470F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4448F83F1CA75BBF00F0470F /* LaunchScreen.storyboard */; };
-		4448F84C1CA75BBF00F0470F /* ZiMuZuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F84B1CA75BBF00F0470F /* ZiMuZuTests.m */; };
-		4448F8571CA75BBF00F0470F /* ZiMuZuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4448F8561CA75BBF00F0470F /* ZiMuZuUITests.m */; };
-		4476DA561CB0210800FC0656 /* ProfileViewTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4476DA551CB0210800FC0656 /* ProfileViewTopBar.m */; };
-		4476DA5A1CB123DF00FC0656 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4476DA591CB123DF00FC0656 /* MoreViewController.m */; };
-		4476DA5C1CB123F800FC0656 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4476DA5B1CB123F800FC0656 /* More.storyboard */; };
-		4476DA5F1CB125D200FC0656 /* MoreLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4476DA5E1CB125D200FC0656 /* MoreLayout.m */; };
-		44AB405C1CAC0DFD0089CBB9 /* DramaLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AB405B1CAC0DFD0089CBB9 /* DramaLayout.m */; };
-		44AB407A1CAD646E0089CBB9 /* ZMZHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AB40791CAD646E0089CBB9 /* ZMZHelper.m */; };
-		44CAABAD1CABF69A00FF1EA7 /* DramaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CAABAB1CABF69A00FF1EA7 /* DramaCell.m */; };
-		44CAABAE1CABF69A00FF1EA7 /* DramaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CAABAC1CABF69A00FF1EA7 /* DramaCell.xib */; };
-		AC3686B6813BF98F83069DA8 /* Pods_ZiMuZu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33388EB25419F13A971F818 /* Pods_ZiMuZu.framework */; };
-		DB02E9481CABCF880017A1E6 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9401CABCF880017A1E6 /* ProximaNova-Bold.otf */; };
-		DB02E9491CABCF880017A1E6 /* ProximaNova-BoldT100.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9411CABCF880017A1E6 /* ProximaNova-BoldT100.otf */; };
-		DB02E94A1CABCF880017A1E6 /* ProximaNova-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9421CABCF880017A1E6 /* ProximaNova-Reg.otf */; };
-		DB02E94B1CABCF880017A1E6 /* ProximaNova-Sbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9431CABCF880017A1E6 /* ProximaNova-Sbold.otf */; };
-		DB02E94C1CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9441CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf */; };
-		DB02E94D1CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9451CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf */; };
-		DB02E94E1CABCF880017A1E6 /* ProximaNova-T100.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9461CABCF880017A1E6 /* ProximaNova-T100.otf */; };
-		DB02E94F1CABCF880017A1E6 /* ProximaNova-T50.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9471CABCF880017A1E6 /* ProximaNova-T50.otf */; };
-		DB02E9681CABD0510017A1E6 /* ZMZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9531CABD0510017A1E6 /* ZMZNavigationController.m */; };
-		DB02E9691CABD0510017A1E6 /* ZMZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9551CABD0510017A1E6 /* ZMZTabBarController.m */; };
-		DB02E96A1CABD0510017A1E6 /* ZMZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9571CABD0510017A1E6 /* ZMZViewController.m */; };
-		DB02E96B1CABD0510017A1E6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E95A1CABD0510017A1E6 /* HomeViewController.m */; };
-		DB02E96C1CABD0510017A1E6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E95D1CABD0510017A1E6 /* ProfileViewController.m */; };
-		DB02E96D1CABD0510017A1E6 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9601CABD0510017A1E6 /* ScheduleViewController.m */; };
-		DB02E96E1CABD0510017A1E6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9631CABD0510017A1E6 /* SearchViewController.m */; };
-		DB02E96F1CABD0510017A1E6 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9661CABD0510017A1E6 /* SettingViewController.m */; };
-		DB02E9741CABD5F90017A1E6 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02E9721CABD5F90017A1E6 /* HomeCell.m */; };
-		DB02E9751CABD5F90017A1E6 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB02E9731CABD5F90017A1E6 /* HomeCell.xib */; };
-		DB1BC8F51CAD190B0023C200 /* SDHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1BC8F31CAD190B0023C200 /* SDHeaderView.m */; };
-		DB1BC8F61CAD190B0023C200 /* SDHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1BC8F41CAD190B0023C200 /* SDHeaderView.xib */; };
-		DB1BC8F91CAD26300023C200 /* SDDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1BC8F81CAD26300023C200 /* SDDatePickerView.m */; };
-		DB1BC8FB1CAD27640023C200 /* SDDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1BC8FA1CAD27640023C200 /* SDDatePickerView.xib */; };
-		DBAAD0511CB3696A00FCB262 /* 640 960.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAAD0501CB3696A00FCB262 /* 640 960.png */; };
+		9727B4311F30C08A00B271DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9727B4301F30C08A00B271DF /* AppDelegate.swift */; };
+		9727B4331F30C08A00B271DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9727B4321F30C08A00B271DF /* ViewController.swift */; };
+		9727B4361F30C08A00B271DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9727B4341F30C08A00B271DF /* Main.storyboard */; };
+		9727B4381F30C08A00B271DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9727B4371F30C08A00B271DF /* Assets.xcassets */; };
+		9727B43B1F30C08A00B271DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9727B4391F30C08A00B271DF /* LaunchScreen.storyboard */; };
+		9727B4461F30C08A00B271DF /* ZiMuZuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9727B4451F30C08A00B271DF /* ZiMuZuTests.swift */; };
+		9727B4511F30C08A00B271DF /* ZiMuZuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9727B4501F30C08A00B271DF /* ZiMuZuUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4448F8481CA75BBF00F0470F /* PBXContainerItemProxy */ = {
+		9727B4421F30C08A00B271DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4448F8261CA75BBF00F0470F /* Project object */;
+			containerPortal = 9727B4251F30C08A00B271DF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4448F82D1CA75BBF00F0470F;
+			remoteGlobalIDString = 9727B42C1F30C08A00B271DF;
 			remoteInfo = ZiMuZu;
 		};
-		4448F8531CA75BBF00F0470F /* PBXContainerItemProxy */ = {
+		9727B44D1F30C08A00B271DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4448F8261CA75BBF00F0470F /* Project object */;
+			containerPortal = 9727B4251F30C08A00B271DF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4448F82D1CA75BBF00F0470F;
+			remoteGlobalIDString = 9727B42C1F30C08A00B271DF;
 			remoteInfo = ZiMuZu;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		000264F21DE1DA960F38D988 /* Pods-ZiMuZu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu.debug.xcconfig"; sourceTree = "<group>"; };
-		12F6874AFDE830A581601E56 /* Pods-ZiMuZu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZu.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu.release.xcconfig"; sourceTree = "<group>"; };
-		4448F82E1CA75BBF00F0470F /* ZiMuZu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZiMuZu.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4448F8321CA75BBF00F0470F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4448F8341CA75BBF00F0470F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4448F8351CA75BBF00F0470F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4448F83B1CA75BBF00F0470F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4448F83D1CA75BBF00F0470F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4448F8401CA75BBF00F0470F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4448F8421CA75BBF00F0470F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4448F8471CA75BBF00F0470F /* ZiMuZuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4448F84B1CA75BBF00F0470F /* ZiMuZuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZiMuZuTests.m; sourceTree = "<group>"; };
-		4448F84D1CA75BBF00F0470F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4448F8521CA75BBF00F0470F /* ZiMuZuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4448F8561CA75BBF00F0470F /* ZiMuZuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZiMuZuUITests.m; sourceTree = "<group>"; };
-		4448F8581CA75BBF00F0470F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4476DA541CB0210800FC0656 /* ProfileViewTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewTopBar.h; sourceTree = "<group>"; };
-		4476DA551CB0210800FC0656 /* ProfileViewTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewTopBar.m; sourceTree = "<group>"; };
-		4476DA581CB123DF00FC0656 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
-		4476DA591CB123DF00FC0656 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
-		4476DA5B1CB123F800FC0656 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
-		4476DA5D1CB125D200FC0656 /* MoreLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreLayout.h; sourceTree = "<group>"; };
-		4476DA5E1CB125D200FC0656 /* MoreLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreLayout.m; sourceTree = "<group>"; };
-		44AB405A1CAC0DFD0089CBB9 /* DramaLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DramaLayout.h; sourceTree = "<group>"; };
-		44AB405B1CAC0DFD0089CBB9 /* DramaLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DramaLayout.m; sourceTree = "<group>"; };
-		44AB40781CAD646E0089CBB9 /* ZMZHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMZHelper.h; sourceTree = "<group>"; };
-		44AB40791CAD646E0089CBB9 /* ZMZHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMZHelper.m; sourceTree = "<group>"; };
-		44CAABAA1CABF69A00FF1EA7 /* DramaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DramaCell.h; sourceTree = "<group>"; };
-		44CAABAB1CABF69A00FF1EA7 /* DramaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DramaCell.m; sourceTree = "<group>"; };
-		44CAABAC1CABF69A00FF1EA7 /* DramaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DramaCell.xib; sourceTree = "<group>"; };
-		A3951A997C499EF291DC193A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B33388EB25419F13A971F818 /* Pods_ZiMuZu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZiMuZu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB02E9151CABB5DF0017A1E6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		DB02E9401CABCF880017A1E6 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
-		DB02E9411CABCF880017A1E6 /* ProximaNova-BoldT100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-BoldT100.otf"; sourceTree = "<group>"; };
-		DB02E9421CABCF880017A1E6 /* ProximaNova-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Reg.otf"; sourceTree = "<group>"; };
-		DB02E9431CABCF880017A1E6 /* ProximaNova-Sbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Sbold.otf"; sourceTree = "<group>"; };
-		DB02E9441CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-SemiBoldT100.otf"; sourceTree = "<group>"; };
-		DB02E9451CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-SemiBoldT50.otf"; sourceTree = "<group>"; };
-		DB02E9461CABCF880017A1E6 /* ProximaNova-T100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-T100.otf"; sourceTree = "<group>"; };
-		DB02E9471CABCF880017A1E6 /* ProximaNova-T50.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-T50.otf"; sourceTree = "<group>"; };
-		DB02E9521CABD0510017A1E6 /* ZMZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMZNavigationController.h; sourceTree = "<group>"; };
-		DB02E9531CABD0510017A1E6 /* ZMZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMZNavigationController.m; sourceTree = "<group>"; };
-		DB02E9541CABD0510017A1E6 /* ZMZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMZTabBarController.h; sourceTree = "<group>"; };
-		DB02E9551CABD0510017A1E6 /* ZMZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMZTabBarController.m; sourceTree = "<group>"; };
-		DB02E9561CABD0510017A1E6 /* ZMZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMZViewController.h; sourceTree = "<group>"; };
-		DB02E9571CABD0510017A1E6 /* ZMZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMZViewController.m; sourceTree = "<group>"; };
-		DB02E9591CABD0510017A1E6 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		DB02E95A1CABD0510017A1E6 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		DB02E95C1CABD0510017A1E6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		DB02E95D1CABD0510017A1E6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		DB02E95F1CABD0510017A1E6 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
-		DB02E9601CABD0510017A1E6 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
-		DB02E9621CABD0510017A1E6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		DB02E9631CABD0510017A1E6 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		DB02E9651CABD0510017A1E6 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		DB02E9661CABD0510017A1E6 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		DB02E9711CABD5F90017A1E6 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
-		DB02E9721CABD5F90017A1E6 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
-		DB02E9731CABD5F90017A1E6 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
-		DB1BC8F21CAD190B0023C200 /* SDHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHeaderView.h; sourceTree = "<group>"; };
-		DB1BC8F31CAD190B0023C200 /* SDHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHeaderView.m; sourceTree = "<group>"; };
-		DB1BC8F41CAD190B0023C200 /* SDHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDHeaderView.xib; sourceTree = "<group>"; };
-		DB1BC8F71CAD26300023C200 /* SDDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDatePickerView.h; sourceTree = "<group>"; };
-		DB1BC8F81CAD26300023C200 /* SDDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDatePickerView.m; sourceTree = "<group>"; };
-		DB1BC8FA1CAD27640023C200 /* SDDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDDatePickerView.xib; sourceTree = "<group>"; };
-		DBAAD0501CB3696A00FCB262 /* 640 960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "640 960.png"; sourceTree = "<group>"; };
+		9727B42D1F30C08A00B271DF /* ZiMuZu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZiMuZu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9727B4301F30C08A00B271DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9727B4321F30C08A00B271DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9727B4351F30C08A00B271DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9727B4371F30C08A00B271DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9727B43A1F30C08A00B271DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9727B43C1F30C08A00B271DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9727B4411F30C08A00B271DF /* ZiMuZuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9727B4451F30C08A00B271DF /* ZiMuZuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuTests.swift; sourceTree = "<group>"; };
+		9727B4471F30C08A00B271DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9727B44C1F30C08A00B271DF /* ZiMuZuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9727B4501F30C08A00B271DF /* ZiMuZuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuUITests.swift; sourceTree = "<group>"; };
+		9727B4521F30C08A00B271DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4448F82B1CA75BBF00F0470F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC3686B6813BF98F83069DA8 /* Pods_ZiMuZu.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4448F8441CA75BBF00F0470F /* Frameworks */ = {
+		9727B42A1F30C08A00B271DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4448F84F1CA75BBF00F0470F /* Frameworks */ = {
+		9727B43E1F30C08A00B271DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9727B4491F30C08A00B271DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -161,260 +74,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4448F8251CA75BBF00F0470F = {
+		9727B4241F30C08A00B271DF = {
 			isa = PBXGroup;
 			children = (
-				4448F8301CA75BBF00F0470F /* ZiMuZu */,
-				4448F84A1CA75BBF00F0470F /* ZiMuZuTests */,
-				4448F8551CA75BBF00F0470F /* ZiMuZuUITests */,
-				4448F82F1CA75BBF00F0470F /* Products */,
-				68513511169550303EF8F76B /* Frameworks */,
-				DC30725B5F9C2D0F4D07705C /* Pods */,
+				9727B42F1F30C08A00B271DF /* ZiMuZu */,
+				9727B4441F30C08A00B271DF /* ZiMuZuTests */,
+				9727B44F1F30C08A00B271DF /* ZiMuZuUITests */,
+				9727B42E1F30C08A00B271DF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4448F82F1CA75BBF00F0470F /* Products */ = {
+		9727B42E1F30C08A00B271DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4448F82E1CA75BBF00F0470F /* ZiMuZu.app */,
-				4448F8471CA75BBF00F0470F /* ZiMuZuTests.xctest */,
-				4448F8521CA75BBF00F0470F /* ZiMuZuUITests.xctest */,
+				9727B42D1F30C08A00B271DF /* ZiMuZu.app */,
+				9727B4411F30C08A00B271DF /* ZiMuZuTests.xctest */,
+				9727B44C1F30C08A00B271DF /* ZiMuZuUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4448F8301CA75BBF00F0470F /* ZiMuZu */ = {
+		9727B42F1F30C08A00B271DF /* ZiMuZu */ = {
 			isa = PBXGroup;
 			children = (
-				DBAAD0501CB3696A00FCB262 /* 640 960.png */,
-				4448F8341CA75BBF00F0470F /* AppDelegate.h */,
-				4448F8351CA75BBF00F0470F /* AppDelegate.m */,
-				44AB40771CAD646E0089CBB9 /* Config */,
-				DB02E9501CABD0510017A1E6 /* ViewControllers */,
-				DB02E9671CABD0510017A1E6 /* Views */,
-				DB02E93E1CABCF880017A1E6 /* Sources */,
-				4448F83A1CA75BBF00F0470F /* Main.storyboard */,
-				4448F83D1CA75BBF00F0470F /* Assets.xcassets */,
-				4448F83F1CA75BBF00F0470F /* LaunchScreen.storyboard */,
-				4448F8421CA75BBF00F0470F /* Info.plist */,
-				4448F8311CA75BBF00F0470F /* Supporting Files */,
-				DB02E9151CABB5DF0017A1E6 /* PrefixHeader.pch */,
+				9727B4301F30C08A00B271DF /* AppDelegate.swift */,
+				9727B4321F30C08A00B271DF /* ViewController.swift */,
+				9727B4341F30C08A00B271DF /* Main.storyboard */,
+				9727B4371F30C08A00B271DF /* Assets.xcassets */,
+				9727B4391F30C08A00B271DF /* LaunchScreen.storyboard */,
+				9727B43C1F30C08A00B271DF /* Info.plist */,
 			);
 			path = ZiMuZu;
 			sourceTree = "<group>";
 		};
-		4448F8311CA75BBF00F0470F /* Supporting Files */ = {
+		9727B4441F30C08A00B271DF /* ZiMuZuTests */ = {
 			isa = PBXGroup;
 			children = (
-				4448F8321CA75BBF00F0470F /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4448F84A1CA75BBF00F0470F /* ZiMuZuTests */ = {
-			isa = PBXGroup;
-			children = (
-				4448F84B1CA75BBF00F0470F /* ZiMuZuTests.m */,
-				4448F84D1CA75BBF00F0470F /* Info.plist */,
+				9727B4451F30C08A00B271DF /* ZiMuZuTests.swift */,
+				9727B4471F30C08A00B271DF /* Info.plist */,
 			);
 			path = ZiMuZuTests;
 			sourceTree = "<group>";
 		};
-		4448F8551CA75BBF00F0470F /* ZiMuZuUITests */ = {
+		9727B44F1F30C08A00B271DF /* ZiMuZuUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4448F8561CA75BBF00F0470F /* ZiMuZuUITests.m */,
-				4448F8581CA75BBF00F0470F /* Info.plist */,
+				9727B4501F30C08A00B271DF /* ZiMuZuUITests.swift */,
+				9727B4521F30C08A00B271DF /* Info.plist */,
 			);
 			path = ZiMuZuUITests;
-			sourceTree = "<group>";
-		};
-		4476DA571CB123BD00FC0656 /* More */ = {
-			isa = PBXGroup;
-			children = (
-				4476DA581CB123DF00FC0656 /* MoreViewController.h */,
-				4476DA591CB123DF00FC0656 /* MoreViewController.m */,
-				4476DA5B1CB123F800FC0656 /* More.storyboard */,
-				4476DA5D1CB125D200FC0656 /* MoreLayout.h */,
-				4476DA5E1CB125D200FC0656 /* MoreLayout.m */,
-			);
-			path = More;
-			sourceTree = "<group>";
-		};
-		44AB40771CAD646E0089CBB9 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				44AB40781CAD646E0089CBB9 /* ZMZHelper.h */,
-				44AB40791CAD646E0089CBB9 /* ZMZHelper.m */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		68513511169550303EF8F76B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A3951A997C499EF291DC193A /* Pods.framework */,
-				B33388EB25419F13A971F818 /* Pods_ZiMuZu.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DB02E93E1CABCF880017A1E6 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				DB02E93F1CABCF880017A1E6 /* Font */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		DB02E93F1CABCF880017A1E6 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				DB02E9401CABCF880017A1E6 /* ProximaNova-Bold.otf */,
-				DB02E9411CABCF880017A1E6 /* ProximaNova-BoldT100.otf */,
-				DB02E9421CABCF880017A1E6 /* ProximaNova-Reg.otf */,
-				DB02E9431CABCF880017A1E6 /* ProximaNova-Sbold.otf */,
-				DB02E9441CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf */,
-				DB02E9451CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf */,
-				DB02E9461CABCF880017A1E6 /* ProximaNova-T100.otf */,
-				DB02E9471CABCF880017A1E6 /* ProximaNova-T50.otf */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
-		DB02E9501CABD0510017A1E6 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				4476DA571CB123BD00FC0656 /* More */,
-				DB02E9511CABD0510017A1E6 /* Base */,
-				DB02E9581CABD0510017A1E6 /* Home */,
-				DB02E95B1CABD0510017A1E6 /* Profile */,
-				DB02E95E1CABD0510017A1E6 /* Schedule */,
-				DB02E9611CABD0510017A1E6 /* Search */,
-				DB02E9641CABD0510017A1E6 /* Setting */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		DB02E9511CABD0510017A1E6 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				DB02E9521CABD0510017A1E6 /* ZMZNavigationController.h */,
-				DB02E9531CABD0510017A1E6 /* ZMZNavigationController.m */,
-				DB02E9541CABD0510017A1E6 /* ZMZTabBarController.h */,
-				DB02E9551CABD0510017A1E6 /* ZMZTabBarController.m */,
-				DB02E9561CABD0510017A1E6 /* ZMZViewController.h */,
-				DB02E9571CABD0510017A1E6 /* ZMZViewController.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		DB02E9581CABD0510017A1E6 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				DB02E9591CABD0510017A1E6 /* HomeViewController.h */,
-				DB02E95A1CABD0510017A1E6 /* HomeViewController.m */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		DB02E95B1CABD0510017A1E6 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				DB02E95C1CABD0510017A1E6 /* ProfileViewController.h */,
-				DB02E95D1CABD0510017A1E6 /* ProfileViewController.m */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		DB02E95E1CABD0510017A1E6 /* Schedule */ = {
-			isa = PBXGroup;
-			children = (
-				DB02E95F1CABD0510017A1E6 /* ScheduleViewController.h */,
-				DB02E9601CABD0510017A1E6 /* ScheduleViewController.m */,
-			);
-			path = Schedule;
-			sourceTree = "<group>";
-		};
-		DB02E9611CABD0510017A1E6 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				DB02E9621CABD0510017A1E6 /* SearchViewController.h */,
-				DB02E9631CABD0510017A1E6 /* SearchViewController.m */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		DB02E9641CABD0510017A1E6 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				DB02E9651CABD0510017A1E6 /* SettingViewController.h */,
-				DB02E9661CABD0510017A1E6 /* SettingViewController.m */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		DB02E9671CABD0510017A1E6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DB1BC8F11CAD190B0023C200 /* HeaderViews */,
-				DB02E9701CABD5E00017A1E6 /* Cells */,
-				4476DA541CB0210800FC0656 /* ProfileViewTopBar.h */,
-				4476DA551CB0210800FC0656 /* ProfileViewTopBar.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		DB02E9701CABD5E00017A1E6 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				DB02E9711CABD5F90017A1E6 /* HomeCell.h */,
-				DB02E9721CABD5F90017A1E6 /* HomeCell.m */,
-				DB02E9731CABD5F90017A1E6 /* HomeCell.xib */,
-				44CAABAA1CABF69A00FF1EA7 /* DramaCell.h */,
-				44CAABAB1CABF69A00FF1EA7 /* DramaCell.m */,
-				44CAABAC1CABF69A00FF1EA7 /* DramaCell.xib */,
-				44AB405A1CAC0DFD0089CBB9 /* DramaLayout.h */,
-				44AB405B1CAC0DFD0089CBB9 /* DramaLayout.m */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		DB1BC8F11CAD190B0023C200 /* HeaderViews */ = {
-			isa = PBXGroup;
-			children = (
-				DB1BC8F21CAD190B0023C200 /* SDHeaderView.h */,
-				DB1BC8F31CAD190B0023C200 /* SDHeaderView.m */,
-				DB1BC8F41CAD190B0023C200 /* SDHeaderView.xib */,
-				DB1BC8F71CAD26300023C200 /* SDDatePickerView.h */,
-				DB1BC8F81CAD26300023C200 /* SDDatePickerView.m */,
-				DB1BC8FA1CAD27640023C200 /* SDDatePickerView.xib */,
-			);
-			path = HeaderViews;
-			sourceTree = "<group>";
-		};
-		DC30725B5F9C2D0F4D07705C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				000264F21DE1DA960F38D988 /* Pods-ZiMuZu.debug.xcconfig */,
-				12F6874AFDE830A581601E56 /* Pods-ZiMuZu.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4448F82D1CA75BBF00F0470F /* ZiMuZu */ = {
+		9727B42C1F30C08A00B271DF /* ZiMuZu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4448F85B1CA75BBF00F0470F /* Build configuration list for PBXNativeTarget "ZiMuZu" */;
+			buildConfigurationList = 9727B4551F30C08A00B271DF /* Build configuration list for PBXNativeTarget "ZiMuZu" */;
 			buildPhases = (
-				4B556394F2A42B0B7B279267 /* Check Pods Manifest.lock */,
-				4448F82A1CA75BBF00F0470F /* Sources */,
-				4448F82B1CA75BBF00F0470F /* Frameworks */,
-				4448F82C1CA75BBF00F0470F /* Resources */,
-				5D69F54C3A311225AC21B36E /* Embed Pods Frameworks */,
-				DC6D6A362E09F3D9FB30527F /* Copy Pods Resources */,
+				9727B4291F30C08A00B271DF /* Sources */,
+				9727B42A1F30C08A00B271DF /* Frameworks */,
+				9727B42B1F30C08A00B271DF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -422,120 +142,107 @@
 			);
 			name = ZiMuZu;
 			productName = ZiMuZu;
-			productReference = 4448F82E1CA75BBF00F0470F /* ZiMuZu.app */;
+			productReference = 9727B42D1F30C08A00B271DF /* ZiMuZu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4448F8461CA75BBF00F0470F /* ZiMuZuTests */ = {
+		9727B4401F30C08A00B271DF /* ZiMuZuTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4448F85E1CA75BBF00F0470F /* Build configuration list for PBXNativeTarget "ZiMuZuTests" */;
+			buildConfigurationList = 9727B4581F30C08A00B271DF /* Build configuration list for PBXNativeTarget "ZiMuZuTests" */;
 			buildPhases = (
-				4448F8431CA75BBF00F0470F /* Sources */,
-				4448F8441CA75BBF00F0470F /* Frameworks */,
-				4448F8451CA75BBF00F0470F /* Resources */,
+				9727B43D1F30C08A00B271DF /* Sources */,
+				9727B43E1F30C08A00B271DF /* Frameworks */,
+				9727B43F1F30C08A00B271DF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4448F8491CA75BBF00F0470F /* PBXTargetDependency */,
+				9727B4431F30C08A00B271DF /* PBXTargetDependency */,
 			);
 			name = ZiMuZuTests;
 			productName = ZiMuZuTests;
-			productReference = 4448F8471CA75BBF00F0470F /* ZiMuZuTests.xctest */;
+			productReference = 9727B4411F30C08A00B271DF /* ZiMuZuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4448F8511CA75BBF00F0470F /* ZiMuZuUITests */ = {
+		9727B44B1F30C08A00B271DF /* ZiMuZuUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4448F8611CA75BBF00F0470F /* Build configuration list for PBXNativeTarget "ZiMuZuUITests" */;
+			buildConfigurationList = 9727B45B1F30C08A00B271DF /* Build configuration list for PBXNativeTarget "ZiMuZuUITests" */;
 			buildPhases = (
-				4448F84E1CA75BBF00F0470F /* Sources */,
-				4448F84F1CA75BBF00F0470F /* Frameworks */,
-				4448F8501CA75BBF00F0470F /* Resources */,
+				9727B4481F30C08A00B271DF /* Sources */,
+				9727B4491F30C08A00B271DF /* Frameworks */,
+				9727B44A1F30C08A00B271DF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4448F8541CA75BBF00F0470F /* PBXTargetDependency */,
+				9727B44E1F30C08A00B271DF /* PBXTargetDependency */,
 			);
 			name = ZiMuZuUITests;
 			productName = ZiMuZuUITests;
-			productReference = 4448F8521CA75BBF00F0470F /* ZiMuZuUITests.xctest */;
+			productReference = 9727B44C1F30C08A00B271DF /* ZiMuZuUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4448F8261CA75BBF00F0470F /* Project object */ = {
+		9727B4251F30C08A00B271DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "YangWei Zhang";
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = zhangyangwei.com;
 				TargetAttributes = {
-					4448F82D1CA75BBF00F0470F = {
-						CreatedOnToolsVersion = 7.2.1;
+					9727B42C1F30C08A00B271DF = {
+						CreatedOnToolsVersion = 9.0;
 					};
-					4448F8461CA75BBF00F0470F = {
-						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = 4448F82D1CA75BBF00F0470F;
+					9727B4401F30C08A00B271DF = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 9727B42C1F30C08A00B271DF;
 					};
-					4448F8511CA75BBF00F0470F = {
-						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = 4448F82D1CA75BBF00F0470F;
+					9727B44B1F30C08A00B271DF = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 9727B42C1F30C08A00B271DF;
 					};
 				};
 			};
-			buildConfigurationList = 4448F8291CA75BBF00F0470F /* Build configuration list for PBXProject "ZiMuZu" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 9727B4281F30C08A00B271DF /* Build configuration list for PBXProject "ZiMuZu" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 4448F8251CA75BBF00F0470F;
-			productRefGroup = 4448F82F1CA75BBF00F0470F /* Products */;
+			mainGroup = 9727B4241F30C08A00B271DF;
+			productRefGroup = 9727B42E1F30C08A00B271DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4448F82D1CA75BBF00F0470F /* ZiMuZu */,
-				4448F8461CA75BBF00F0470F /* ZiMuZuTests */,
-				4448F8511CA75BBF00F0470F /* ZiMuZuUITests */,
+				9727B42C1F30C08A00B271DF /* ZiMuZu */,
+				9727B4401F30C08A00B271DF /* ZiMuZuTests */,
+				9727B44B1F30C08A00B271DF /* ZiMuZuUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4448F82C1CA75BBF00F0470F /* Resources */ = {
+		9727B42B1F30C08A00B271DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBAAD0511CB3696A00FCB262 /* 640 960.png in Resources */,
-				DB02E94C1CABCF880017A1E6 /* ProximaNova-SemiBoldT100.otf in Resources */,
-				4448F8411CA75BBF00F0470F /* LaunchScreen.storyboard in Resources */,
-				DB02E94A1CABCF880017A1E6 /* ProximaNova-Reg.otf in Resources */,
-				DB02E9481CABCF880017A1E6 /* ProximaNova-Bold.otf in Resources */,
-				4448F83E1CA75BBF00F0470F /* Assets.xcassets in Resources */,
-				4448F83C1CA75BBF00F0470F /* Main.storyboard in Resources */,
-				DB02E94D1CABCF880017A1E6 /* ProximaNova-SemiBoldT50.otf in Resources */,
-				DB02E94E1CABCF880017A1E6 /* ProximaNova-T100.otf in Resources */,
-				DB02E9491CABCF880017A1E6 /* ProximaNova-BoldT100.otf in Resources */,
-				4476DA5C1CB123F800FC0656 /* More.storyboard in Resources */,
-				44CAABAE1CABF69A00FF1EA7 /* DramaCell.xib in Resources */,
-				DB1BC8F61CAD190B0023C200 /* SDHeaderView.xib in Resources */,
-				DB1BC8FB1CAD27640023C200 /* SDDatePickerView.xib in Resources */,
-				DB02E94B1CABCF880017A1E6 /* ProximaNova-Sbold.otf in Resources */,
-				DB02E9751CABD5F90017A1E6 /* HomeCell.xib in Resources */,
-				DB02E94F1CABCF880017A1E6 /* ProximaNova-T50.otf in Resources */,
+				9727B43B1F30C08A00B271DF /* LaunchScreen.storyboard in Resources */,
+				9727B4381F30C08A00B271DF /* Assets.xcassets in Resources */,
+				9727B4361F30C08A00B271DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4448F8451CA75BBF00F0470F /* Resources */ = {
+		9727B43F1F30C08A00B271DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4448F8501CA75BBF00F0470F /* Resources */ = {
+		9727B44A1F30C08A00B271DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -544,125 +251,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4B556394F2A42B0B7B279267 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5D69F54C3A311225AC21B36E /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC6D6A362E09F3D9FB30527F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4448F82A1CA75BBF00F0470F /* Sources */ = {
+		9727B4291F30C08A00B271DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4448F8361CA75BBF00F0470F /* AppDelegate.m in Sources */,
-				DB02E9691CABD0510017A1E6 /* ZMZTabBarController.m in Sources */,
-				DB1BC8F51CAD190B0023C200 /* SDHeaderView.m in Sources */,
-				DB02E9741CABD5F90017A1E6 /* HomeCell.m in Sources */,
-				DB02E9681CABD0510017A1E6 /* ZMZNavigationController.m in Sources */,
-				4448F8331CA75BBF00F0470F /* main.m in Sources */,
-				DB02E96E1CABD0510017A1E6 /* SearchViewController.m in Sources */,
-				44AB407A1CAD646E0089CBB9 /* ZMZHelper.m in Sources */,
-				DB02E96C1CABD0510017A1E6 /* ProfileViewController.m in Sources */,
-				DB02E96A1CABD0510017A1E6 /* ZMZViewController.m in Sources */,
-				DB02E96B1CABD0510017A1E6 /* HomeViewController.m in Sources */,
-				DB02E96D1CABD0510017A1E6 /* ScheduleViewController.m in Sources */,
-				DB02E96F1CABD0510017A1E6 /* SettingViewController.m in Sources */,
-				4476DA5F1CB125D200FC0656 /* MoreLayout.m in Sources */,
-				4476DA5A1CB123DF00FC0656 /* MoreViewController.m in Sources */,
-				44AB405C1CAC0DFD0089CBB9 /* DramaLayout.m in Sources */,
-				4476DA561CB0210800FC0656 /* ProfileViewTopBar.m in Sources */,
-				DB1BC8F91CAD26300023C200 /* SDDatePickerView.m in Sources */,
-				44CAABAD1CABF69A00FF1EA7 /* DramaCell.m in Sources */,
+				9727B4331F30C08A00B271DF /* ViewController.swift in Sources */,
+				9727B4311F30C08A00B271DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4448F8431CA75BBF00F0470F /* Sources */ = {
+		9727B43D1F30C08A00B271DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4448F84C1CA75BBF00F0470F /* ZiMuZuTests.m in Sources */,
+				9727B4461F30C08A00B271DF /* ZiMuZuTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4448F84E1CA75BBF00F0470F /* Sources */ = {
+		9727B4481F30C08A00B271DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4448F8571CA75BBF00F0470F /* ZiMuZuUITests.m in Sources */,
+				9727B4511F30C08A00B271DF /* ZiMuZuUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4448F8491CA75BBF00F0470F /* PBXTargetDependency */ = {
+		9727B4431F30C08A00B271DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4448F82D1CA75BBF00F0470F /* ZiMuZu */;
-			targetProxy = 4448F8481CA75BBF00F0470F /* PBXContainerItemProxy */;
+			target = 9727B42C1F30C08A00B271DF /* ZiMuZu */;
+			targetProxy = 9727B4421F30C08A00B271DF /* PBXContainerItemProxy */;
 		};
-		4448F8541CA75BBF00F0470F /* PBXTargetDependency */ = {
+		9727B44E1F30C08A00B271DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4448F82D1CA75BBF00F0470F /* ZiMuZu */;
-			targetProxy = 4448F8531CA75BBF00F0470F /* PBXContainerItemProxy */;
+			target = 9727B42C1F30C08A00B271DF /* ZiMuZu */;
+			targetProxy = 9727B44D1F30C08A00B271DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4448F83A1CA75BBF00F0470F /* Main.storyboard */ = {
+		9727B4341F30C08A00B271DF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4448F83B1CA75BBF00F0470F /* Base */,
+				9727B4351F30C08A00B271DF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4448F83F1CA75BBF00F0470F /* LaunchScreen.storyboard */ = {
+		9727B4391F30C08A00B271DF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4448F8401CA75BBF00F0470F /* Base */,
+				9727B43A1F30C08A00B271DF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -670,29 +312,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4448F8591CA75BBF00F0470F /* Debug */ = {
+		9727B4531F30C08A00B271DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -706,36 +360,50 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		4448F85A1CA75BBF00F0470F /* Release */ = {
+		9727B4541F30C08A00B271DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -743,131 +411,141 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4448F85C1CA75BBF00F0470F /* Debug */ = {
+		9727B4561F30C08A00B271DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000264F21DE1DA960F38D988 /* Pods-ZiMuZu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/ZiMuZu/PrefixHeader.pch";
+				DEVELOPMENT_TEAM = R9P3557NQX;
 				INFOPLIST_FILE = ZiMuZu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zyvv.github.ZiMuZu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4448F85D1CA75BBF00F0470F /* Release */ = {
+		9727B4571F30C08A00B271DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12F6874AFDE830A581601E56 /* Pods-ZiMuZu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/ZiMuZu/PrefixHeader.pch";
+				DEVELOPMENT_TEAM = R9P3557NQX;
 				INFOPLIST_FILE = ZiMuZu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zyvv.github.ZiMuZu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		4448F85F1CA75BBF00F0470F /* Debug */ = {
+		9727B4591F30C08A00B271DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = R9P3557NQX;
 				INFOPLIST_FILE = ZiMuZuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zyvv.github.ZiMuZuTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZiMuZu.app/ZiMuZu";
 			};
 			name = Debug;
 		};
-		4448F8601CA75BBF00F0470F /* Release */ = {
+		9727B45A1F30C08A00B271DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = R9P3557NQX;
 				INFOPLIST_FILE = ZiMuZuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zyvv.github.ZiMuZuTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZiMuZu.app/ZiMuZu";
 			};
 			name = Release;
 		};
-		4448F8621CA75BBF00F0470F /* Debug */ = {
+		9727B45C1F30C08A00B271DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = R9P3557NQX;
 				INFOPLIST_FILE = ZiMuZuUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zyvv.github.ZiMuZuUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZuUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ZiMuZu;
-				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
 		};
-		4448F8631CA75BBF00F0470F /* Release */ = {
+		9727B45D1F30C08A00B271DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = R9P3557NQX;
 				INFOPLIST_FILE = ZiMuZuUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zyvv.github.ZiMuZuUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZuUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ZiMuZu;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4448F8291CA75BBF00F0470F /* Build configuration list for PBXProject "ZiMuZu" */ = {
+		9727B4281F30C08A00B271DF /* Build configuration list for PBXProject "ZiMuZu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4448F8591CA75BBF00F0470F /* Debug */,
-				4448F85A1CA75BBF00F0470F /* Release */,
+				9727B4531F30C08A00B271DF /* Debug */,
+				9727B4541F30C08A00B271DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4448F85B1CA75BBF00F0470F /* Build configuration list for PBXNativeTarget "ZiMuZu" */ = {
+		9727B4551F30C08A00B271DF /* Build configuration list for PBXNativeTarget "ZiMuZu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4448F85C1CA75BBF00F0470F /* Debug */,
-				4448F85D1CA75BBF00F0470F /* Release */,
+				9727B4561F30C08A00B271DF /* Debug */,
+				9727B4571F30C08A00B271DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		4448F85E1CA75BBF00F0470F /* Build configuration list for PBXNativeTarget "ZiMuZuTests" */ = {
+		9727B4581F30C08A00B271DF /* Build configuration list for PBXNativeTarget "ZiMuZuTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4448F85F1CA75BBF00F0470F /* Debug */,
-				4448F8601CA75BBF00F0470F /* Release */,
+				9727B4591F30C08A00B271DF /* Debug */,
+				9727B45A1F30C08A00B271DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		4448F8611CA75BBF00F0470F /* Build configuration list for PBXNativeTarget "ZiMuZuUITests" */ = {
+		9727B45B1F30C08A00B271DF /* Build configuration list for PBXNativeTarget "ZiMuZuUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4448F8621CA75BBF00F0470F /* Debug */,
-				4448F8631CA75BBF00F0470F /* Release */,
+				9727B45C1F30C08A00B271DF /* Debug */,
+				9727B45D1F30C08A00B271DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4448F8261CA75BBF00F0470F /* Project object */;
+	rootObject = 9727B4251F30C08A00B271DF /* Project object */;
 }

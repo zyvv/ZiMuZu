@@ -1,2 +1,0 @@
-# SFNetworking
-基于AFNetworking对GET和POST请求的简单封装

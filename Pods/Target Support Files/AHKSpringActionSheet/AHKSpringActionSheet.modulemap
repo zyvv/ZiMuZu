@@ -1,6 +1,0 @@
-framework module AHKSpringActionSheet {
-  umbrella header "AHKSpringActionSheet-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (4.5.0)
+  - Hue (2.0.1)
+  - IGListKit (3.0.0):
+    - IGListKit/Default (= 3.0.0)
+  - IGListKit/Default (3.0.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.0.0)
+  - Kingfisher (3.10.4)
+  - Moya (9.0.0-alpha.1):
+    - Moya/Core (= 9.0.0-alpha.1)
+  - Moya/Core (9.0.0-alpha.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Result (3.2.3)
+
+DEPENDENCIES:
+  - Hue
+  - IGListKit (~> 3.0)
+  - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`, branch `swift4`)
+  - Moya (from `https://github.com/Moya/Moya.git`, branch `feature/swift4_support`)
+
+EXTERNAL SOURCES:
+  Kingfisher:
+    :branch: swift4
+    :git: https://github.com/onevcat/Kingfisher.git
+  Moya:
+    :branch: feature/swift4_support
+    :git: https://github.com/Moya/Moya.git
+
+CHECKOUT OPTIONS:
+  Kingfisher:
+    :commit: abc208e8609f52058d56f8e8331538c4fcc2b779
+    :git: https://github.com/onevcat/Kingfisher.git
+  Moya:
+    :commit: 4233e4dbb5b98e6b389b65ccd9fca4d60a977553
+    :git: https://github.com/Moya/Moya.git
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
+  IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
+  Kingfisher: dbfac2b5dec4a531822e0ba8b571ce6010616075
+  Moya: d104801616468247e5a9abd258c838c5ca6b1389
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+
+PODFILE CHECKSUM: 60dc2de8e5789f7b8a7cbf7cadcc6933bef95df2
+
+COCOAPODS: 1.2.0.beta.3

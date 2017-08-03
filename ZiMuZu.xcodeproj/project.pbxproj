@@ -11,28 +11,30 @@
 		9727B4361F30C08A00B271DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9727B4341F30C08A00B271DF /* Main.storyboard */; };
 		9727B4381F30C08A00B271DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9727B4371F30C08A00B271DF /* Assets.xcassets */; };
 		9727B43B1F30C08A00B271DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9727B4391F30C08A00B271DF /* LaunchScreen.storyboard */; };
-		9727B4461F30C08A00B271DF /* ZiMuZuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9727B4451F30C08A00B271DF /* ZiMuZuTests.swift */; };
 		9727B4511F30C08A00B271DF /* ZiMuZuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9727B4501F30C08A00B271DF /* ZiMuZuUITests.swift */; };
 		A17503B09089A4F9BFC16157 /* Pods_ZiMuZu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680CCB0B9876F22E9F7EE5CA /* Pods_ZiMuZu.framework */; };
+		A301AEEDE914A33EAA4467B2 /* Pods_ZiMuZuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F73336619A52438D3CCC60 /* Pods_ZiMuZuTests.framework */; };
 		C10040DC1F31724700068142 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040DB1F31724700068142 /* BaseTabBarController.swift */; };
 		C10040DE1F317AD200068142 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040DD1F317AD200068142 /* ProfileViewController.swift */; };
 		C10040E01F317BB800068142 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040DF1F317BB800068142 /* SearchViewController.swift */; };
 		C10040E21F31A8E400068142 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040E11F31A8E400068142 /* SearchBar.swift */; };
 		C10040E41F31AAD300068142 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040E31F31AAD300068142 /* SearchController.swift */; };
 		C10040E61F31E86C00068142 /* ZiMuZuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040E51F31E86C00068142 /* ZiMuZuAPI.swift */; };
+		C159409D1F32F20700929B91 /* ZiMuZuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159409C1F32F20700929B91 /* ZiMuZuTests.swift */; };
+		C15940E61F330EA100929B91 /* TV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15940E51F330EA100929B91 /* TV.swift */; };
 		C17E49C81F31663900F969B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E49C71F31663900F969B2 /* HomeViewController.swift */; };
 		C17E49CA1F31693200F969B2 /* ViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E49C91F31693200F969B2 /* ViewControllerConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9727B4421F30C08A00B271DF /* PBXContainerItemProxy */ = {
+		9727B44D1F30C08A00B271DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9727B4251F30C08A00B271DF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9727B42C1F30C08A00B271DF;
 			remoteInfo = ZiMuZu;
 		};
-		9727B44D1F30C08A00B271DF /* PBXContainerItemProxy */ = {
+		C159409F1F32F20700929B91 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9727B4251F30C08A00B271DF /* Project object */;
 			proxyType = 1;
@@ -43,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0158784D9F42A27500FF1D64 /* Pods-ZiMuZu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZu.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu.release.xcconfig"; sourceTree = "<group>"; };
+		20F73336619A52438D3CCC60 /* Pods_ZiMuZuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZiMuZuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		680CCB0B9876F22E9F7EE5CA /* Pods_ZiMuZu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZiMuZu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9727B42D1F30C08A00B271DF /* ZiMuZu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZiMuZu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9727B4301F30C08A00B271DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,19 +53,22 @@
 		9727B4371F30C08A00B271DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9727B43A1F30C08A00B271DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9727B43C1F30C08A00B271DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9727B4411F30C08A00B271DF /* ZiMuZuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9727B4451F30C08A00B271DF /* ZiMuZuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuTests.swift; sourceTree = "<group>"; };
-		9727B4471F30C08A00B271DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9727B44C1F30C08A00B271DF /* ZiMuZuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9727B4501F30C08A00B271DF /* ZiMuZuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuUITests.swift; sourceTree = "<group>"; };
 		9727B4521F30C08A00B271DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADDAC9D39D2D54B823DAC200 /* Pods-ZiMuZu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu.debug.xcconfig"; sourceTree = "<group>"; };
+		B2C5BDA30FD4529D4EDC464D /* Pods-ZiMuZuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZuTests/Pods-ZiMuZuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C10040DB1F31724700068142 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		C10040DD1F317AD200068142 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C10040DF1F317BB800068142 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C10040E11F31A8E400068142 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C10040E31F31AAD300068142 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		C10040E51F31E86C00068142 /* ZiMuZuAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuAPI.swift; sourceTree = "<group>"; };
+		C159409A1F32F20700929B91 /* ZiMuZuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C159409C1F32F20700929B91 /* ZiMuZuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuTests.swift; sourceTree = "<group>"; };
+		C159409E1F32F20700929B91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C15940E51F330EA100929B91 /* TV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV.swift; sourceTree = "<group>"; };
+		C16151FA4776D9C0E3A92CAA /* Pods-ZiMuZuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZuTests/Pods-ZiMuZuTests.release.xcconfig"; sourceTree = "<group>"; };
 		C17E49C71F31663900F969B2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C17E49C91F31693200F969B2 /* ViewControllerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,17 +82,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9727B43E1F30C08A00B271DF /* Frameworks */ = {
+		9727B4491F30C08A00B271DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9727B4491F30C08A00B271DF /* Frameworks */ = {
+		C15940971F32F20700929B91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A301AEEDE914A33EAA4467B2 /* Pods_ZiMuZuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				680CCB0B9876F22E9F7EE5CA /* Pods_ZiMuZu.framework */,
+				20F73336619A52438D3CCC60 /* Pods_ZiMuZuTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9727B42F1F30C08A00B271DF /* ZiMuZu */,
-				9727B4441F30C08A00B271DF /* ZiMuZuTests */,
+				C159409B1F32F20700929B91 /* ZiMuZuTests */,
 				9727B44F1F30C08A00B271DF /* ZiMuZuUITests */,
 				9727B42E1F30C08A00B271DF /* Products */,
 				DE3E841AAC2DF5EC50311B54 /* Pods */,
@@ -117,8 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				9727B42D1F30C08A00B271DF /* ZiMuZu.app */,
-				9727B4411F30C08A00B271DF /* ZiMuZuTests.xctest */,
 				9727B44C1F30C08A00B271DF /* ZiMuZuUITests.xctest */,
+				C159409A1F32F20700929B91 /* ZiMuZuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,15 +147,6 @@
 			path = ZiMuZu;
 			sourceTree = "<group>";
 		};
-		9727B4441F30C08A00B271DF /* ZiMuZuTests */ = {
-			isa = PBXGroup;
-			children = (
-				9727B4451F30C08A00B271DF /* ZiMuZuTests.swift */,
-				9727B4471F30C08A00B271DF /* Info.plist */,
-			);
-			path = ZiMuZuTests;
-			sourceTree = "<group>";
-		};
 		9727B44F1F30C08A00B271DF /* ZiMuZuUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +154,15 @@
 				9727B4521F30C08A00B271DF /* Info.plist */,
 			);
 			path = ZiMuZuUITests;
+			sourceTree = "<group>";
+		};
+		C159409B1F32F20700929B91 /* ZiMuZuTests */ = {
+			isa = PBXGroup;
+			children = (
+				C159409C1F32F20700929B91 /* ZiMuZuTests.swift */,
+				C159409E1F32F20700929B91 /* Info.plist */,
+			);
+			path = ZiMuZuTests;
 			sourceTree = "<group>";
 		};
 		C17E49C11F31643900F969B2 /* Profile */ = {
@@ -189,6 +197,7 @@
 				C17E49C91F31693200F969B2 /* ViewControllerConfig.swift */,
 				C10040DB1F31724700068142 /* BaseTabBarController.swift */,
 				C10040E51F31E86C00068142 /* ZiMuZuAPI.swift */,
+				C15940E51F330EA100929B91 /* TV.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -198,6 +207,8 @@
 			children = (
 				ADDAC9D39D2D54B823DAC200 /* Pods-ZiMuZu.debug.xcconfig */,
 				0158784D9F42A27500FF1D64 /* Pods-ZiMuZu.release.xcconfig */,
+				B2C5BDA30FD4529D4EDC464D /* Pods-ZiMuZuTests.debug.xcconfig */,
+				C16151FA4776D9C0E3A92CAA /* Pods-ZiMuZuTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -225,24 +236,6 @@
 			productReference = 9727B42D1F30C08A00B271DF /* ZiMuZu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9727B4401F30C08A00B271DF /* ZiMuZuTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9727B4581F30C08A00B271DF /* Build configuration list for PBXNativeTarget "ZiMuZuTests" */;
-			buildPhases = (
-				9727B43D1F30C08A00B271DF /* Sources */,
-				9727B43E1F30C08A00B271DF /* Frameworks */,
-				9727B43F1F30C08A00B271DF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9727B4431F30C08A00B271DF /* PBXTargetDependency */,
-			);
-			name = ZiMuZuTests;
-			productName = ZiMuZuTests;
-			productReference = 9727B4411F30C08A00B271DF /* ZiMuZuTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		9727B44B1F30C08A00B271DF /* ZiMuZuUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9727B45B1F30C08A00B271DF /* Build configuration list for PBXNativeTarget "ZiMuZuUITests" */;
@@ -261,6 +254,27 @@
 			productReference = 9727B44C1F30C08A00B271DF /* ZiMuZuUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C15940991F32F20700929B91 /* ZiMuZuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C15940A11F32F20700929B91 /* Build configuration list for PBXNativeTarget "ZiMuZuTests" */;
+			buildPhases = (
+				003BB5C44A1DA0639A24833A /* [CP] Check Pods Manifest.lock */,
+				C15940961F32F20700929B91 /* Sources */,
+				C15940971F32F20700929B91 /* Frameworks */,
+				C15940981F32F20700929B91 /* Resources */,
+				417A263D42344203FE263BEB /* [CP] Embed Pods Frameworks */,
+				F1FB9BA40D573C4A3C63D7BA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C15940A01F32F20700929B91 /* PBXTargetDependency */,
+			);
+			name = ZiMuZuTests;
+			productName = ZiMuZuTests;
+			productReference = C159409A1F32F20700929B91 /* ZiMuZuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -274,11 +288,11 @@
 					9727B42C1F30C08A00B271DF = {
 						CreatedOnToolsVersion = 9.0;
 					};
-					9727B4401F30C08A00B271DF = {
+					9727B44B1F30C08A00B271DF = {
 						CreatedOnToolsVersion = 9.0;
 						TestTargetID = 9727B42C1F30C08A00B271DF;
 					};
-					9727B44B1F30C08A00B271DF = {
+					C15940991F32F20700929B91 = {
 						CreatedOnToolsVersion = 9.0;
 						TestTargetID = 9727B42C1F30C08A00B271DF;
 					};
@@ -298,7 +312,7 @@
 			projectRoot = "";
 			targets = (
 				9727B42C1F30C08A00B271DF /* ZiMuZu */,
-				9727B4401F30C08A00B271DF /* ZiMuZuTests */,
+				C15940991F32F20700929B91 /* ZiMuZuTests */,
 				9727B44B1F30C08A00B271DF /* ZiMuZuUITests */,
 			);
 		};
@@ -315,14 +329,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9727B43F1F30C08A00B271DF /* Resources */ = {
+		9727B44A1F30C08A00B271DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9727B44A1F30C08A00B271DF /* Resources */ = {
+		C15940981F32F20700929B91 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -332,6 +346,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		003BB5C44A1DA0639A24833A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		1F06FC516349B2A90FBDDE20 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,6 +374,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		417A263D42344203FE263BEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZiMuZuTests/Pods-ZiMuZuTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9345B8D0043CA2ACBDBA781C /* [CP] Copy Pods Resources */ = {
@@ -377,6 +421,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		F1FB9BA40D573C4A3C63D7BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZiMuZuTests/Pods-ZiMuZuTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -387,20 +446,13 @@
 				C10040E21F31A8E400068142 /* SearchBar.swift in Sources */,
 				C10040E01F317BB800068142 /* SearchViewController.swift in Sources */,
 				9727B4311F30C08A00B271DF /* AppDelegate.swift in Sources */,
+				C15940E61F330EA100929B91 /* TV.swift in Sources */,
 				C10040E41F31AAD300068142 /* SearchController.swift in Sources */,
 				C10040E61F31E86C00068142 /* ZiMuZuAPI.swift in Sources */,
 				C10040DC1F31724700068142 /* BaseTabBarController.swift in Sources */,
 				C10040DE1F317AD200068142 /* ProfileViewController.swift in Sources */,
 				C17E49CA1F31693200F969B2 /* ViewControllerConfig.swift in Sources */,
 				C17E49C81F31663900F969B2 /* HomeViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9727B43D1F30C08A00B271DF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9727B4461F30C08A00B271DF /* ZiMuZuTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,18 +464,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C15940961F32F20700929B91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C159409D1F32F20700929B91 /* ZiMuZuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9727B4431F30C08A00B271DF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9727B42C1F30C08A00B271DF /* ZiMuZu */;
-			targetProxy = 9727B4421F30C08A00B271DF /* PBXContainerItemProxy */;
-		};
 		9727B44E1F30C08A00B271DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9727B42C1F30C08A00B271DF /* ZiMuZu */;
 			targetProxy = 9727B44D1F30C08A00B271DF /* PBXContainerItemProxy */;
+		};
+		C15940A01F32F20700929B91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9727B42C1F30C08A00B271DF /* ZiMuZu */;
+			targetProxy = C159409F1F32F20700929B91 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -584,43 +644,11 @@
 			};
 			name = Release;
 		};
-		9727B4591F30C08A00B271DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = R9P3557NQX;
-				INFOPLIST_FILE = ZiMuZuTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZuTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZiMuZu.app/ZiMuZu";
-			};
-			name = Debug;
-		};
-		9727B45A1F30C08A00B271DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = R9P3557NQX;
-				INFOPLIST_FILE = ZiMuZuTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZuTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZiMuZu.app/ZiMuZu";
-			};
-			name = Release;
-		};
 		9727B45C1F30C08A00B271DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = R9P3557NQX;
+				DEVELOPMENT_TEAM = QXJB9XPNQ5;
 				INFOPLIST_FILE = ZiMuZuUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZuUITests;
@@ -635,7 +663,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = R9P3557NQX;
+				DEVELOPMENT_TEAM = QXJB9XPNQ5;
 				INFOPLIST_FILE = ZiMuZuUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZuUITests;
@@ -643,6 +671,38 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ZiMuZu;
+			};
+			name = Release;
+		};
+		C15940A21F32F20700929B91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2C5BDA30FD4529D4EDC464D /* Pods-ZiMuZuTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QXJB9XPNQ5;
+				INFOPLIST_FILE = ZiMuZuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arbanban.ZiMuZuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZiMuZu.app/ZiMuZu";
+			};
+			name = Debug;
+		};
+		C15940A31F32F20700929B91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C16151FA4776D9C0E3A92CAA /* Pods-ZiMuZuTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QXJB9XPNQ5;
+				INFOPLIST_FILE = ZiMuZuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arbanban.ZiMuZuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZiMuZu.app/ZiMuZu";
 			};
 			name = Release;
 		};
@@ -667,20 +727,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9727B4581F30C08A00B271DF /* Build configuration list for PBXNativeTarget "ZiMuZuTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9727B4591F30C08A00B271DF /* Debug */,
-				9727B45A1F30C08A00B271DF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		9727B45B1F30C08A00B271DF /* Build configuration list for PBXNativeTarget "ZiMuZuUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9727B45C1F30C08A00B271DF /* Debug */,
 				9727B45D1F30C08A00B271DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C15940A11F32F20700929B91 /* Build configuration list for PBXNativeTarget "ZiMuZuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C15940A21F32F20700929B91 /* Debug */,
+				C15940A31F32F20700929B91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -18,7 +18,23 @@ final class HomeViewController: UIViewController {
         self.viewConfig()
         self.navigationConfig()
         self.title = "热门"
+        requestTvS()
     }
+    
+    
+    func requestTvS() {
+        zmzProvider.request(.tv_schedule()) { result in
+            do {
+                let response = try result.dematerialize()
+                let responseData = try response.mapJSON() as! Array<Any>
+                
+                
+            } catch {
+                
+            }
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

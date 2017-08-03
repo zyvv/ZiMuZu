@@ -11,6 +11,11 @@ import Moya
 
 let accesskey = "519f9cab85c8059d17544947k361a827"
 
+let customParameters = ["accesskey": accesskey,
+                        "client": "1",
+                        "g": "api/v2",
+                        "m": "index"]
+
 let zmzProvider = MoyaProvider<ZiMuZu>()
 
 public enum ZiMuZu {
@@ -18,49 +23,55 @@ public enum ZiMuZu {
 }
 
 extension ZiMuZu: TargetType {
-    public var baseURL: URL {
-        return URL(string: "https://api1.ousns.net/index.php")!
-    }
-    
-    public var path: String {
+    public var sampleData: Data {
         switch self {
         case .tv_schedule():
-            return "/"
-        default:
-            <#code#>
+            return "Half measures are as bad as nothing at all.".data(using: String.Encoding.utf8)!
         }
     }
     
-    public var method: Method {
-//        switch self {
-//        case :
-//            <#code#>
-//        default:
-//            <#code#>
-//        }
+    public var headers: [String : String]? {
+        return nil
+    }
+    
+    public var baseURL: URL {
+        return URL(string: "https://api1.ousns.net")!
+    }
+    
+    public var path: String {
+        return "index.php"
+    }
+    
+    public var method: Moya.Method {
+        return .get
     }
     
     public var parameters: [String : Any]? {
-        <#code#>
+        switch self {
+        case .tv_schedule():
+            return ["a": "tv_schedule", "start": today(), "end": today()].merging(customParameters) {(_, new) in new}
+        }
     }
     
     public var parameterEncoding: ParameterEncoding {
-        <#code#>
+        return URLEncoding.default
     }
-    
-    public var sampleData: Data {
-        <#code#>
-    }
-    
     public var task: Task {
-        <#code#>
+        return .request
     }
-    
-    public var headers: [String : String]? {
-        <#code#>
-    }
-    
-    
 }
 
+func today() -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "zh-CN")
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    return dateFormatter.string(from: Date())
+}
+
+func tomorrow() -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "zh-CN")
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    return dateFormatter.string(from: Date.init(timeIntervalSinceNow: 24 * 60 * 60))
+}
 

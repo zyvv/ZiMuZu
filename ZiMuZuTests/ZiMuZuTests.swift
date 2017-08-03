@@ -2,12 +2,11 @@
 //  ZiMuZuTests.swift
 //  ZiMuZuTests
 //
-//  Created by vi~ on 2017/8/1.
+//  Created by 张洋威 on 2017/8/3.
 //  Copyright © 2017年 zhangyangwei.com. All rights reserved.
 //
 
 import XCTest
-@testable import ZiMuZu
 
 class ZiMuZuTests: XCTestCase {
     
@@ -21,16 +20,21 @@ class ZiMuZuTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testZiMuZuAPIExist() {
+
+        
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testExample() {
+//        // This is an example of a functional test case.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    }
+//
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
 }

@@ -16,11 +16,14 @@ PODS:
 
 DEPENDENCIES:
   - Hue
-  - IGListKit (~> 3.0)
+  - IGListKit (from `https://github.com/Instagram/IGListKit.git`, branch `swift4`)
   - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`, branch `swift4`)
   - Moya (from `https://github.com/Moya/Moya.git`, branch `feature/swift4_support`)
 
 EXTERNAL SOURCES:
+  IGListKit:
+    :branch: swift4
+    :git: https://github.com/Instagram/IGListKit.git
   Kingfisher:
     :branch: swift4
     :git: https://github.com/onevcat/Kingfisher.git
@@ -29,6 +32,9 @@ EXTERNAL SOURCES:
     :git: https://github.com/Moya/Moya.git
 
 CHECKOUT OPTIONS:
+  IGListKit:
+    :commit: 895de471bac0b04fa4d255ccf138b748defc5456
+    :git: https://github.com/Instagram/IGListKit.git
   Kingfisher:
     :commit: abc208e8609f52058d56f8e8331538c4fcc2b779
     :git: https://github.com/onevcat/Kingfisher.git
@@ -44,6 +50,6 @@ SPEC CHECKSUMS:
   Moya: d104801616468247e5a9abd258c838c5ca6b1389
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
 
-PODFILE CHECKSUM: 60dc2de8e5789f7b8a7cbf7cadcc6933bef95df2
+PODFILE CHECKSUM: e647e39ba4339fcb026f086e60aaf783f62585c7
 
 COCOAPODS: 1.2.0.beta.3

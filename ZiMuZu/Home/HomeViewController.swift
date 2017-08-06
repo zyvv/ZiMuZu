@@ -8,29 +8,66 @@
 
 import UIKit
 import IGListKit
+import SwiftyJSON
 
+final class HomeViewController: UIViewController, ListAdapterDataSource {
 
-final class HomeViewController: UIViewController {
-
+    lazy var adapter: ListAdapter = {
+        return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 1)
+    }()
+    
+    lazy var data: [TodayTVs] = []
+    
+    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.viewConfig()
         self.navigationConfig()
         self.title = "热门"
+        collectionView.backgroundColor = UIColor.clear
+        view.addSubview(collectionView)
+        adapter.collectionView = collectionView
+        adapter.dataSource = self
+        
         requestTvS()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.frame = view.bounds
+    }
+    
+    // MARK: ListAdapterDataSource
+    
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        return data as [ListDiffable]
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        // note that each child section controller is designed to handle an Int (or no data)
+        let sectionController = ListStackedSectionController(sectionControllers: [
+            HomeSectionController(),
+            ])
+//        sectionController.inset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        return sectionController
+    }
+    
+    func emptyView(for listAdapter: ListAdapter) -> UIView? { return nil }
     
     
     func requestTvS() {
         zmzProvider.request(.tv_schedule()) { result in
             do {
-                let response = try result.dematerialize()
-                let responseData = try response.mapJSON() as! Array<Any>
-                
+                if case let .success(response) = result {
+                    let tvs = try JSONDecoder().decode(TVSchedule.self, from: response.data)
+                    self.data.append(TodayTVs(tvs: tvs.data.todayTVs))
+                    self.adapter.performUpdates(animated: true, completion: nil)
+                }
                 
             } catch {
-                
+                print(error)
             }
         }
     }

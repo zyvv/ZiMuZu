@@ -12,6 +12,11 @@
 		9727B4381F30C08A00B271DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9727B4371F30C08A00B271DF /* Assets.xcassets */; };
 		9727B43B1F30C08A00B271DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9727B4391F30C08A00B271DF /* LaunchScreen.storyboard */; };
 		9727B4511F30C08A00B271DF /* ZiMuZuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9727B4501F30C08A00B271DF /* ZiMuZuUITests.swift */; };
+		97D4EBAF1F36A3C00067E25D /* HomeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EBAE1F36A3C00067E25D /* HomeSectionController.swift */; };
+		97D4EBB21F36A4070067E25D /* TVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EBB01F36A4070067E25D /* TVCell.swift */; };
+		97D4EBB31F36A4070067E25D /* TVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D4EBB11F36A4070067E25D /* TVCell.xib */; };
+		97D4EBB51F36A9340067E25D /* HomeEmbeddedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EBB41F36A9340067E25D /* HomeEmbeddedCollectionViewCell.swift */; };
+		97D4EBB71F36B51B0067E25D /* HomeEmbeddedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EBB61F36B51B0067E25D /* HomeEmbeddedSectionController.swift */; };
 		A17503B09089A4F9BFC16157 /* Pods_ZiMuZu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680CCB0B9876F22E9F7EE5CA /* Pods_ZiMuZu.framework */; };
 		A301AEEDE914A33EAA4467B2 /* Pods_ZiMuZuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F73336619A52438D3CCC60 /* Pods_ZiMuZuTests.framework */; };
 		C10040DC1F31724700068142 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040DB1F31724700068142 /* BaseTabBarController.swift */; };
@@ -56,6 +61,11 @@
 		9727B44C1F30C08A00B271DF /* ZiMuZuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9727B4501F30C08A00B271DF /* ZiMuZuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuUITests.swift; sourceTree = "<group>"; };
 		9727B4521F30C08A00B271DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97D4EBAE1F36A3C00067E25D /* HomeSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionController.swift; sourceTree = "<group>"; };
+		97D4EBB01F36A4070067E25D /* TVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCell.swift; sourceTree = "<group>"; };
+		97D4EBB11F36A4070067E25D /* TVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVCell.xib; sourceTree = "<group>"; };
+		97D4EBB41F36A9340067E25D /* HomeEmbeddedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmbeddedCollectionViewCell.swift; sourceTree = "<group>"; };
+		97D4EBB61F36B51B0067E25D /* HomeEmbeddedSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmbeddedSectionController.swift; sourceTree = "<group>"; };
 		ADDAC9D39D2D54B823DAC200 /* Pods-ZiMuZu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu.debug.xcconfig"; sourceTree = "<group>"; };
 		B2C5BDA30FD4529D4EDC464D /* Pods-ZiMuZuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZuTests/Pods-ZiMuZuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C10040DB1F31724700068142 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
@@ -187,6 +197,11 @@
 			isa = PBXGroup;
 			children = (
 				C17E49C71F31663900F969B2 /* HomeViewController.swift */,
+				97D4EBAE1F36A3C00067E25D /* HomeSectionController.swift */,
+				97D4EBB01F36A4070067E25D /* TVCell.swift */,
+				97D4EBB11F36A4070067E25D /* TVCell.xib */,
+				97D4EBB61F36B51B0067E25D /* HomeEmbeddedSectionController.swift */,
+				97D4EBB41F36A9340067E25D /* HomeEmbeddedCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -324,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9727B43B1F30C08A00B271DF /* LaunchScreen.storyboard in Resources */,
+				97D4EBB31F36A4070067E25D /* TVCell.xib in Resources */,
 				9727B4381F30C08A00B271DF /* Assets.xcassets in Resources */,
 				9727B4361F30C08A00B271DF /* Main.storyboard in Resources */,
 			);
@@ -443,14 +459,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D4EBB71F36B51B0067E25D /* HomeEmbeddedSectionController.swift in Sources */,
 				C10040E21F31A8E400068142 /* SearchBar.swift in Sources */,
 				C10040E01F317BB800068142 /* SearchViewController.swift in Sources */,
 				9727B4311F30C08A00B271DF /* AppDelegate.swift in Sources */,
 				C15940E61F330EA100929B91 /* TV.swift in Sources */,
 				C10040E41F31AAD300068142 /* SearchController.swift in Sources */,
 				C10040E61F31E86C00068142 /* ZiMuZuAPI.swift in Sources */,
+				97D4EBB51F36A9340067E25D /* HomeEmbeddedCollectionViewCell.swift in Sources */,
 				C10040DC1F31724700068142 /* BaseTabBarController.swift in Sources */,
+				97D4EBAF1F36A3C00067E25D /* HomeSectionController.swift in Sources */,
 				C10040DE1F317AD200068142 /* ProfileViewController.swift in Sources */,
+				97D4EBB21F36A4070067E25D /* TVCell.swift in Sources */,
 				C17E49CA1F31693200F969B2 /* ViewControllerConfig.swift in Sources */,
 				C17E49C81F31663900F969B2 /* HomeViewController.swift in Sources */,
 			);

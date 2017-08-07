@@ -17,6 +17,24 @@ final class News: NSObject, Codable {
     let poster: URL?
     let type_cn: String?
     
+    lazy var datelineString: String = {
+        let duratinInterval = Date().timeIntervalSince1970 - Double(dateline ?? "0.0")!
+        switch duratinInterval {
+        case 0..<60:
+            return "刚刚"
+        case 60..<3600:
+            return "\(Int(duratinInterval / 60.0))分钟前"
+        case 3600..<24*3600:
+            return "\(Int(duratinInterval / (3600.0)))小时前"
+        case 24*3600..<24*3600*7:
+            return "\(Int(duratinInterval / (24 * 3600.0)))天前"
+        case 24*3600*7..<24*3600*7*4:
+            return "\(Int(duratinInterval / (24 * 3600 * 7.0)))周前"
+        default:
+            return "\(Int(duratinInterval / (24 * 3600 * 365.0)))年前"
+        }
+    }()
+    
     override init() {
         self.title = nil
         self.id = nil

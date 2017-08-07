@@ -104,7 +104,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H0K-vA-Css" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tabbar_profile" id="QOL-zT-vjA">
-                        <color key="badgeColor" red="1" green="0.0" blue="0.25425197838429625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="badgeColor" red="1" green="0.0" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oqa-Vb-9P9">

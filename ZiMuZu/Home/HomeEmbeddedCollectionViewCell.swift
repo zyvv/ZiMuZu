@@ -25,6 +25,7 @@ final class HomeEmbeddedCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         collectionView.frame = contentView.frame
+        collectionView.backgroundColor = UIColor.yellow
     }
 
 }

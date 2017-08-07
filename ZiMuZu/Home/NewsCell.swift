@@ -19,6 +19,8 @@ class NewsCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        posterImageView.layer.cornerRadius = 5
+        posterImageView.layer.masksToBounds = true
     }
 
 }

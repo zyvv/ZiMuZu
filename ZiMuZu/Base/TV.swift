@@ -17,6 +17,7 @@ final class TV: NSObject, Decodable {
     let id: String?
     let play_time: String?
     let poster: URL?
+    let title: String?
     
     override init() {
         self.cnname = nil
@@ -26,6 +27,7 @@ final class TV: NSObject, Decodable {
         self.id = nil
         self.play_time = nil
         self.poster = nil
+        self.title = nil
     }
 }
 
@@ -40,6 +42,20 @@ extension TV: ListDiffable {
     }
 }
 
+struct TVScheduleDataCodingOptions {
+    enum TVScheduleDataType: String {
+        case todayList = "today"
+        case favWeekList = "fav_week_list"
+        case tvWeekList = "tv_week_list"
+        case movieMonthList = "movie_month_list"
+        case tvTotalList = "tv_total_list"
+        case hotJapanList = "hot_japan_list"
+        case playing = "playing"
+    }
+    let tvScheduleDataType = TVScheduleDataType.todayList
+    static let key = CodingUserInfoKey(rawValue: "TVScheduleDataCodingOption")!
+}
+
 struct TVScheduleData: Codable {
     
     struct ScheduleDateKey : CodingKey {
@@ -49,17 +65,26 @@ struct TVScheduleData: Codable {
         }
         var intValue: Int? { return nil }
         init?(intValue: Int) { return nil }
-        
-        static let todayTVs = ScheduleDateKey(stringValue: today())!
     }
     
-    var todayTVs: [TV] = []
+    var tvs: [TV] = []
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: ScheduleDateKey.self)
         do {
-            let todayTVs = try container.decode([TV].self, forKey: .todayTVs)
-            self.todayTVs = todayTVs
+            
+            var scheduleKey = today()
+            guard let scheduleOptionKey: TVScheduleDataCodingOptions.TVScheduleDataType = decoder.userInfo[TVScheduleDataCodingOptions.key] as? TVScheduleDataCodingOptions.TVScheduleDataType else {
+                return
+            }
+            
+            if scheduleOptionKey != TVScheduleDataCodingOptions.TVScheduleDataType.todayList {
+                scheduleKey = scheduleOptionKey.rawValue
+            }
+            
+            let tvs = try container.decode([TV].self, forKey: TVScheduleData.ScheduleDateKey(stringValue: scheduleKey)!)
+            self.tvs = tvs
+            
         } catch {
             print(error)
         }
@@ -75,14 +100,20 @@ struct TVSchedule: Codable {
     let status: Int
 }
 
-final class TodayTVs {
-    let tvs: [TV]
-    init(tvs: [TV]) {
+final class TVs {
+    
+    let tvs: [Any]
+    let title: String
+    let handle: String
+    
+    init(tvs: [Any], title: String, handle: String) {
         self.tvs = tvs
+        self.title = title
+        self.handle = handle
     }
 }
 
-extension TodayTVs: ListDiffable {
+extension TVs: ListDiffable {
     func diffIdentifier() -> NSObjectProtocol {
         return self as! NSObjectProtocol
     }

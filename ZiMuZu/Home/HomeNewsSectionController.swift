@@ -1,21 +1,21 @@
 //
-//  HomeSectionController.swift
+//  HomeNewsSectionController.swift
 //  ZiMuZu
 //
-//  Created by vi~ on 2017/8/6.
+//  Created by 张洋威 on 2017/8/7.
 //  Copyright © 2017年 zhangyangwei.com. All rights reserved.
 //
 
 import UIKit
 import IGListKit
 
-final class HomeSectionController: ListSectionController, ListAdapterDataSource, ListSupplementaryViewSource {
-
-    private var tvs: TVs = TVs(tvs: [], title: "", handle: "")
-
+class HomeNewsSectionController: ListSectionController, ListAdapterDataSource, ListSupplementaryViewSource {
+    
+    private var news: TVs = TVs(tvs: [], title: "", handle: "")
+    
     lazy var adapter: ListAdapter = {
         let adapter = ListAdapter(updater: ListAdapterUpdater(),
-                                    viewController: self.viewController)
+                                  viewController: self.viewController)
         adapter.dataSource = self
         return adapter
     }()
@@ -24,39 +24,37 @@ final class HomeSectionController: ListSectionController, ListAdapterDataSource,
         super.init()
         supplementaryViewSource = self
     }
-
+    
     override func sizeForItem(at index: Int) -> CGSize {
         let width = collectionContext!.containerSize.width
-        return CGSize(width: width, height: (width - 20)/2.0)
+        return CGSize(width: width, height: (width - 60)*(9/16.0)+135)
     }
-
+    
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         guard let cell = collectionContext?.dequeueReusableCell(of: HomeEmbeddedCollectionViewCell.self,
-                                                          for: self,
-                                                          at: index) as? HomeEmbeddedCollectionViewCell else {
-                                                            fatalError()
+                                                                for: self,
+                                                                at: index) as? HomeEmbeddedCollectionViewCell else {
+                                                                    fatalError()
         }
         adapter.collectionView = cell.collectionView
         return cell
     }
     
     override func didUpdate(to object: Any) {
-        tvs = object as! TVs
+        news = object as! TVs
     }
-
+    
     // MARK: ListAdapterDataSource
-
+    
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        if tvs.tvs.count > 10 {
-            return Array(tvs.tvs[..<10]) as! [ListDiffable]
-        }
-        return tvs.tvs as! [ListDiffable]
-    }
 
+        return news.tvs as! [ListDiffable]
+    }
+    
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return HomeEmbeddedSectionController()
+        return HomeNewsEmbeddedSectionController()
     }
-
+    
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return nil
     }
@@ -74,8 +72,8 @@ final class HomeSectionController: ListSectionController, ListAdapterDataSource,
                                                                                  at: index) as? HomeHeaderView else {
                                                                                     fatalError()
             }
-            view.name = tvs.title
-            view.handle = tvs.handle
+            view.name = news.title
+            view.handle = news.handle
             return view
         }
         let view = collectionContext?.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, for: self, class:UICollectionViewCell.self, at: index)
@@ -88,6 +86,4 @@ final class HomeSectionController: ListSectionController, ListAdapterDataSource,
         }
         return CGSize(width: collectionContext!.containerSize.width, height: 30)
     }
-
 }
-

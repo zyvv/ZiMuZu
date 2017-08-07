@@ -20,6 +20,8 @@ let zmzProvider = MoyaProvider<ZiMuZu>()
 
 public enum ZiMuZu {
     case tv_schedule()
+    case top()
+    case articleList(page: Int)
 }
 
 extension ZiMuZu: TargetType {
@@ -27,6 +29,10 @@ extension ZiMuZu: TargetType {
         switch self {
         case .tv_schedule():
             return "Half measures are as bad as nothing at all.".data(using: String.Encoding.utf8)!
+        case .top():
+            return "".data(using: String.Encoding.utf8)!
+        case .articleList( _):
+            return "".data(using: String.Encoding.utf8)!
         }
     }
     
@@ -50,6 +56,10 @@ extension ZiMuZu: TargetType {
         switch self {
         case .tv_schedule():
             return ["a": "tv_schedule", "start": today(), "end": today()].merging(customParameters) {(_, new) in new}
+        case .top():
+            return ["a": "top"].merging(customParameters) {(_, new) in new}
+        case .articleList(let page):
+            return ["a": "article_list", "page": page].merging(customParameters) {(_, new) in new}
         }
     }
     

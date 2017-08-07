@@ -16,7 +16,7 @@ class HomeEmbeddedSectionController: ListSectionController {
     
     override init() {
         super.init()
-        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        self.inset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
@@ -29,7 +29,11 @@ class HomeEmbeddedSectionController: ListSectionController {
             fatalError()
         }
 
-        cell.cnName.text = tv?.cnname
+        if tv?.cnname != nil {
+           cell.cnName.text = tv?.cnname
+        } else {
+            cell.cnName.text = tv?.title
+        }
         cell.poster.kf.setImage(with: tv?.poster)
         return cell
     }

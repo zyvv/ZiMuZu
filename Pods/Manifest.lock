@@ -13,14 +13,12 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - Result (3.2.1)
-  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Hue
   - IGListKit (from `https://github.com/Instagram/IGListKit.git`, branch `swift4`)
   - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`, branch `swift4`)
   - Moya (from `https://github.com/Moya/Moya.git`)
-  - SwiftyJSON
 
 EXTERNAL SOURCES:
   IGListKit:
@@ -50,8 +48,7 @@ SPEC CHECKSUMS:
   Kingfisher: dbfac2b5dec4a531822e0ba8b571ce6010616075
   Moya: d104801616468247e5a9abd258c838c5ca6b1389
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 94e0ada993ce16bc2e989c9f84d1de42ec3dfb23
+PODFILE CHECKSUM: 361e988393edc9cf5de95a0ab41e0cebc06f4cf8
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0.beta.3

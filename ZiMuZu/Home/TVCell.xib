@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="216" height="350"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="duz-ip-m8Z">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="duz-ip-m8Z">
                         <rect key="frame" x="0.0" y="0.0" width="216" height="317.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="duz-ip-m8Z" secondAttribute="height" multiplier="17:25" id="XVM-Ub-Rfk"/>

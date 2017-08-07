@@ -7,7 +7,6 @@ use_frameworks!
 def pods
     pod 'IGListKit', :git => 'https://github.com/Instagram/IGListKit.git', :branch => 'swift4'
     pod 'Hue'
-    pod 'SwiftyJSON'
     pod 'Kingfisher',:git => 'https://github.com/onevcat/Kingfisher.git', :branch => 'swift4'
     pod 'Moya', :git => 'https://github.com/Moya/Moya.git'
 end

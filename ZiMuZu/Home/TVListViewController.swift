@@ -25,7 +25,7 @@ class TVListViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Register cell classes
-        self.collectionView!.register(TVCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UINib.init(nibName: reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         // Do any additional setup after loading the view.
     }
 
@@ -62,13 +62,10 @@ class TVListViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TVCell
         // Configure the cell
         let tv = dataArray![indexPath.item]
-
         if tv.cnname != nil {
-            cell.cnName?.text = tv.cnname!
-        }
-
-        if tv.title != nil {
-            cell.cnName?.text = tv.title!
+            cell.cnName.text = tv.cnname
+        } else {
+            cell.cnName.text = tv.title
         }
         cell.poster?.kf.setImage(with: tv.poster)
         

@@ -49,13 +49,13 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="IcF-yq-ko8" secondAttribute="trailing" id="1Br-ql-Lxm"/>
                 <constraint firstItem="Jet-Qw-ds7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="1wW-av-uVo"/>
-                <constraint firstAttribute="bottom" secondItem="8yf-RM-d4j" secondAttribute="bottom" constant="5" id="3s0-6n-3fw"/>
-                <constraint firstAttribute="trailing" secondItem="jaf-zq-H36" secondAttribute="trailing" id="AcT-iL-B8m"/>
+                <constraint firstAttribute="trailing" secondItem="jaf-zq-H36" secondAttribute="trailing" constant="5" id="AcT-iL-B8m"/>
                 <constraint firstItem="jaf-zq-H36" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Gi1-zv-erE"/>
                 <constraint firstItem="8yf-RM-d4j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Ku9-jK-VsI"/>
                 <constraint firstItem="IcF-yq-ko8" firstAttribute="top" secondItem="Jet-Qw-ds7" secondAttribute="bottom" constant="5" id="W9p-G5-QXj"/>
                 <constraint firstItem="Jet-Qw-ds7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="X50-42-8Ig"/>
                 <constraint firstItem="jaf-zq-H36" firstAttribute="top" secondItem="IcF-yq-ko8" secondAttribute="bottom" constant="10" id="g5L-cF-Dz1"/>
+                <constraint firstItem="8yf-RM-d4j" firstAttribute="top" secondItem="jaf-zq-H36" secondAttribute="bottom" constant="5" id="jZg-LP-h19"/>
                 <constraint firstItem="IcF-yq-ko8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ktC-iz-z3h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

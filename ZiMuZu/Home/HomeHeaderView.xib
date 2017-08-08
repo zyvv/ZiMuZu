@@ -15,29 +15,33 @@
             <rect key="frame" x="0.0" y="0.0" width="391" height="105"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXW-kS-rfe">
-                    <rect key="frame" x="376.5" y="53" width="0.0" height="0.0"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP3-BM-kge">
                     <rect key="frame" x="15" y="53" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="right" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsg-8k-BGD">
+                    <rect key="frame" x="346" y="37" width="30" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="handleButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="C5A-0d-KXW"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="cP3-BM-kge" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="LiL-FQ-pZ4"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sXW-kS-rfe" secondAttribute="trailing" constant="15" id="OFh-pn-BrY"/>
                 <constraint firstItem="cP3-BM-kge" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="kVM-IL-V0P"/>
-                <constraint firstItem="sXW-kS-rfe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pJA-Pg-th5"/>
+                <constraint firstItem="tsg-8k-BGD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="r5Y-7V-deQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tsg-8k-BGD" secondAttribute="trailing" constant="15" id="rU6-SQ-xGI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="handleLabel" destination="sXW-kS-rfe" id="7mD-jE-CrT"/>
+                <outlet property="handleButton" destination="tsg-8k-BGD" id="HUk-ac-dKs"/>
                 <outlet property="nameLabel" destination="cP3-BM-kge" id="33J-m7-aTt"/>
             </connections>
             <point key="canvasLocation" x="0.5" y="2.5"/>

@@ -8,10 +8,30 @@
 
 import UIKit
 
-class HomeHeaderView: UICollectionViewCell {
+class HomeHeaderView: UICollectionReusableView {
 
     @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var handleLabel: UILabel!
+    @IBOutlet private weak var handleButton: UIButton!
+    
+     typealias ClickButton = () -> Void
+    
+    var clickButton: ClickButton?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    @IBAction func handleButtonAction(_ sender: Any) {
+        guard let clickButton = clickButton else {
+            return
+        }
+        clickButton()
+    }
+    
+    func tapHandleButton(callBack: @escaping ClickButton) {
+        clickButton = callBack
+    }
+    
     
     var name: String? {
         get {
@@ -24,11 +44,13 @@ class HomeHeaderView: UICollectionViewCell {
     
     var handle: String? {
         get {
-            return handleLabel.text
+            return handleButton.titleLabel?.text
         }
         set {
-            handleLabel.text = newValue
+            handleButton.setTitle(newValue, for: .normal)
         }
     }
-
+    
+//    var tapHandleButton: () -> (Void)
+    
 }

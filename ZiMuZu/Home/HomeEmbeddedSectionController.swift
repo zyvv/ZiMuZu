@@ -43,3 +43,21 @@ class HomeEmbeddedSectionController: ListSectionController {
     }
 
 }
+
+final class HomeEmbeddedCollectionViewCell: UICollectionViewCell {
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.backgroundColor = .clear
+        view.showsHorizontalScrollIndicator = false
+        self.contentView.addSubview(view)
+        return view
+    }()
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        collectionView.frame = contentView.frame
+    }
+}

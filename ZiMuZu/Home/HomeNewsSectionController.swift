@@ -27,17 +27,16 @@ class HomeNewsSectionController: ListSectionController, ListAdapterDataSource, L
     
     override func sizeForItem(at index: Int) -> CGSize {
         let width = collectionContext!.containerSize.width
-        return CGSize(width: width, height: (width - 60)*(9/16.0)+110)
+        return CGSize(width: width, height: (newsItemWidth)*(9/16.0)+110)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        guard let cell = collectionContext?.dequeueReusableCell(of: HomeEmbeddedCollectionViewCell.self,
+        guard let cell = collectionContext?.dequeueReusableCell(of: HomeNewsEmbeddedCollectionViewCell.self,
                                                                 for: self,
-                                                                at: index) as? HomeEmbeddedCollectionViewCell else {
+                                                                at: index) as? HomeNewsEmbeddedCollectionViewCell else {
                                                                     fatalError()
         }
         adapter.collectionView = cell.collectionView
-        adapter.collectionView?.isPagingEnabled = true
         return cell
     }
     
@@ -49,7 +48,7 @@ class HomeNewsSectionController: ListSectionController, ListAdapterDataSource, L
     
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
 
-        return [news] as! [ListDiffable]
+        return [news] as [ListDiffable]
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {

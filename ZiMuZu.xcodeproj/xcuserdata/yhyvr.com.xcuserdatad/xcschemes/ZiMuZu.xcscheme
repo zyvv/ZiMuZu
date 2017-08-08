@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9727B4401F30C08A00B271DF"
+               BlueprintIdentifier = "C15940991F32F20700929B91"
                BuildableName = "ZiMuZuTests.xctest"
                BlueprintName = "ZiMuZuTests"
                ReferencedContainer = "container:ZiMuZu.xcodeproj">

@@ -15,7 +15,6 @@
 		97D4EBAF1F36A3C00067E25D /* HomeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EBAE1F36A3C00067E25D /* HomeSectionController.swift */; };
 		97D4EBB21F36A4070067E25D /* TVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EBB01F36A4070067E25D /* TVCell.swift */; };
 		97D4EBB31F36A4070067E25D /* TVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D4EBB11F36A4070067E25D /* TVCell.xib */; };
-		97D4EBB51F36A9340067E25D /* HomeEmbeddedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EBB41F36A9340067E25D /* HomeEmbeddedCollectionViewCell.swift */; };
 		97D4EBB71F36B51B0067E25D /* HomeEmbeddedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EBB61F36B51B0067E25D /* HomeEmbeddedSectionController.swift */; };
 		A17503B09089A4F9BFC16157 /* Pods_ZiMuZu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680CCB0B9876F22E9F7EE5CA /* Pods_ZiMuZu.framework */; };
 		A301AEEDE914A33EAA4467B2 /* Pods_ZiMuZuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F73336619A52438D3CCC60 /* Pods_ZiMuZuTests.framework */; };
@@ -27,6 +26,7 @@
 		C10040E61F31E86C00068142 /* ZiMuZuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040E51F31E86C00068142 /* ZiMuZuAPI.swift */; };
 		C129FCF71F38383800F3E629 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C129FCF61F38383800F3E629 /* HomeHeaderView.swift */; };
 		C129FCF91F38384B00F3E629 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C129FCF81F38384B00F3E629 /* HomeHeaderView.xib */; };
+		C132117F1F39C60A00D788AD /* TVListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132117E1F39C60A00D788AD /* TVListViewController.swift */; };
 		C159409D1F32F20700929B91 /* ZiMuZuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159409C1F32F20700929B91 /* ZiMuZuTests.swift */; };
 		C15940E61F330EA100929B91 /* TV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15940E51F330EA100929B91 /* TV.swift */; };
 		C174E6C51F38529300921434 /* HomeListSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174E6C41F38529300921434 /* HomeListSectionController.swift */; };
@@ -74,7 +74,6 @@
 		97D4EBAE1F36A3C00067E25D /* HomeSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionController.swift; sourceTree = "<group>"; };
 		97D4EBB01F36A4070067E25D /* TVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCell.swift; sourceTree = "<group>"; };
 		97D4EBB11F36A4070067E25D /* TVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVCell.xib; sourceTree = "<group>"; };
-		97D4EBB41F36A9340067E25D /* HomeEmbeddedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmbeddedCollectionViewCell.swift; sourceTree = "<group>"; };
 		97D4EBB61F36B51B0067E25D /* HomeEmbeddedSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmbeddedSectionController.swift; sourceTree = "<group>"; };
 		ADDAC9D39D2D54B823DAC200 /* Pods-ZiMuZu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu.debug.xcconfig"; sourceTree = "<group>"; };
 		B2C5BDA30FD4529D4EDC464D /* Pods-ZiMuZuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZuTests/Pods-ZiMuZuTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		C10040E51F31E86C00068142 /* ZiMuZuAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuAPI.swift; sourceTree = "<group>"; };
 		C129FCF61F38383800F3E629 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		C129FCF81F38384B00F3E629 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		C132117E1F39C60A00D788AD /* TVListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVListViewController.swift; sourceTree = "<group>"; };
 		C159409A1F32F20700929B91 /* ZiMuZuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C159409C1F32F20700929B91 /* ZiMuZuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuTests.swift; sourceTree = "<group>"; };
 		C159409E1F32F20700929B91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -224,13 +224,13 @@
 				97D4EBB11F36A4070067E25D /* TVCell.xib */,
 				97D4EBB61F36B51B0067E25D /* HomeEmbeddedSectionController.swift */,
 				C174E6CE1F386E9100921434 /* HomeNewsEmbeddedSectionController.swift */,
-				97D4EBB41F36A9340067E25D /* HomeEmbeddedCollectionViewCell.swift */,
 				C129FCF61F38383800F3E629 /* HomeHeaderView.swift */,
 				C129FCF81F38384B00F3E629 /* HomeHeaderView.xib */,
 				C174E6C61F3852E500921434 /* HomeListCell.swift */,
 				C174E6C71F3852E500921434 /* HomeListCell.xib */,
 				C174E6D01F386EC800921434 /* NewsCell.swift */,
 				C174E6D11F386EC800921434 /* NewsCell.xib */,
+				C132117E1F39C60A00D788AD /* TVListViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -505,8 +505,8 @@
 				C174E6D21F386EC800921434 /* NewsCell.swift in Sources */,
 				C174E6C81F3852E500921434 /* HomeListCell.swift in Sources */,
 				C174E6C51F38529300921434 /* HomeListSectionController.swift in Sources */,
-				97D4EBB51F36A9340067E25D /* HomeEmbeddedCollectionViewCell.swift in Sources */,
 				C10040DC1F31724700068142 /* BaseTabBarController.swift in Sources */,
+				C132117F1F39C60A00D788AD /* TVListViewController.swift in Sources */,
 				97D4EBAF1F36A3C00067E25D /* HomeSectionController.swift in Sources */,
 				C174E6CF1F386E9100921434 /* HomeNewsEmbeddedSectionController.swift in Sources */,
 				C10040DE1F317AD200068142 /* ProfileViewController.swift in Sources */,

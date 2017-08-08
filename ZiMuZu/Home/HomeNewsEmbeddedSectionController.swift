@@ -10,14 +10,17 @@ import UIKit
 import IGListKit
 import Kingfisher
 
+let newsSectionInsetsWidth: CGFloat = 20.0
+let newsMiniLineSpacing: CGFloat = 10.0
+var newsItemWidth: CGFloat = (kScreenWidth - 2 * newsSectionInsetsWidth)
+
 class HomeNewsEmbeddedSectionController: ListSectionController {
     private var tvs: TVs?
     
     override init() {
         super.init()
-        self.inset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-        self.minimumInteritemSpacing = 0
-        self.minimumLineSpacing = 0
+        self.inset = UIEdgeInsets(top: 0, left: newsSectionInsetsWidth, bottom: 0, right: newsSectionInsetsWidth)
+        self.minimumLineSpacing = newsMiniLineSpacing
     }
     
     override func numberOfItems() -> Int {
@@ -26,7 +29,7 @@ class HomeNewsEmbeddedSectionController: ListSectionController {
     
     override func sizeForItem(at index: Int) -> CGSize {
         let height = collectionContext?.containerSize.height ?? 0
-        return CGSize(width: (collectionContext?.containerSize.width)! - 0, height: height)
+        return CGSize(width: newsItemWidth, height: height)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
@@ -38,12 +41,50 @@ class HomeNewsEmbeddedSectionController: ListSectionController {
         cell.newsType.text = news.type_cn
         cell.posterImageView.kf.setImage(with: news.poster)
         cell.postDate.text = news.datelineString
-        cell.backgroundColor = UIColor.red
         return cell
     }
     
     override func didUpdate(to object: Any) {
         tvs = object as? TVs
     }
-
 }
+
+final class HomeNewsEmbeddedCollectionViewCell: UICollectionViewCell {
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = HomeNewsLayout()
+        layout.scrollDirection = .horizontal
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.backgroundColor = .clear
+        view.showsHorizontalScrollIndicator = false
+        self.contentView.addSubview(view)
+        return view
+    }()
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        collectionView.frame = contentView.frame
+    }
+}
+
+final class HomeNewsLayout: UICollectionViewFlowLayout {
+    
+    override func prepare() {
+        super.prepare()
+    }
+    
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+        if velocity.x == 0 {
+            return proposedContentOffset
+        }
+        var index: Float
+        if velocity.x > 0 {
+            index = ceil(Float((proposedContentOffset.x - newsSectionInsetsWidth - newsItemWidth * 0.3) / (newsItemWidth + newsMiniLineSpacing)))
+        } else {
+            index = floor(Float((proposedContentOffset.x - newsSectionInsetsWidth - newsItemWidth * 0.7) / (newsItemWidth + newsMiniLineSpacing)))
+        }
+        return CGPoint(x: CGFloat(index) * CGFloat(newsItemWidth + newsMiniLineSpacing), y: 0)
+    }
+    
+}
+

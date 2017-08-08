@@ -27,11 +27,16 @@ extension UIViewController {
         navigationController?.navigationBar.shadowImage = nil
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)]
-        navigationController?.navigationBar.tintColor = nil
-        
+        navigationController?.navigationBar.tintColor = UIColor.white
+//        UINavigationBar.appearance().tin
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .automatic
+        if navigationController?.viewControllers.count == 1 {
+            navigationItem.largeTitleDisplayMode = .automatic
+        } else {
+            navigationItem.largeTitleDisplayMode = .never
+        }
+        
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
 }

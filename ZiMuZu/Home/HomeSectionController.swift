@@ -76,6 +76,12 @@ final class HomeSectionController: ListSectionController, ListAdapterDataSource,
             }
             view.name = tvs.title
             view.handle = tvs.handle
+            view.tapHandleButton {
+                let vc = TVListViewController(collectionViewLayout: UICollectionViewFlowLayout())
+                vc.title = self.tvs.title
+                vc.dataArray = self.tvs.tvs as? [TV]
+                self.viewController?.navigationController?.pushViewController(vc, animated: true)
+            }
             return view
         }
         let view = collectionContext?.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, for: self, class:UICollectionViewCell.self, at: index)

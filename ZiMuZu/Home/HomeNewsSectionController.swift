@@ -74,6 +74,12 @@ class HomeNewsSectionController: ListSectionController, ListAdapterDataSource, L
             }
             view.name = news.title
             view.handle = news.handle
+            view.tapHandleButton {
+                let vc = NewsListTableViewController(style: .plain)
+                vc.title = self.news.title
+                vc.dataArray = self.news.tvs as? [News]
+                self.viewController?.navigationController?.pushViewController(vc, animated: true)
+            }
             return view
         }
         let view = collectionContext?.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, for: self, class:UICollectionViewCell.self, at: index)

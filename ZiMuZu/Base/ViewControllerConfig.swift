@@ -26,9 +26,8 @@ extension UIViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.shadowImage = nil
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20)]
         navigationController?.navigationBar.tintColor = UIColor.white
-//        UINavigationBar.appearance().tin
         
         navigationController?.navigationBar.prefersLargeTitles = true
         if navigationController?.viewControllers.count == 1 {

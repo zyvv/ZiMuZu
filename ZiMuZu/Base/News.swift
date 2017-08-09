@@ -16,6 +16,7 @@ final class News: NSObject, Codable {
     let dateline: String?
     let poster: URL?
     let type_cn: String?
+    let intro: String?
     
     lazy var datelineString: String = {
         let duratinInterval = Date().timeIntervalSince1970 - Double(dateline ?? "0.0")!
@@ -41,6 +42,7 @@ final class News: NSObject, Codable {
         self.dateline = nil
         self.poster = nil
         self.type_cn = nil
+        self.intro = nil
     }
 }
 

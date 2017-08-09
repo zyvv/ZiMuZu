@@ -57,4 +57,11 @@ class HomeListSectionController: ListSectionController, ListAdapterDataSource {
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return nil
     }
+    
+    override func didSelectItem(at index: Int) {
+        let vc = TVListViewController(collectionViewLayout: TVListLayout())
+        vc.dataArray = tvs.tvs as? [TV]
+        vc.title = tvs.title
+        self.viewController?.navigationController?.pushViewController(vc, animated: true)
+    }
 }

@@ -10,7 +10,12 @@ import UIKit
 
 class NewsListTableViewController: UITableViewController {
 
+    typealias RefreshState = (isLoading: Bool, beginTimeInterval: CFTimeInterval)
+    
     var dataArray: [News]?
+    var refeshState: RefreshState = (false, 0)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +38,8 @@ class NewsListTableViewController: UITableViewController {
     @objc func refreshData() {
         self.requestNewsList(1)
 //        self.refreshControl?.beginRefreshing()
+        
+        refeshState = (true, CACurrentMediaTime())
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,6 +73,9 @@ class NewsListTableViewController: UITableViewController {
     
     
     func requestNewsList(_ page: Int) {
+        if refeshState.isLoading {
+            return
+        }
         zmzProvider.request(.articleList(page:page)) { result in
             do {
                 if case let .success(response) = result {
@@ -75,11 +85,23 @@ class NewsListTableViewController: UITableViewController {
                     } else {
                         self.dataArray = news.data
                     }
-//                    dataArray?.append(news)
-                    self.tableView.reloadData()
-//                    self.refreshControl?.endRefreshing()
-//                    self.data.append(TVs(tvs: news.data, title: "新闻资讯和剧评", handle: "更多"))
-//                    self.adapter.performUpdates(animated: true, completion: nil)
+                    
+                    if CACurrentMediaTime() - self.refeshState.beginTimeInterval < 1.5 {
+                        DispatchQueue.global(qos: .default).async {
+                            sleep(1)
+                            DispatchQueue.main.async {
+                                self.refeshState = (false, 0)
+                                self.tableView.reloadData()
+                                self.refreshControl?.endRefreshing()
+                            }
+                        }
+                    } else {
+                        self.refeshState = (false, 0)
+                        self.tableView.reloadData()
+                        self.refreshControl?.endRefreshing()
+                    }
+                    
+
                 }
                 
             } catch {

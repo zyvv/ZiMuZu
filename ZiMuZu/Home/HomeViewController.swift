@@ -51,17 +51,9 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
         
         let obj = object as! TVs
         switch obj.title {
-        case "今日更新":
+        case "今日更新", "本周热门", "热门新剧":
             return HomeSectionController()
-        case "本周热门":
-            return HomeSectionController()
-        case "热门新剧":
-            return HomeSectionController()
-        case "最热日剧排行":
-            return HomeListSectionController()
-        case "本月电影排行":
-            return HomeListSectionController()
-        case "电视剧总榜":
+        case "最热日剧排行", "本月电影排行", "电视剧总榜":
             return HomeListSectionController()
         case "新闻资讯和剧评":
             return HomeNewsSectionController()

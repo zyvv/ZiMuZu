@@ -31,6 +31,8 @@ final class News: NSObject, Codable {
             return "\(Int(duratinInterval / (24 * 3600.0)))天前"
         case 24*3600*7..<24*3600*7*4:
             return "\(Int(duratinInterval / (24 * 3600 * 7.0)))周前"
+        case 24*3600*7*4..<24*3600*365:
+            return "\(Int(duratinInterval / (24 * 3600 * 4 * 7.0)))月前"
         default:
             return "\(Int(duratinInterval / (24 * 3600 * 365.0)))年前"
         }
@@ -58,6 +60,16 @@ extension News: ListDiffable {
 
 struct NewsList: Codable {
     let data: [News]
+    let info: String
+    let status: Int
+}
+
+struct NewsDetail: Codable {
+    struct NewsDetailData: Codable {
+        let content: String
+    }
+    
+    let data: NewsDetailData
     let info: String
     let status: Int
 }

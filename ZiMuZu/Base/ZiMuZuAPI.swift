@@ -22,6 +22,7 @@ public enum ZiMuZu {
     case tv_schedule()
     case top()
     case articleList(page: Int)
+    case article(id: String)
 }
 
 extension ZiMuZu: TargetType {
@@ -32,6 +33,8 @@ extension ZiMuZu: TargetType {
         case .top():
             return "".data(using: String.Encoding.utf8)!
         case .articleList( _):
+            return "".data(using: String.Encoding.utf8)!
+        case .article( _):
             return "".data(using: String.Encoding.utf8)!
         }
     }
@@ -60,6 +63,8 @@ extension ZiMuZu: TargetType {
             return ["a": "top"].merging(customParameters) {(_, new) in new}
         case .articleList(let page):
             return ["a": "article_list", "page": page].merging(customParameters) {(_, new) in new}
+        case .article(let id):
+            return ["a": "article", "id": id].merging(customParameters) {(_, new) in new}
         }
     }
     

@@ -9,6 +9,7 @@ def pods
     pod 'Hue'
     pod 'Kingfisher',:git => 'https://github.com/onevcat/Kingfisher.git', :branch => 'swift4'
     pod 'Moya', :git => 'https://github.com/Moya/Moya.git'
+    pod 'DTCoreText'
 #    pod 'JTAppleCalendar'
 end
 

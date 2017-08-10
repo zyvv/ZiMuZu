@@ -71,44 +71,13 @@ class NewsListTableViewController: UITableViewController {
         return textCellHeight
     }
     
-    
-    func requestNewsList(_ page: Int) {
-        if refeshState.isLoading {
-            return
-        }
-        zmzProvider.request(.articleList(page:page)) { result in
-            do {
-                if case let .success(response) = result {
-                    let news = try JSONDecoder().decode(NewsList.self, from: response.data)
-                    if page > 1 {
-                        self.dataArray?.append(contentsOf: news.data)
-                    } else {
-                        self.dataArray = news.data
-                    }
-                    
-                    if CACurrentMediaTime() - self.refeshState.beginTimeInterval < 1.5 {
-                        DispatchQueue.global(qos: .default).async {
-                            sleep(1)
-                            DispatchQueue.main.async {
-                                self.refeshState = (false, 0)
-                                self.tableView.reloadData()
-                                self.refreshControl?.endRefreshing()
-                            }
-                        }
-                    } else {
-                        self.refeshState = (false, 0)
-                        self.tableView.reloadData()
-                        self.refreshControl?.endRefreshing()
-                    }
-                    
-
-                }
-                
-            } catch {
-                print(error)
-            }
-        }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = NewsDetailViewController()
+        vc.news = dataArray?[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
+    
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -145,14 +114,44 @@ class NewsListTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    func requestNewsList(_ page: Int) {
+        if refeshState.isLoading {
+            return
+        }
+        zmzProvider.request(.articleList(page:page)) { result in
+            do {
+                if case let .success(response) = result {
+                    let news = try JSONDecoder().decode(NewsList.self, from: response.data)
+                    if page > 1 {
+                        self.dataArray?.append(contentsOf: news.data)
+                    } else {
+                        self.dataArray = news.data
+                    }
+                    
+                    if CACurrentMediaTime() - self.refeshState.beginTimeInterval < 1.5 {
+                        DispatchQueue.global(qos: .default).async {
+                            sleep(1)
+                            DispatchQueue.main.async {
+                                self.refeshState = (false, 0)
+                                self.tableView.reloadData()
+                                self.refreshControl?.endRefreshing()
+                            }
+                        }
+                    } else {
+                        self.refeshState = (false, 0)
+                        self.tableView.reloadData()
+                        self.refreshControl?.endRefreshing()
+                    }
+                    
+                }
+                
+            } catch {
+                print(error)
+            }
+        }
     }
-    */
 
 }

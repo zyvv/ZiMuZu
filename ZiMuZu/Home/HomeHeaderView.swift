@@ -32,7 +32,6 @@ class HomeHeaderView: UICollectionReusableView {
         clickButton = callBack
     }
     
-    
     var name: String? {
         get {
             return nameLabel.text

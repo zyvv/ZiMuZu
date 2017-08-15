@@ -131,7 +131,7 @@ class NewsListTableViewController: UITableViewController {
                         self.dataArray = news.data
                     }
                     
-                    if CACurrentMediaTime() - self.refeshState.beginTimeInterval < 1.5 {
+                    if CACurrentMediaTime() - self.refeshState.beginTimeInterval < 1.0 {
                         DispatchQueue.global(qos: .default).async {
                             sleep(1)
                             DispatchQueue.main.async {

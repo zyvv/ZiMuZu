@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreText
+import DTCoreText
 
-class NewsDetailViewController: UIViewController {
+class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDelegate, DTLazyImageViewDelegate {
 
     var news: News? {
         didSet {
@@ -17,19 +18,52 @@ class NewsDetailViewController: UIViewController {
         }
     }
 
-    lazy var htmlTextView = { () -> UITextView in
-        let textView = UITextView(frame: CGRect(x: 0, y: 100, width: kScreenWidth, height: kScreenHeight - 100))
-        textView.isEditable = false
-//        textView.backgroundColor = .clear
+    lazy var htmlTextView: DTAttributedTextView = {
+        let textView = DTAttributedTextView(frame: view.bounds)
+        textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        textView.backgroundColor = .clear
+        textView.contentInset = UIEdgeInsetsMake(10, 10, 54, 10)
+        textView.contentInsetAdjustmentBehavior = .never
+        textView.shouldDrawImages = false;
+        textView.shouldDrawLinks = false;
+        textView.textDelegate = self
         self.view.addSubview(textView)
         return textView
+    }()
+    
+    let callBackBlock:(DTHTMLElement) -> Void = { element in
+        for oneChildElement in element.childNodes {
+            guard let oneChildElement: DTHTMLElement = oneChildElement as? DTHTMLElement else {
+                return
+            }
+            if oneChildElement.displayStyle == .inline && oneChildElement.textAttachment.displaySize.height > 2.0 * oneChildElement.fontDescriptor.pointSize {
+                oneChildElement.displayStyle = .block;
+                oneChildElement.paragraphStyle.minimumLineHeight = element.textAttachment.displaySize.height;
+                oneChildElement.paragraphStyle.maximumLineHeight = element.textAttachment.displaySize.height;
+            }
+        }
     }
+    
+    lazy var htmlStringAttributeds: [String: Any] = {
+        
+
+        let maxImageSize = CGSize(width: view.bounds.size.width - 20, height: view.bounds.size.height - 20)
+        return [NSTextSizeMultiplierDocumentOption: NSNumber(floatLiteral: 1.0),
+                                                    DTMaxImageSize: NSValue(cgSize: maxImageSize),
+                                                    DTDefaultTextColor: UIColor.white,
+                                                    DTAttachmentParagraphSpacingAttribute: 25,
+                                                    DTDefaultFirstLineHeadIndent:15.0,
+                                                    DTDefaultLineHeightMultiplier: 0.8,
+//                                                    DTWillFlushBlockCallBack: self.callBackBlock,
+                                                    DTDefaultFontSize: NSNumber(floatLiteral: 15.0)]
+    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewConfig()
         navigationConfig()
+        extendedLayoutIncludesOpaqueBars = true
 
         // Do any additional setup after loading the view.
     }
@@ -45,20 +79,51 @@ class NewsDetailViewController: UIViewController {
             do {
                 if case let .success(response) = result {
                     let news = try JSONDecoder().decode(NewsDetail.self, from: response.data)
-
-                    DispatchQueue.global(qos: .default).async {
-                        let attributedText = news.data.content.htmlAttributedString()
-                        DispatchQueue.main.async {
-                            self.htmlTextView().attributedText = attributedText
-                            print("渲染完成: \(CACurrentMediaTime())")
-                        }
+                    guard let data = news.data.content.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return }
+                    let attributedString = NSAttributedString(htmlData: data, options: self.htmlStringAttributeds, documentAttributes: nil)
+                    DispatchQueue.main.async {
+                        self.htmlTextView.attributedString = attributedString
                     }
-//                    self.htmlTextView().attributedText = news.data.content.htmlAttributedString()
-                    
                 }
                 
             } catch {
                 print(error)
+            }
+        }
+    }
+    
+    
+    // MARK: - DTAttributedTextContentViewDelegate
+    func attributedTextContentView(_ attributedTextContentView: DTAttributedTextContentView!, viewFor attachment: DTTextAttachment!, frame: CGRect) -> UIView! {
+        if attachment.isKind(of: DTImageTextAttachment.self) {
+            let imageView = DTLazyImageView(frame: frame)
+            imageView.delegate = self
+            imageView.url = attachment.contentURL
+            return imageView
+        }
+        return UIView()
+    }
+    
+    // MARK: - DTLazyImageViewDelegate
+    func lazyImageView(_ lazyImageView: DTLazyImageView!, didChangeImageSize size: CGSize) {
+        let url = lazyImageView.url
+        let imageSize = size
+        let predicate = NSPredicate(format: "contentURL == %@", url! as NSURL)
+        
+        var didUpdate = false
+        for oneAttachment in self.htmlTextView.attributedTextContentView.layoutFrame.textAttachments(with: predicate) {
+            guard let oneAttachment: DTTextAttachment = oneAttachment as? DTTextAttachment else {
+                return
+            }
+            if oneAttachment.originalSize.height == 0 {
+                oneAttachment.originalSize = imageSize
+                didUpdate = true
+            }
+        }
+        
+        if didUpdate {
+            DispatchQueue.main.async {
+                self.htmlTextView.relayoutText()
             }
         }
     }
@@ -74,13 +139,14 @@ class NewsDetailViewController: UIViewController {
     */
 
 }
+//
+//extension String {
+//    func htmlAttributedString() -> NSAttributedString? {
+//        print("开始处理字符串: \(CACurrentMediaTime())")
+//        guard let data = self.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return nil }
+//        guard let html =
+//        print("结束处理字符串: \(CACurrentMediaTime())")
+//        return html
+//    }
+//}
 
-extension String {
-    func htmlAttributedString() -> NSAttributedString? {
-        print("开始处理字符串: \(CACurrentMediaTime())")
-        guard let data = self.data(using: String.Encoding.utf16, allowLossyConversion: false) else { return nil }
-        guard let html = try? NSMutableAttributedString( data: data, options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) else { return nil }
-        print("结束处理字符串: \(CACurrentMediaTime())")
-        return html
-    }
-}

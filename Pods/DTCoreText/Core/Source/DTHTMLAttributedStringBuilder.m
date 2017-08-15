@@ -833,6 +833,7 @@
 							// caller gets opportunity to modify tag before it is written
 							if (_willFlushCallback)
 							{
+
 								_willFlushCallback(theTag);
 							}
 							

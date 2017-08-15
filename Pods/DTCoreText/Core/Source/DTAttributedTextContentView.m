@@ -448,7 +448,13 @@ static Class _layerClassToUseForDTAttributedTextContentView = nil;
 		CGContextSetPatternPhase(ctx, _backgroundOffset);
 	}
 	
-	CGContextSetFillColorWithColor(ctx, [self.backgroundColor CGColor]);
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        CGColorRef color = [self.backgroundColor CGColor];
+        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            CGContextSetFillColorWithColor(ctx, color);
+        });
+    });
+	
 	CGContextFillRect(ctx, rect);
 	
 	// offset layout if necessary

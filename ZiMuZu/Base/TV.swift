@@ -56,8 +56,8 @@ struct TVScheduleDataCodingOptions {
     static let key = CodingUserInfoKey(rawValue: "TVScheduleDataCodingOption")!
 }
 
-struct TVScheduleData: Codable {
-    
+
+struct TVSchedule: Codable {
     struct ScheduleDateKey : CodingKey {
         var stringValue: String
         init?(stringValue: String) {
@@ -82,7 +82,7 @@ struct TVScheduleData: Codable {
                 scheduleKey = scheduleOptionKey.rawValue
             }
             
-            let tvs = try container.decode([TV].self, forKey: TVScheduleData.ScheduleDateKey(stringValue: scheduleKey)!)
+            let tvs = try container.decode([TV].self, forKey: TVSchedule.ScheduleDateKey(stringValue: scheduleKey)!)
             self.tvs = tvs
             
         } catch {
@@ -94,26 +94,19 @@ struct TVScheduleData: Codable {
     }
 }
 
-struct TVSchedule: Codable {
-    let data: TVScheduleData
-    let info: String
-    let status: Int
-}
-
-final class TVs {
-    
-    let tvs: [Any]
+final class HomeSectionList {
+    let list: [Any]
     let title: String
     let handle: String
     
-    init(tvs: [Any], title: String, handle: String) {
-        self.tvs = tvs
+    init(list: [Any], title: String, handle: String) {
+        self.list = list
         self.title = title
         self.handle = handle
     }
 }
 
-extension TVs: ListDiffable {
+extension HomeSectionList: ListDiffable {
     func diffIdentifier() -> NSObjectProtocol {
         return self as! NSObjectProtocol
     }

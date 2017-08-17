@@ -15,7 +15,7 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 1)
     }()
     
-    lazy var data: [TVs] = []
+    lazy var data: [HomeSectionList] = []
     
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
@@ -24,13 +24,13 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
 
         self.viewConfig()
         self.navigationConfig()
-        self.title = "热门"
+        self.navigationItem.title = "热门"
         collectionView.backgroundColor = UIColor.clear
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         adapter.dataSource = self
         
-        requestTvS()
+        requestTVs()
         requestTopList()
         requestNewsList()
         
@@ -49,7 +49,7 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         
-        let obj = object as! TVs
+        let obj = object as! HomeSectionList
         switch obj.title {
         case "今日更新", "本周热门", "热门新剧":
             return HomeSectionController()
@@ -66,14 +66,14 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
     func emptyView(for listAdapter: ListAdapter) -> UIView? { return nil }
     
     
-    func requestTvS() {
+    func requestTVs() {
         zmzProvider.request(.tv_schedule()) { result in
             do {
                 if case let .success(response) = result {
                     let decoder = JSONDecoder()
                     decoder.userInfo = [TVScheduleDataCodingOptions.key: TVScheduleDataCodingOptions.TVScheduleDataType.todayList]
-                    let tvs = try decoder.decode(TVSchedule.self, from: response.data)
-                    self.data.append(TVs(tvs: tvs.data.tvs, title: "今日更新", handle: today()))
+                    let todayList = try decoder.decode(TVSchedule.self, from: response.data)
+                    self.data.append(HomeSectionList(list: todayList.tvs, title: "今日更新", handle: today()))
                     self.adapter.performUpdates(animated: true, completion: nil)
                 }
                 
@@ -91,23 +91,23 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
                     
                     decoder.userInfo = [TVScheduleDataCodingOptions.key: TVScheduleDataCodingOptions.TVScheduleDataType.favWeekList]
                     let favWeekList = try decoder.decode(TVSchedule.self, from: response.data)
-                    self.data.append(TVs(tvs: favWeekList.data.tvs, title: "本周热门", handle: "全部"))
+                    self.data.append(HomeSectionList(list: favWeekList.tvs, title: "本周热门", handle: "全部"))
                     
                     decoder.userInfo = [TVScheduleDataCodingOptions.key: TVScheduleDataCodingOptions.TVScheduleDataType.playing]
                     let playing = try decoder.decode(TVSchedule.self, from: response.data)
-                    self.data.append(TVs(tvs: playing.data.tvs, title: "热门新剧", handle: "全部"))
+                    self.data.append(HomeSectionList(list: playing.tvs, title: "热门新剧", handle: "全部"))
                     
                     decoder.userInfo = [TVScheduleDataCodingOptions.key: TVScheduleDataCodingOptions.TVScheduleDataType.hotJapanList]
                     let hotJapanList = try decoder.decode(TVSchedule.self, from: response.data)
-                    self.data.append(TVs(tvs: hotJapanList.data.tvs, title: "最热日剧排行", handle: ""))
+                    self.data.append(HomeSectionList(list: hotJapanList.tvs, title: "最热日剧排行", handle: ""))
                     
                     decoder.userInfo = [TVScheduleDataCodingOptions.key: TVScheduleDataCodingOptions.TVScheduleDataType.movieMonthList]
                     let movieMonthList = try decoder.decode(TVSchedule.self, from: response.data)
-                    self.data.append(TVs(tvs: movieMonthList.data.tvs, title: "本月电影排行", handle: ""))
+                    self.data.append(HomeSectionList(list: movieMonthList.tvs, title: "本月电影排行", handle: ""))
                     
                     decoder.userInfo = [TVScheduleDataCodingOptions.key: TVScheduleDataCodingOptions.TVScheduleDataType.tvTotalList]
                     let tvTotalList = try decoder.decode(TVSchedule.self, from: response.data)
-                    self.data.append(TVs(tvs: tvTotalList.data.tvs, title: "电视剧总榜", handle: ""))
+                    self.data.append(HomeSectionList(list: tvTotalList.tvs, title: "电视剧总榜", handle: ""))
                     
                     self.adapter.performUpdates(animated: true, completion: nil)
                 }
@@ -117,16 +117,9 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
     
     func requestNewsList() {
         zmzProvider.request(.articleList(page:1)) { result in
-            do {
-                if case let .success(response) = result {
-                    let news = try JSONDecoder().decode(NewsList.self, from: response.data)
-                    self.data.append(TVs(tvs: news.data, title: "新闻资讯和剧评", handle: "更多"))
-                    self.adapter.performUpdates(animated: true, completion: nil)
-                }
-                
-            } catch {
-                print(error)
-            }
+            let newsList = handleResponse([News].self, result: result)
+            self.data.append(HomeSectionList(list: newsList ?? [], title: "新闻资讯和剧评", handle: "更多"))
+            self.adapter.performUpdates(animated: true, completion: nil)
         }
     }
     

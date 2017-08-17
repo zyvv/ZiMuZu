@@ -9,6 +9,7 @@
 import UIKit
 import CoreText
 import DTCoreText
+//import Hero
 
 class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDelegate, DTLazyImageViewDelegate {
 
@@ -79,7 +80,7 @@ class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDel
             do {
                 if case let .success(response) = result {
                     let news = try JSONDecoder().decode(NewsDetail.self, from: response.data)
-                    guard let data = news.data.content.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return }
+                    guard let data = news.content.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return }
                     let attributedString = NSAttributedString(htmlData: data, options: self.htmlStringAttributeds, documentAttributes: nil)
                     DispatchQueue.main.async {
                         self.htmlTextView.attributedString = attributedString

@@ -15,7 +15,7 @@ let newsMiniLineSpacing: CGFloat = 10.0
 var newsItemWidth: CGFloat = (kScreenWidth - 2 * newsSectionInsetsWidth)
 
 class HomeNewsEmbeddedSectionController: ListSectionController {
-    private var tvs: TVs?
+    private var newsList: HomeSectionList?
     
     override init() {
         super.init()
@@ -24,7 +24,7 @@ class HomeNewsEmbeddedSectionController: ListSectionController {
     }
     
     override func numberOfItems() -> Int {
-        return tvs?.tvs.count ?? 0
+        return newsList?.list.count ?? 0
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
@@ -36,7 +36,7 @@ class HomeNewsEmbeddedSectionController: ListSectionController {
         guard let cell = collectionContext?.dequeueReusableCell(withNibName: "NewsCell", bundle: nil, for: self, at: index) as? NewsCell else {
             fatalError()
         }
-        let news = tvs?.tvs[index] as! News
+        let news = newsList?.list[index] as! News
         cell.newsTitle.text = news.title
         cell.newsType.text = news.type_cn
         cell.posterImageView.kf.setImage(with: news.poster)
@@ -45,7 +45,7 @@ class HomeNewsEmbeddedSectionController: ListSectionController {
     }
     
     override func didUpdate(to object: Any) {
-        tvs = object as? TVs
+        newsList = object as? HomeSectionList
     }
 }
 

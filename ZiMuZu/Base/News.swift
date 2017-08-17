@@ -58,18 +58,6 @@ extension News: ListDiffable {
     }
 }
 
-struct NewsList: Codable {
-    let data: [News]
-    let info: String
-    let status: Int
-}
-
 struct NewsDetail: Codable {
-    struct NewsDetailData: Codable {
-        let content: String
-    }
-    
-    let data: NewsDetailData
-    let info: String
-    let status: Int
+    let content: String
 }

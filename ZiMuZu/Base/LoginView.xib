@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoginView" customModule="ZiMuZu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWz-w8-4DY">
+                    <rect key="frame" x="22" y="313.5" width="277" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.36470588240000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="jOL-7Q-hqt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="loginButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="zo2-3N-LDw"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收藏的剧集和新闻资讯。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5a-Uy-yLT">
+                    <rect key="frame" x="22" y="258.5" width="235" height="25.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录后你可以在这里看到自己" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0n-yz-s66">
+                    <rect key="frame" x="22" y="228" width="277.5" height="25.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="没有账号？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rt-H5-HIa">
+                    <rect key="frame" x="22" y="383.5" width="71.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGa-5J-2VQ">
+                    <rect key="frame" x="93.5" y="369.5" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="AVv-1B-K3P"/>
+                        <constraint firstAttribute="width" constant="44" id="gg4-Lh-D33"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="注册">
+                        <color key="titleColor" red="1" green="0.36470588240000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="registerButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="VOn-F0-i5T"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8rt-H5-HIa" firstAttribute="leading" secondItem="CWz-w8-4DY" secondAttribute="leading" id="318-di-1rV"/>
+                <constraint firstItem="8rt-H5-HIa" firstAttribute="top" secondItem="CWz-w8-4DY" secondAttribute="bottom" constant="30" id="7aG-1j-BqM"/>
+                <constraint firstItem="CWz-w8-4DY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CvU-pH-d0B"/>
+                <constraint firstItem="CWz-w8-4DY" firstAttribute="width" secondItem="c0n-yz-s66" secondAttribute="width" id="FlA-bZ-JMv"/>
+                <constraint firstItem="c0n-yz-s66" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IAI-XY-cis"/>
+                <constraint firstItem="c0n-yz-s66" firstAttribute="leading" secondItem="V5a-Uy-yLT" secondAttribute="leading" id="aJc-wp-3r4"/>
+                <constraint firstItem="OGa-5J-2VQ" firstAttribute="centerY" secondItem="8rt-H5-HIa" secondAttribute="centerY" id="b3a-P4-ICd"/>
+                <constraint firstItem="OGa-5J-2VQ" firstAttribute="leading" secondItem="8rt-H5-HIa" secondAttribute="trailing" id="d2X-uF-Ltn"/>
+                <constraint firstItem="CWz-w8-4DY" firstAttribute="top" secondItem="V5a-Uy-yLT" secondAttribute="bottom" constant="30" id="g5V-K8-lC6"/>
+                <constraint firstItem="CWz-w8-4DY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pFY-QJ-ucS"/>
+                <constraint firstItem="V5a-Uy-yLT" firstAttribute="top" secondItem="c0n-yz-s66" secondAttribute="bottom" constant="5" id="ymc-cB-sOe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33" y="53.5"/>
+        </view>
+    </objects>
+</document>

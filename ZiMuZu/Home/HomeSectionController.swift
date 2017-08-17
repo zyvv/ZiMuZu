@@ -11,7 +11,7 @@ import IGListKit
 
 final class HomeSectionController: ListSectionController, ListAdapterDataSource, ListSupplementaryViewSource {
 
-    private var tvs: TVs = TVs(tvs: [], title: "", handle: "")
+    private var tvs: HomeSectionList = HomeSectionList(list: [], title: "", handle: "")
 
     lazy var adapter: ListAdapter = {
         let adapter = ListAdapter(updater: ListAdapterUpdater(),
@@ -41,16 +41,16 @@ final class HomeSectionController: ListSectionController, ListAdapterDataSource,
     }
     
     override func didUpdate(to object: Any) {
-        tvs = object as! TVs
+        tvs = object as! HomeSectionList
     }
 
     // MARK: ListAdapterDataSource
 
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        if tvs.tvs.count > 10 {
-            return Array(tvs.tvs[..<10]) as! [ListDiffable]
+        if tvs.list.count > 10 {
+            return Array(tvs.list[..<10]) as! [ListDiffable]
         }
-        return tvs.tvs as! [ListDiffable]
+        return tvs.list as! [ListDiffable]
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
@@ -82,7 +82,7 @@ final class HomeSectionController: ListSectionController, ListAdapterDataSource,
                 default:
                     let vc = TVListViewController(collectionViewLayout: TVListLayout())
                     vc.title = self.tvs.title
-                    vc.dataArray = self.tvs.tvs as? [TV]
+                    vc.dataArray = self.tvs.list as? [TV]
                     self.viewController?.navigationController?.pushViewController(vc, animated: true)
                 }
             }

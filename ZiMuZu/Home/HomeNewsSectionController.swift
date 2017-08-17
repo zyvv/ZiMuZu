@@ -11,7 +11,7 @@ import IGListKit
 
 class HomeNewsSectionController: ListSectionController, ListAdapterDataSource, ListSupplementaryViewSource {
     
-    private var news: TVs = TVs(tvs: [], title: "", handle: "")
+    private var news: HomeSectionList = HomeSectionList(list: [], title: "", handle: "")
     
     lazy var adapter: ListAdapter = {
         let adapter = ListAdapter(updater: ListAdapterUpdater(),
@@ -41,7 +41,7 @@ class HomeNewsSectionController: ListSectionController, ListAdapterDataSource, L
     }
     
     override func didUpdate(to object: Any) {
-        news = object as! TVs
+        news = object as! HomeSectionList
     }
     
     // MARK: ListAdapterDataSource
@@ -77,7 +77,7 @@ class HomeNewsSectionController: ListSectionController, ListAdapterDataSource, L
             view.tapHandleButton {
                 let vc = NewsListTableViewController(style: .plain)
                 vc.title = self.news.title
-                vc.dataArray = self.news.tvs as? [News]
+                vc.dataArray = self.news.list as? [News]
                 self.viewController?.navigationController?.pushViewController(vc, animated: true)
             }
             return view

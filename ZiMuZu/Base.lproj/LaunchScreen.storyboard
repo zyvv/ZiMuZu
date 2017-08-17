@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,12 +22,16 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
                                     <tabBarItem image="tabbar_home" id="oV1-9d-nZ1">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                                         <color key="badgeColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tabBarItem>
                                     <tabBarItem image="tabbar_search" id="pLJ-jV-wTl">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                                         <color key="badgeColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tabBarItem>
-                                    <tabBarItem image="tabbar_profile" id="5fH-wm-7Wv"/>
+                                    <tabBarItem image="tabbar_profile" id="5fH-wm-7Wv">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
                                 </items>
                                 <color key="tintColor" red="1" green="0.36470588240000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.0078431372550000003" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>

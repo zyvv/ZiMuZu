@@ -15,7 +15,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         
         self.viewConfig()
         self.navigationConfig()
-        self.title = "片库"
+        self.navigationItem.title = "搜索"
 
         let searchController = UISearchController(searchResultsController: nil)
         let searchBarTextAttributes: [String : AnyObject] = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]

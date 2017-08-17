@@ -17,6 +17,7 @@ PODS:
     - DTFoundation/Core
   - DTFoundation/UIKit (1.7.12):
     - DTFoundation/Core
+  - Hero (1.0.0-alpha.4)
   - Hue (2.0.1)
   - IGListKit (3.0.0):
     - IGListKit/Default (= 3.0.0)
@@ -29,16 +30,24 @@ PODS:
   - Moya/Core (9.0.0-alpha.1):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - PKHUD (4.2.3)
   - Result (3.2.1)
+  - Typist (1.0.0)
 
 DEPENDENCIES:
   - DTCoreText
+  - Hero (from `https://github.com/lkzhao/Hero.git`, tag `1.0.0-alpha.4`)
   - Hue
   - IGListKit (from `https://github.com/Instagram/IGListKit.git`, branch `swift4`)
   - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`, branch `swift4`)
   - Moya (from `https://github.com/Moya/Moya.git`)
+  - PKHUD (from `https://github.com/pkluz/PKHUD.git`, branch `release/swift4`)
+  - Typist
 
 EXTERNAL SOURCES:
+  Hero:
+    :git: https://github.com/lkzhao/Hero.git
+    :tag: 1.0.0-alpha.4
   IGListKit:
     :branch: swift4
     :git: https://github.com/Instagram/IGListKit.git
@@ -47,8 +56,14 @@ EXTERNAL SOURCES:
     :git: https://github.com/onevcat/Kingfisher.git
   Moya:
     :git: https://github.com/Moya/Moya.git
+  PKHUD:
+    :branch: release/swift4
+    :git: https://github.com/pkluz/PKHUD.git
 
 CHECKOUT OPTIONS:
+  Hero:
+    :git: https://github.com/lkzhao/Hero.git
+    :tag: 1.0.0-alpha.4
   IGListKit:
     :commit: 895de471bac0b04fa4d255ccf138b748defc5456
     :git: https://github.com/Instagram/IGListKit.git
@@ -58,17 +73,23 @@ CHECKOUT OPTIONS:
   Moya:
     :commit: 2d182bf7320c67195d77203810f7c334685001fe
     :git: https://github.com/Moya/Moya.git
+  PKHUD:
+    :commit: 4d8fbf70ae912dd72280cde0a5c1440ada9a7306
+    :git: https://github.com/pkluz/PKHUD.git
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   DTCoreText: 51904f2374af443e0d270d6fdc76035ab6f9ef8a
   DTFoundation: 26a164ef510877387906fb92bff524a792db4bf8
+  Hero: ccbacbed53714fee376950f3df364b146864425c
   Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
   IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
   Kingfisher: dbfac2b5dec4a531822e0ba8b571ce6010616075
   Moya: d104801616468247e5a9abd258c838c5ca6b1389
+  PKHUD: 351011b853e6b942e7ee8ad335864cc84c787241
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  Typist: 470a4f47f4e635ccd0e9f3ff9ce2d70c9e6001a5
 
-PODFILE CHECKSUM: 385f272ca3d50d909de34bdf8d91e38dda689064
+PODFILE CHECKSUM: a5c3b6c539a75346f932abf6f598c52cf3b29d93
 
 COCOAPODS: 1.2.0.beta.3

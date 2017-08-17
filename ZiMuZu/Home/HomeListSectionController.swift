@@ -10,7 +10,7 @@ import UIKit
 import IGListKit
 
 class HomeListSectionController: ListSectionController, ListAdapterDataSource {
-    private var tvs: TVs = TVs(tvs: [], title: "", handle: "")
+    private var tvs: HomeSectionList = HomeSectionList(list: [], title: "", handle: "")
     
     lazy var adapter: ListAdapter = {
         let adapter = ListAdapter(updater: ListAdapterUpdater(),
@@ -29,7 +29,7 @@ class HomeListSectionController: ListSectionController, ListAdapterDataSource {
         guard let cell = collectionContext?.dequeueReusableCell(withNibName: "HomeListCell", bundle: nil, for: self, at: index) as? HomeListCell else {
             fatalError()
         }
-        if let tv:TV = tvs.tvs.first as? TV {
+        if let tv:TV = tvs.list.first as? TV {
             cell.tvImageView.kf.setImage(with: tv.poster)
         }
         cell.nameLabel.text = tvs.title
@@ -37,13 +37,13 @@ class HomeListSectionController: ListSectionController, ListAdapterDataSource {
     }
     
     override func didUpdate(to object: Any) {
-        tvs = object as! TVs
+        tvs = object as! HomeSectionList
     }
     
     // MARK: ListAdapterDataSource
     
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return tvs.tvs as! [ListDiffable]
+        return tvs.list as! [ListDiffable]
     }
     
     override func numberOfItems() -> Int {
@@ -60,7 +60,7 @@ class HomeListSectionController: ListSectionController, ListAdapterDataSource {
     
     override func didSelectItem(at index: Int) {
         let vc = TVListViewController(collectionViewLayout: TVListLayout())
-        vc.dataArray = tvs.tvs as? [TV]
+        vc.dataArray = tvs.list as? [TV]
         vc.title = tvs.title
         self.viewController?.navigationController?.pushViewController(vc, animated: true)
     }

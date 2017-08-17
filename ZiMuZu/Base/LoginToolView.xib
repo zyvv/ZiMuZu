@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoginToolView" customModule="ZiMuZu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwH-8j-0ct">
+                    <rect key="frame" x="15" y="34.5" width="77" height="30"/>
+                    <state key="normal" title="忘记密码？">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="forgetPasswordButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="YKZ-on-Zt6"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkK-Qa-jk2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="DTb-1I-NwZ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ3-on-JhN">
+                    <rect key="frame" x="300" y="35" width="60" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.36470588240000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="g7o-fg-lHA"/>
+                        <constraint firstAttribute="width" constant="60" id="zmN-GC-ug0"/>
+                    </constraints>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="loginButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Wef-Gt-wiO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="0.76000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZJ3-on-JhN" secondAttribute="trailing" constant="15" id="6HQ-LE-ucL"/>
+                <constraint firstItem="YwH-8j-0ct" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="6MW-kJ-db5"/>
+                <constraint firstItem="YwH-8j-0ct" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6cC-xk-awX"/>
+                <constraint firstItem="PkK-Qa-jk2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Bgc-MD-2zc"/>
+                <constraint firstItem="PkK-Qa-jk2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="IMe-KC-IXA"/>
+                <constraint firstItem="ZJ3-on-JhN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iss-S1-fK5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PkK-Qa-jk2" secondAttribute="trailing" id="m0E-C5-uRn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="30.5" y="202.5"/>
+        </view>
+    </objects>
+</document>

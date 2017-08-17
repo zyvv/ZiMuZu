@@ -124,11 +124,11 @@ class NewsListTableViewController: UITableViewController {
         zmzProvider.request(.articleList(page:page)) { result in
             do {
                 if case let .success(response) = result {
-                    let news = try JSONDecoder().decode(NewsList.self, from: response.data)
+                    let newsList = try JSONDecoder().decode([News].self, from: response.data)
                     if page > 1 {
-                        self.dataArray?.append(contentsOf: news.data)
+                        self.dataArray?.append(contentsOf: newsList)
                     } else {
-                        self.dataArray = news.data
+                        self.dataArray = newsList
                     }
                     
                     if CACurrentMediaTime() - self.refeshState.beginTimeInterval < 1.0 {

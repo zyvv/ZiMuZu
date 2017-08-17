@@ -9,13 +9,24 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    var loginView: LoginView? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.viewConfig()
         self.navigationConfig()
-        self.title = "个人中心"
+        self.navigationItem.title = "记录"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if !UserCenter.sharedInstance.isLogin && loginView == nil {
+            loginView = Bundle.main.loadNibNamed("LoginView", owner: self, options: nil)?.last as? LoginView
+            loginView?.frame = view.bounds
+            view.addSubview(loginView!)
+        }
     }
 
     override func didReceiveMemoryWarning() {

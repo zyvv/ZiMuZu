@@ -9,6 +9,52 @@
 import Foundation
 import IGListKit
 
+struct HotKeyword: Decodable {
+    let keyword: String
+}
+
+final class SearchTVResult: NSObject, Decodable {
+    let count: Int
+    let list: [TV]?
+    
+    override init() {
+        self.count = 0
+        self.list = nil
+    }
+}
+
+
+final class FavoriteTV: NSObject, Decodable {
+    let type: String?
+//    let channel: String?
+    let itemid: String?
+    let uid: String?
+    let dateline: String?
+    let updatetime: String?
+    let area: String?
+    let detail: TV?
+    
+    override init() {
+        self.type = nil
+        self.itemid = nil
+        self.uid = nil
+        self.dateline = nil
+        self.updatetime = nil
+        self.area = nil
+        self.detail = nil
+    }
+}
+
+extension FavoriteTV: ListDiffable {
+    func diffIdentifier() -> NSObjectProtocol {
+        return self
+    }
+    
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        return self === object ? true : self.isEqual(object)
+    }
+}
+
 final class TV: NSObject, Decodable {
     let cnname: String?
     let enname: String?
@@ -18,6 +64,41 @@ final class TV: NSObject, Decodable {
     let play_time: String?
     let poster: URL?
     let title: String?
+    let play_status: String?
+    let channel_cn: String?
+    let poster_b: URL?
+    let page_description: String?
+    let score: String?
+    let score_counts: String?
+    let area: String?
+    let channel: String?
+    
+    lazy var customChannel: String = {
+
+        if self.area != nil && self.channel != nil {
+            if self.channel == "tv" {
+                return "电视剧 "+self.area!
+            }
+            if self.channel == "movie" {
+                return "电视 "+self.area!
+            }
+            return self.channel!+" "+self.area!
+        }
+        if self.area != nil {
+            return self.area!
+        }
+        if self.channel != nil {
+            if self.channel == "tv" {
+                return "电视剧"
+            }
+            if self.channel == "movie" {
+                return "电视"
+            }
+            return self.channel!
+        }
+        return ""
+    }()
+
     
     override init() {
         self.cnname = nil
@@ -28,6 +109,14 @@ final class TV: NSObject, Decodable {
         self.play_time = nil
         self.poster = nil
         self.title = nil
+        self.play_status = nil
+        self.channel_cn = nil
+        self.poster_b = nil
+        self.page_description = nil
+        self.score = nil
+        self.score_counts = nil
+        self.area = nil
+        self.channel = nil
     }
 }
 
@@ -114,5 +203,11 @@ extension HomeSectionList: ListDiffable {
     func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
         return self === object ? true : self.isEqual(toDiffableObject: object)
     }
+}
+
+enum SearchType: String {
+    case resource = "resource"
+    case article = "article"
+    case none = "none"
 }
 

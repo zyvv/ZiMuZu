@@ -20,7 +20,6 @@
 		A301AEEDE914A33EAA4467B2 /* Pods_ZiMuZuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F73336619A52438D3CCC60 /* Pods_ZiMuZuTests.framework */; };
 		C10040DC1F31724700068142 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040DB1F31724700068142 /* BaseTabBarController.swift */; };
 		C10040DE1F317AD200068142 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040DD1F317AD200068142 /* ProfileViewController.swift */; };
-		C10040E01F317BB800068142 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040DF1F317BB800068142 /* SearchViewController.swift */; };
 		C10040E61F31E86C00068142 /* ZiMuZuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040E51F31E86C00068142 /* ZiMuZuAPI.swift */; };
 		C10833321F3B00E000533C9D /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10833311F3B00E000533C9D /* NewsListTableViewController.swift */; };
 		C10833351F3B010F00533C9D /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10833331F3B010F00533C9D /* NewsListCell.swift */; };
@@ -40,11 +39,24 @@
 		C174E6D31F386EC800921434 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C174E6D11F386EC800921434 /* NewsCell.xib */; };
 		C17E49C81F31663900F969B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E49C71F31663900F969B2 /* HomeViewController.swift */; };
 		C17E49CA1F31693200F969B2 /* ViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E49C91F31693200F969B2 /* ViewControllerConfig.swift */; };
+		C1916B321F46852F00F51362 /* ProfileListSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1916B311F46852F00F51362 /* ProfileListSectionController.swift */; };
+		C1916B351F4686E000F51362 /* ProfileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1916B331F4686E000F51362 /* ProfileListCell.swift */; };
+		C1916B361F4686E000F51362 /* ProfileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1916B341F4686E000F51362 /* ProfileListCell.xib */; };
+		C1916B381F4699E700F51362 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1916B371F4699E700F51362 /* Store.swift */; };
+		C197D5FD1F46C81400CF2D34 /* FavoriteTVTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197D5FC1F46C81400CF2D34 /* FavoriteTVTableViewController.swift */; };
+		C197D6001F46C8B200CF2D34 /* FavoriteTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197D5FE1F46C8B200CF2D34 /* FavoriteTVCell.swift */; };
+		C197D6011F46C8B200CF2D34 /* FavoriteTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C197D5FF1F46C8B200CF2D34 /* FavoriteTVCell.xib */; };
+		C197D6031F46E84A00CF2D34 /* FavoriteNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197D6021F46E84A00CF2D34 /* FavoriteNewsTableViewController.swift */; };
 		C197DC461F43E09B000891E5 /* UserCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197DC451F43E09B000891E5 /* UserCenter.swift */; };
 		C197DC481F43EABD000891E5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197DC471F43EABD000891E5 /* LoginView.swift */; };
 		C197DC4A1F43EB29000891E5 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C197DC491F43EB29000891E5 /* LoginView.xib */; };
 		C197DC4D1F43F7EA000891E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197DC4B1F43F7EA000891E5 /* LoginViewController.swift */; };
+		C1B5817D1F4ADA7200A97154 /* TVDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5817C1F4ADA7200A97154 /* TVDetailViewController.swift */; };
 		C1B625091F3C30080020EA39 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B625081F3C30080020EA39 /* NewsDetailViewController.swift */; };
+		C1D8DC521F4E86C800A3D323 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8DC511F4E86C800A3D323 /* SearchTableViewController.swift */; };
+		C1D8DC541F4EA16500A3D323 /* SeachHistoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8DC531F4EA16500A3D323 /* SeachHistoryHeaderView.swift */; };
+		C1D8DC561F4EA16E00A3D323 /* SeachHistoryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1D8DC551F4EA16E00A3D323 /* SeachHistoryHeaderView.xib */; };
+		C1D8DC581F4EA70800A3D323 /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8DC571F4EA70800A3D323 /* SearchResultTableViewController.swift */; };
 		C1F7169A1F441FFB00029338 /* LoginToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F716991F441FFB00029338 /* LoginToolView.swift */; };
 		C1F7169C1F44200300029338 /* LoginToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F7169B1F44200300029338 /* LoginToolView.xib */; };
 		C1F7169E1F44346A00029338 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F7169D1F44346A00029338 /* User.swift */; };
@@ -88,7 +100,6 @@
 		B2C5BDA30FD4529D4EDC464D /* Pods-ZiMuZuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiMuZuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZiMuZuTests/Pods-ZiMuZuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C10040DB1F31724700068142 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		C10040DD1F317AD200068142 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		C10040DF1F317BB800068142 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C10040E51F31E86C00068142 /* ZiMuZuAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuAPI.swift; sourceTree = "<group>"; };
 		C10833311F3B00E000533C9D /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
 		C10833331F3B010F00533C9D /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
@@ -111,11 +122,24 @@
 		C174E6D11F386EC800921434 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		C17E49C71F31663900F969B2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C17E49C91F31693200F969B2 /* ViewControllerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfig.swift; sourceTree = "<group>"; };
+		C1916B311F46852F00F51362 /* ProfileListSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListSectionController.swift; sourceTree = "<group>"; };
+		C1916B331F4686E000F51362 /* ProfileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListCell.swift; sourceTree = "<group>"; };
+		C1916B341F4686E000F51362 /* ProfileListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileListCell.xib; sourceTree = "<group>"; };
+		C1916B371F4699E700F51362 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		C197D5FC1F46C81400CF2D34 /* FavoriteTVTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTVTableViewController.swift; sourceTree = "<group>"; };
+		C197D5FE1F46C8B200CF2D34 /* FavoriteTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTVCell.swift; sourceTree = "<group>"; };
+		C197D5FF1F46C8B200CF2D34 /* FavoriteTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTVCell.xib; sourceTree = "<group>"; };
+		C197D6021F46E84A00CF2D34 /* FavoriteNewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNewsTableViewController.swift; sourceTree = "<group>"; };
 		C197DC451F43E09B000891E5 /* UserCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenter.swift; sourceTree = "<group>"; };
 		C197DC471F43EABD000891E5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C197DC491F43EB29000891E5 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		C197DC4B1F43F7EA000891E5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C1B5817C1F4ADA7200A97154 /* TVDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVDetailViewController.swift; sourceTree = "<group>"; };
 		C1B625081F3C30080020EA39 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		C1D8DC511F4E86C800A3D323 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		C1D8DC531F4EA16500A3D323 /* SeachHistoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachHistoryHeaderView.swift; sourceTree = "<group>"; };
+		C1D8DC551F4EA16E00A3D323 /* SeachHistoryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeachHistoryHeaderView.xib; sourceTree = "<group>"; };
+		C1D8DC571F4EA70800A3D323 /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
 		C1F716991F441FFB00029338 /* LoginToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginToolView.swift; sourceTree = "<group>"; };
 		C1F7169B1F44200300029338 /* LoginToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginToolView.xib; sourceTree = "<group>"; };
 		C1F7169D1F44346A00029338 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -217,6 +241,14 @@
 			isa = PBXGroup;
 			children = (
 				C10040DD1F317AD200068142 /* ProfileViewController.swift */,
+				C1916B311F46852F00F51362 /* ProfileListSectionController.swift */,
+				C1916B331F4686E000F51362 /* ProfileListCell.swift */,
+				C1916B341F4686E000F51362 /* ProfileListCell.xib */,
+				C1916B371F4699E700F51362 /* Store.swift */,
+				C197D5FC1F46C81400CF2D34 /* FavoriteTVTableViewController.swift */,
+				C197D5FE1F46C8B200CF2D34 /* FavoriteTVCell.swift */,
+				C197D5FF1F46C8B200CF2D34 /* FavoriteTVCell.xib */,
+				C197D6021F46E84A00CF2D34 /* FavoriteNewsTableViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -224,7 +256,10 @@
 		C17E49C21F31643900F969B2 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				C10040DF1F317BB800068142 /* SearchViewController.swift */,
+				C1D8DC511F4E86C800A3D323 /* SearchTableViewController.swift */,
+				C1D8DC531F4EA16500A3D323 /* SeachHistoryHeaderView.swift */,
+				C1D8DC551F4EA16E00A3D323 /* SeachHistoryHeaderView.xib */,
+				C1D8DC571F4EA70800A3D323 /* SearchResultTableViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -251,6 +286,7 @@
 				C10833331F3B010F00533C9D /* NewsListCell.swift */,
 				C10833341F3B010F00533C9D /* NewsListCell.xib */,
 				C1B625081F3C30080020EA39 /* NewsDetailViewController.swift */,
+				C1B5817C1F4ADA7200A97154 /* TVDetailViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -395,14 +431,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1916B361F4686E000F51362 /* ProfileListCell.xib in Resources */,
 				C174E6C91F3852E500921434 /* HomeListCell.xib in Resources */,
 				9727B43B1F30C08A00B271DF /* LaunchScreen.storyboard in Resources */,
 				C197DC4A1F43EB29000891E5 /* LoginView.xib in Resources */,
 				C10833361F3B010F00533C9D /* NewsListCell.xib in Resources */,
+				C197D6011F46C8B200CF2D34 /* FavoriteTVCell.xib in Resources */,
 				C174E6D31F386EC800921434 /* NewsCell.xib in Resources */,
 				C129FCF91F38384B00F3E629 /* HomeHeaderView.xib in Resources */,
 				97D4EBB31F36A4070067E25D /* TVCell.xib in Resources */,
 				9727B4381F30C08A00B271DF /* Assets.xcassets in Resources */,
+				C1D8DC561F4EA16E00A3D323 /* SeachHistoryHeaderView.xib in Resources */,
 				C1F7169C1F44200300029338 /* LoginToolView.xib in Resources */,
 				9727B4361F30C08A00B271DF /* Main.storyboard in Resources */,
 			);
@@ -523,11 +562,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D4EBB71F36B51B0067E25D /* HomeEmbeddedSectionController.swift in Sources */,
-				C10040E01F317BB800068142 /* SearchViewController.swift in Sources */,
 				C197DC461F43E09B000891E5 /* UserCenter.swift in Sources */,
+				C1916B321F46852F00F51362 /* ProfileListSectionController.swift in Sources */,
+				C1916B351F4686E000F51362 /* ProfileListCell.swift in Sources */,
 				9727B4311F30C08A00B271DF /* AppDelegate.swift in Sources */,
 				C1F7169A1F441FFB00029338 /* LoginToolView.swift in Sources */,
 				C1F7169E1F44346A00029338 /* User.swift in Sources */,
+				C197D6031F46E84A00CF2D34 /* FavoriteNewsTableViewController.swift in Sources */,
+				C1D8DC581F4EA70800A3D323 /* SearchResultTableViewController.swift in Sources */,
 				C15940E61F330EA100929B91 /* TV.swift in Sources */,
 				C174E6CD1F38688C00921434 /* News.swift in Sources */,
 				C197DC481F43EABD000891E5 /* LoginView.swift in Sources */,
@@ -535,18 +577,24 @@
 				C1B625091F3C30080020EA39 /* NewsDetailViewController.swift in Sources */,
 				C174E6CB1F3866F400921434 /* HomeNewsSectionController.swift in Sources */,
 				C10833351F3B010F00533C9D /* NewsListCell.swift in Sources */,
+				C1916B381F4699E700F51362 /* Store.swift in Sources */,
+				C1D8DC521F4E86C800A3D323 /* SearchTableViewController.swift in Sources */,
+				C1B5817D1F4ADA7200A97154 /* TVDetailViewController.swift in Sources */,
 				C10040E61F31E86C00068142 /* ZiMuZuAPI.swift in Sources */,
 				C10833321F3B00E000533C9D /* NewsListTableViewController.swift in Sources */,
 				C197DC4D1F43F7EA000891E5 /* LoginViewController.swift in Sources */,
 				C174E6D21F386EC800921434 /* NewsCell.swift in Sources */,
+				C1D8DC541F4EA16500A3D323 /* SeachHistoryHeaderView.swift in Sources */,
 				C174E6C81F3852E500921434 /* HomeListCell.swift in Sources */,
 				C174E6C51F38529300921434 /* HomeListSectionController.swift in Sources */,
 				C10040DC1F31724700068142 /* BaseTabBarController.swift in Sources */,
 				C132117F1F39C60A00D788AD /* TVListViewController.swift in Sources */,
 				97D4EBAF1F36A3C00067E25D /* HomeSectionController.swift in Sources */,
+				C197D6001F46C8B200CF2D34 /* FavoriteTVCell.swift in Sources */,
 				C174E6CF1F386E9100921434 /* HomeNewsEmbeddedSectionController.swift in Sources */,
 				C10040DE1F317AD200068142 /* ProfileViewController.swift in Sources */,
 				97D4EBB21F36A4070067E25D /* TVCell.swift in Sources */,
+				C197D5FD1F46C81400CF2D34 /* FavoriteTVTableViewController.swift in Sources */,
 				C17E49CA1F31693200F969B2 /* ViewControllerConfig.swift in Sources */,
 				C17E49C81F31663900F969B2 /* HomeViewController.swift in Sources */,
 			);

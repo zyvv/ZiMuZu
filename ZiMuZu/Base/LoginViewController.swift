@@ -88,7 +88,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, UITextFieldDe
             return
         }
         zmzProvider.request(.login(account: emailTextField.text!, password: passwordTextField.text!)) { result in
-            guard let user = handleResponse(User.self, result: result) else {
+            guard let user = handleResponse(nil, type: User.self, result: result) else {
                 return
             }
             UserCenter.sharedInstance.login(user)

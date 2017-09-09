@@ -9,6 +9,26 @@
 import Foundation
 import IGListKit
 
+final class SearchNewsResult: NSObject, Decodable {
+    let count: Int
+    let list: [News]?
+    
+    override init() {
+        self.count = 0
+        self.list = nil
+    }
+}
+
+final class FavoriteNews: NSObject, Codable {
+    let dateline: String?
+    let detail: News?
+    
+    override init() {
+        self.dateline = nil
+        self.detail = nil
+    }
+}
+
 final class News: NSObject, Codable {
     
     let title: String?
@@ -17,9 +37,11 @@ final class News: NSObject, Codable {
     let poster: URL?
     let type_cn: String?
     let intro: String?
+    let poster_b: URL?
+    let pubtime: String?
     
     lazy var datelineString: String = {
-        let duratinInterval = Date().timeIntervalSince1970 - Double(dateline ?? "0.0")!
+        let duratinInterval = Date().timeIntervalSince1970 - Double(dateline ?? pubtime ?? "0.0")!
         switch duratinInterval {
         case 0..<60:
             return "刚刚"
@@ -45,6 +67,8 @@ final class News: NSObject, Codable {
         self.poster = nil
         self.type_cn = nil
         self.intro = nil
+        self.poster_b = nil
+        self.pubtime = nil
     }
 }
 

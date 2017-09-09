@@ -68,18 +68,11 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
     
     func requestTVs() {
         zmzProvider.request(.tv_schedule()) { result in
-            do {
-                if case let .success(response) = result {
-                    let decoder = JSONDecoder()
-                    decoder.userInfo = [TVScheduleDataCodingOptions.key: TVScheduleDataCodingOptions.TVScheduleDataType.todayList]
-                    let todayList = try decoder.decode(TVSchedule.self, from: response.data)
-                    self.data.append(HomeSectionList(list: todayList.tvs, title: "今日更新", handle: today()))
-                    self.adapter.performUpdates(animated: true, completion: nil)
-                }
-                
-            } catch {
-                print(error)
-            }
+            let decoder = JSONDecoder()
+            decoder.userInfo = [TVScheduleDataCodingOptions.key: TVScheduleDataCodingOptions.TVScheduleDataType.todayList]
+            let todayList = handleResponse(decoder, type: TVSchedule.self, result: result)
+            self.data.append(HomeSectionList(list: todayList?.tvs ?? [], title: "今日更新", handle: today()))
+            self.adapter.performUpdates(animated: true, completion: nil)
         }
     }
     
@@ -117,7 +110,7 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
     
     func requestNewsList() {
         zmzProvider.request(.articleList(page:1)) { result in
-            let newsList = handleResponse([News].self, result: result)
+            let newsList = handleResponse(nil, type: [News].self, result: result)
             self.data.append(HomeSectionList(list: newsList ?? [], title: "新闻资讯和剧评", handle: "更多"))
             self.adapter.performUpdates(animated: true, completion: nil)
         }

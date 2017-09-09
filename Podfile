@@ -13,6 +13,7 @@ def pods
     pod 'Hero', :git => 'https://github.com/lkzhao/Hero.git', :tag => '1.0.0-alpha.4'
     pod 'Typist'
     pod 'PKHUD', :git => 'https://github.com/pkluz/PKHUD.git', :branch => 'release/swift4'
+    pod 'SQLite.swift', :git => 'https://github.com/stephencelis/SQLite.swift.git', :branch => 'swift-4'
 #    pod 'JTAppleCalendar'
 end
 

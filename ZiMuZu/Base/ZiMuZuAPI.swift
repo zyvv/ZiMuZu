@@ -20,19 +20,22 @@ let customParameters = { () -> [String : String] in
                       "m": "index"]
     if UserCenter.sharedInstance.isLogin {
         parameters["uid"] = UserCenter.sharedInstance.uid!
+        parameters["token"] = UserCenter.sharedInstance.userToken!
     }
     return parameters
 }()
 
 let endpointClosure: (ZiMuZu) -> Endpoint<ZiMuZu> = { (target: ZiMuZu) -> Endpoint<ZiMuZu> in
     let url = target.baseURL.appendingPathComponent(target.path).absoluteString
-    let endpoint = Endpoint<ZiMuZu>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters).adding(newParameters:customParameters)
-    return endpoint
+    if target.parameters != nil {
+        return Endpoint<ZiMuZu>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters).adding(newParameters:customParameters)
+    } else {
+        return Endpoint<ZiMuZu>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
+    }
+
 }
 
-struct ResponsePlugin {
-    
-}
+struct ResponsePlugin {}
 
 extension ResponsePlugin: PluginType {
     
@@ -51,7 +54,6 @@ extension ResponsePlugin: PluginType {
         
         // 成功返回后台数据
         if case .success(let response) = result {
-
             // 解析后台数据 key为data部分
             if let filterResponse = try? response.filterData() {
                 
@@ -90,20 +92,15 @@ public enum ZiMuZu {
     case articleList(page: Int)
     case article(id: String)
     case login(account: String, password: String)
+    case favlist(page: Int, limit: Int, ft: String)
+    case search(st: String, k: String)
+    case hotkeyword()
 }
 
 extension ZiMuZu: TargetType {
     public var sampleData: Data {
         switch self {
-        case .tv_schedule():
-            return "Half measures are as bad as nothing at all.".data(using: String.Encoding.utf8)!
-        case .top():
-            return "".data(using: String.Encoding.utf8)!
-        case .articleList( _):
-            return "".data(using: String.Encoding.utf8)!
-        case .article( _):
-            return "".data(using: String.Encoding.utf8)!
-        case .login( _, _):
+        case .tv_schedule(), .top(), .articleList(_), .article(_), .login(_, _), .favlist(_, _, _), .search(_, _), .hotkeyword():
             return "".data(using: String.Encoding.utf8)!
         }
     }
@@ -113,11 +110,22 @@ extension ZiMuZu: TargetType {
     }
     
     public var baseURL: URL {
-        return URL(string: "https://api1.ousns.net")!
+        switch self {
+        case .hotkeyword():
+            return URL(string: "http://www.zimuzu.tv/public/hotkeyword")!
+        default:
+            return URL(string: "https://api1.ousns.net")!
+        }
+        
     }
     
     public var path: String {
-        return "index.php"
+         switch self {
+            case .hotkeyword():
+            return "public/hotkeyword"
+            default:
+            return "index.php"
+        }
     }
     
     public var method: Moya.Method {
@@ -141,6 +149,12 @@ extension ZiMuZu: TargetType {
             return ["a": "article", "id": id]
         case .login(let account, let password):
             return ["a": "login", "account": account, "password": password]
+        case .favlist(let page, let limit, let ft):
+            return ["a": "fav_list", "page": page, "limit": limit, "ft": ft]
+        case .search(let st, let k):
+            return ["a": "search", "st": st, "k": k]
+        case .hotkeyword():
+            return nil
         }
     }
     
@@ -169,10 +183,11 @@ extension Moya.Response {
     }
 }
 
-func handleResponse<T>(_ type: T.Type, result: Result<Moya.Response, MoyaError>) -> T? where T: Codable {
+func handleResponse<T>(_ decoder: JSONDecoder?, type: T.Type, result: Result<Moya.Response, MoyaError>) -> T? where T: Decodable {
     do {
         if case let .success(response) = result {
-            let responseData: T = try JSONDecoder().decode(type, from: response.data)
+            let decoder = decoder != nil ? decoder : JSONDecoder()
+            let responseData: T = try decoder!.decode(type, from: response.data)
             return responseData
         }
         if case let .failure(error) = result {
@@ -193,8 +208,6 @@ func handleResponse<T>(_ type: T.Type, result: Result<Moya.Response, MoyaError>)
     }
     return nil
 }
-
-
 
 func today() -> String {
     let dateFormatter = DateFormatter()

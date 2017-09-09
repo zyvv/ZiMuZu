@@ -16,11 +16,6 @@ class NewsListCell: UITableViewCell {
     @IBOutlet weak var newsIntro: UILabel!
     @IBOutlet weak var postDate: UILabel!
     
-    var news: News? {
-        didSet {
-            setNeedsLayout()
-        }
-    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,15 +23,6 @@ class NewsListCell: UITableViewCell {
         posterImageView.layer.masksToBounds = true
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        newsTitle.text = news?.title
-        newsType.text = news?.type_cn
-        newsIntro.text = news?.intro
-        posterImageView.kf.setImage(with: news?.poster)
-        postDate.text = news?.datelineString
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

@@ -80,28 +80,57 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Rr5-nx-2vC" kind="relationship" relationship="rootViewController" id="Hzp-ZK-gYK"/>
+                        <segue destination="ipu-OZ-sqq" kind="relationship" relationship="rootViewController" id="tGX-7z-tNi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hem-Ph-Xnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-39" y="853"/>
         </scene>
-        <!--Search View Controller-->
-        <scene sceneID="fW8-s1-7S2">
+        <!--Search Table View Controller-->
+        <scene sceneID="TDB-E0-2GX">
             <objects>
-                <viewController id="Rr5-nx-2vC" customClass="SearchViewController" customModule="ZiMuZu" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gIh-2e-KY3">
+                <tableViewController id="ipu-OZ-sqq" customClass="SearchTableViewController" customModule="ZiMuZu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kVB-03-n2h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="btJ-hy-5qi"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jUJ-96-70I"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AD9-El-jHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchHistoryCell" id="Tjd-d0-SOF">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tjd-d0-SOF" id="2cN-VN-F9z">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xup-cS-xfx">
+                                            <rect key="frame" x="15" y="43" width="360" height="1"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="8sz-uH-K32"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xup-cS-xfx" secondAttribute="bottom" id="0sQ-m9-fqK"/>
+                                        <constraint firstItem="xup-cS-xfx" firstAttribute="leading" secondItem="2cN-VN-F9z" secondAttribute="leading" constant="15" id="Tph-Mh-8R2"/>
+                                        <constraint firstAttribute="trailing" secondItem="xup-cS-xfx" secondAttribute="trailing" id="aqv-xn-vkZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ipu-OZ-sqq" id="Wdu-ey-T0Z"/>
+                            <outlet property="delegate" destination="ipu-OZ-sqq" id="Kwv-qV-tXe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Pyk-7u-Wpe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewn-xa-j1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="730" y="855"/>
+            <point key="canvasLocation" x="948" y="851.42428785607206"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PCU-HS-xE0">
@@ -109,7 +138,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H0K-vA-Css" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tabbar_profile" id="QOL-zT-vjA">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                        <color key="badgeColor" red="1" green="0.0" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oqa-Vb-9P9">
@@ -223,7 +251,7 @@
                         <viewLayoutGuide key="safeArea" id="LWk-QA-gKK"/>
                     </view>
                     <navigationItem key="navigationItem" title="登录" largeTitleDisplayMode="always" id="85o-10-diT">
-                        <barButtonItem key="leftBarButtonItem" title="取消" style="plain" id="Yjt-H2-DHK">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="Yjt-H2-DHK">
                             <connections>
                                 <action selector="backItemAction:" destination="5Rp-EO-xz2" id="ihL-Ln-zau"/>
                             </connections>
@@ -249,7 +277,7 @@
                         <viewLayoutGuide key="safeArea" id="pMu-u4-Ggy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="hCM-ka-SMF">
-                        <barButtonItem key="rightBarButtonItem" title="设置" springLoaded="YES" style="plain" id="IFs-ex-KYT">
+                        <barButtonItem key="rightBarButtonItem" title="设置" id="IFs-ex-KYT">
                             <inset key="largeContentSizeImageInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>

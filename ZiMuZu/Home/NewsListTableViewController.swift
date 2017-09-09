@@ -51,29 +51,41 @@ class NewsListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return dataArray?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dataArray?.count ?? 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell", for: indexPath) as! NewsListCell
-        cell.news = dataArray?[indexPath.row]
+        let news: News = (dataArray?[indexPath.section])!
+        cell.newsTitle.text = news.title
+        cell.newsType.text = news.type_cn
+        cell.newsIntro.text = news.intro
+        cell.posterImageView.kf.setImage(with: news.poster)
+        cell.postDate.text = news.datelineString
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let imageCellHeight = (kScreenWidth - 20) * 0.3 * (12/16.0) - 10
-        let textCellHeight: CGFloat = 130
-        return textCellHeight
+        return 130
     }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
+    }
+
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = NewsDetailViewController()
-        vc.news = dataArray?[indexPath.row]
+        vc.news = dataArray?[indexPath.section]
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -122,34 +134,26 @@ class NewsListTableViewController: UITableViewController {
             return
         }
         zmzProvider.request(.articleList(page:page)) { result in
-            do {
-                if case let .success(response) = result {
-                    let newsList = try JSONDecoder().decode([News].self, from: response.data)
-                    if page > 1 {
-                        self.dataArray?.append(contentsOf: newsList)
-                    } else {
-                        self.dataArray = newsList
-                    }
-                    
-                    if CACurrentMediaTime() - self.refeshState.beginTimeInterval < 1.0 {
-                        DispatchQueue.global(qos: .default).async {
-                            sleep(1)
-                            DispatchQueue.main.async {
-                                self.refeshState = (false, 0)
-                                self.tableView.reloadData()
-                                self.refreshControl?.endRefreshing()
-                            }
-                        }
-                    } else {
-                        self.refeshState = (false, 0)
-                        self.tableView.reloadData()
-                        self.refreshControl?.endRefreshing()
-                    }
-                    
+            if let newsList = handleResponse(nil, type: [News].self, result: result) {
+                if page > 1 {
+                    self.dataArray?.append(contentsOf: newsList)
+                } else {
+                    self.dataArray = newsList
                 }
-                
-            } catch {
-                print(error)
+                if CACurrentMediaTime() - self.refeshState.beginTimeInterval < 1.0 {
+                    DispatchQueue.global(qos: .default).async {
+                        sleep(1)
+                        DispatchQueue.main.async {
+                            self.refeshState = (false, 0)
+                            self.tableView.reloadData()
+                            self.refreshControl?.endRefreshing()
+                        }
+                    }
+                } else {
+                    self.refeshState = (false, 0)
+                    self.tableView.reloadData()
+                    self.refreshControl?.endRefreshing()
+                }
             }
         }
     }

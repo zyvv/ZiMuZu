@@ -80,7 +80,7 @@ final class HomeSectionController: ListSectionController, ListAdapterDataSource,
                 switch self.tvs.title {
                 case "今日更新": break
                 default:
-                    let vc = TVListViewController(collectionViewLayout: TVListLayout())
+                    let vc = TVListViewController(style: .plain)    
                     vc.title = self.tvs.title
                     vc.dataArray = self.tvs.list as? [TV]
                     self.viewController?.navigationController?.pushViewController(vc, animated: true)

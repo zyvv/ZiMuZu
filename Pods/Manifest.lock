@@ -32,6 +32,9 @@ PODS:
     - Result (~> 3.0)
   - PKHUD (4.2.3)
   - Result (3.2.1)
+  - SQLite.swift (0.11.3):
+    - SQLite.swift/standard (= 0.11.3)
+  - SQLite.swift/standard (0.11.3)
   - Typist (1.0.0)
 
 DEPENDENCIES:
@@ -42,6 +45,7 @@ DEPENDENCIES:
   - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`, branch `swift4`)
   - Moya (from `https://github.com/Moya/Moya.git`)
   - PKHUD (from `https://github.com/pkluz/PKHUD.git`, branch `release/swift4`)
+  - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`, branch `swift-4`)
   - Typist
 
 EXTERNAL SOURCES:
@@ -59,6 +63,9 @@ EXTERNAL SOURCES:
   PKHUD:
     :branch: release/swift4
     :git: https://github.com/pkluz/PKHUD.git
+  SQLite.swift:
+    :branch: swift-4
+    :git: https://github.com/stephencelis/SQLite.swift.git
 
 CHECKOUT OPTIONS:
   Hero:
@@ -76,6 +83,9 @@ CHECKOUT OPTIONS:
   PKHUD:
     :commit: 4d8fbf70ae912dd72280cde0a5c1440ada9a7306
     :git: https://github.com/pkluz/PKHUD.git
+  SQLite.swift:
+    :commit: 6463eb13c021cba6de2ed4e8a76a5c03301de200
+    :git: https://github.com/stephencelis/SQLite.swift.git
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -88,8 +98,9 @@ SPEC CHECKSUMS:
   Moya: d104801616468247e5a9abd258c838c5ca6b1389
   PKHUD: 351011b853e6b942e7ee8ad335864cc84c787241
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  SQLite.swift: f5e183af7f267169a3e71cefc7c0a72e687c52a7
   Typist: 470a4f47f4e635ccd0e9f3ff9ce2d70c9e6001a5
 
-PODFILE CHECKSUM: a5c3b6c539a75346f932abf6f598c52cf3b29d93
+PODFILE CHECKSUM: fe552d3fa7b75e5df2a56d7a009a3b3c3d01d6d3
 
 COCOAPODS: 1.2.0.beta.3

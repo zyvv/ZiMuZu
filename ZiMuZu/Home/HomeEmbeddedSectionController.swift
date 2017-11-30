@@ -21,6 +21,7 @@ class HomeEmbeddedSectionController: ListSectionController {
     
     override func sizeForItem(at index: Int) -> CGSize {
         let height = collectionContext?.containerSize.height ?? 0
+        print(height)
         return CGSize(width: (height - 27)*0.68, height: height)
     }
     
@@ -41,7 +42,6 @@ class HomeEmbeddedSectionController: ListSectionController {
     override func didUpdate(to object: Any) {
         tv = object as? TV
     }
-
 }
 
 final class HomeEmbeddedCollectionViewCell: UICollectionViewCell {

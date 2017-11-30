@@ -21,6 +21,19 @@
 		C10040DC1F31724700068142 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040DB1F31724700068142 /* BaseTabBarController.swift */; };
 		C10040DE1F317AD200068142 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040DD1F317AD200068142 /* ProfileViewController.swift */; };
 		C10040E61F31E86C00068142 /* ZiMuZuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10040E51F31E86C00068142 /* ZiMuZuAPI.swift */; };
+		C10739F81FCFAC5B00E17F07 /* Pods-ZiMuZu-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = C10739F71FCFAC5B00E17F07 /* Pods-ZiMuZu-acknowledgements.plist */; };
+		C10739FD1FCFF36400E17F07 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10739FC1FCFF36400E17F07 /* AudioToolbox.framework */; };
+		C10739FF1FCFF37400E17F07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10739FE1FCFF37400E17F07 /* AVFoundation.framework */; };
+		C1073A011FCFF37C00E17F07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A001FCFF37C00E17F07 /* CoreGraphics.framework */; };
+		C1073A031FCFF38700E17F07 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A021FCFF38700E17F07 /* CoreMedia.framework */; };
+		C1073A051FCFF38E00E17F07 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A041FCFF38D00E17F07 /* CoreVideo.framework */; };
+		C1073A071FCFF39800E17F07 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A061FCFF39800E17F07 /* libbz2.tbd */; };
+		C1073A091FCFF39E00E17F07 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A081FCFF39E00E17F07 /* libz.tbd */; };
+		C1073A0B1FCFF3A900E17F07 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A0A1FCFF3A900E17F07 /* MediaPlayer.framework */; };
+		C1073A0D1FCFF3B300E17F07 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A0C1FCFF3B300E17F07 /* MobileCoreServices.framework */; };
+		C1073A0F1FCFF3BA00E17F07 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A0E1FCFF3BA00E17F07 /* OpenGLES.framework */; };
+		C1073A111FCFF3C400E17F07 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A101FCFF3C400E17F07 /* QuartzCore.framework */; };
+		C1073A131FCFF3CB00E17F07 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A121FCFF3CB00E17F07 /* VideoToolbox.framework */; };
 		C10833321F3B00E000533C9D /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10833311F3B00E000533C9D /* NewsListTableViewController.swift */; };
 		C10833351F3B010F00533C9D /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10833331F3B010F00533C9D /* NewsListCell.swift */; };
 		C10833361F3B010F00533C9D /* NewsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C10833341F3B010F00533C9D /* NewsListCell.xib */; };
@@ -101,6 +114,19 @@
 		C10040DB1F31724700068142 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		C10040DD1F317AD200068142 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C10040E51F31E86C00068142 /* ZiMuZuAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuAPI.swift; sourceTree = "<group>"; };
+		C10739F71FCFAC5B00E17F07 /* Pods-ZiMuZu-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-ZiMuZu-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		C10739FC1FCFF36400E17F07 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C10739FE1FCFF37400E17F07 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C1073A001FCFF37C00E17F07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C1073A021FCFF38700E17F07 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C1073A041FCFF38D00E17F07 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		C1073A061FCFF39800E17F07 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		C1073A081FCFF39E00E17F07 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C1073A0A1FCFF3A900E17F07 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C1073A0C1FCFF3B300E17F07 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C1073A0E1FCFF3BA00E17F07 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		C1073A101FCFF3C400E17F07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C1073A121FCFF3CB00E17F07 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		C10833311F3B00E000533C9D /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
 		C10833331F3B010F00533C9D /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
 		C10833341F3B010F00533C9D /* NewsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListCell.xib; sourceTree = "<group>"; };
@@ -150,6 +176,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1073A131FCFF3CB00E17F07 /* VideoToolbox.framework in Frameworks */,
+				C1073A111FCFF3C400E17F07 /* QuartzCore.framework in Frameworks */,
+				C1073A0F1FCFF3BA00E17F07 /* OpenGLES.framework in Frameworks */,
+				C1073A0D1FCFF3B300E17F07 /* MobileCoreServices.framework in Frameworks */,
+				C1073A0B1FCFF3A900E17F07 /* MediaPlayer.framework in Frameworks */,
+				C1073A091FCFF39E00E17F07 /* libz.tbd in Frameworks */,
+				C1073A071FCFF39800E17F07 /* libbz2.tbd in Frameworks */,
+				C1073A051FCFF38E00E17F07 /* CoreVideo.framework in Frameworks */,
+				C1073A031FCFF38700E17F07 /* CoreMedia.framework in Frameworks */,
+				C1073A011FCFF37C00E17F07 /* CoreGraphics.framework in Frameworks */,
+				C10739FF1FCFF37400E17F07 /* AVFoundation.framework in Frameworks */,
+				C10739FD1FCFF36400E17F07 /* AudioToolbox.framework in Frameworks */,
 				A17503B09089A4F9BFC16157 /* Pods_ZiMuZu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +213,18 @@
 		23A5E9B686C82CC0851684A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1073A121FCFF3CB00E17F07 /* VideoToolbox.framework */,
+				C1073A101FCFF3C400E17F07 /* QuartzCore.framework */,
+				C1073A0E1FCFF3BA00E17F07 /* OpenGLES.framework */,
+				C1073A0C1FCFF3B300E17F07 /* MobileCoreServices.framework */,
+				C1073A0A1FCFF3A900E17F07 /* MediaPlayer.framework */,
+				C1073A081FCFF39E00E17F07 /* libz.tbd */,
+				C1073A061FCFF39800E17F07 /* libbz2.tbd */,
+				C1073A041FCFF38D00E17F07 /* CoreVideo.framework */,
+				C1073A021FCFF38700E17F07 /* CoreMedia.framework */,
+				C1073A001FCFF37C00E17F07 /* CoreGraphics.framework */,
+				C10739FE1FCFF37400E17F07 /* AVFoundation.framework */,
+				C10739FC1FCFF36400E17F07 /* AudioToolbox.framework */,
 				680CCB0B9876F22E9F7EE5CA /* Pods_ZiMuZu.framework */,
 				20F73336619A52438D3CCC60 /* Pods_ZiMuZuTests.framework */,
 			);
@@ -206,6 +256,7 @@
 		9727B42F1F30C08A00B271DF /* ZiMuZu */ = {
 			isa = PBXGroup;
 			children = (
+				C10739F91FCFF31D00E17F07 /* Frameworks */,
 				C17E49C41F31647800F969B2 /* Base */,
 				C17E49C31F31644100F969B2 /* Home */,
 				C17E49C11F31643900F969B2 /* Profile */,
@@ -215,6 +266,7 @@
 				9727B4371F30C08A00B271DF /* Assets.xcassets */,
 				9727B4391F30C08A00B271DF /* LaunchScreen.storyboard */,
 				9727B43C1F30C08A00B271DF /* Info.plist */,
+				C10739F71FCFAC5B00E17F07 /* Pods-ZiMuZu-acknowledgements.plist */,
 			);
 			path = ZiMuZu;
 			sourceTree = "<group>";
@@ -226,6 +278,13 @@
 				9727B4521F30C08A00B271DF /* Info.plist */,
 			);
 			path = ZiMuZuUITests;
+			sourceTree = "<group>";
+		};
+		C10739F91FCFF31D00E17F07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		C159409B1F32F20700929B91 /* ZiMuZuTests */ = {
@@ -440,6 +499,7 @@
 				C174E6D31F386EC800921434 /* NewsCell.xib in Resources */,
 				C129FCF91F38384B00F3E629 /* HomeHeaderView.xib in Resources */,
 				97D4EBB31F36A4070067E25D /* TVCell.xib in Resources */,
+				C10739F81FCFAC5B00E17F07 /* Pods-ZiMuZu-acknowledgements.plist in Resources */,
 				9727B4381F30C08A00B271DF /* Assets.xcassets in Resources */,
 				C1D8DC561F4EA16E00A3D323 /* SeachHistoryHeaderView.xib in Resources */,
 				C1F7169C1F44200300029338 /* LoginToolView.xib in Resources */,
@@ -470,13 +530,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZiMuZuTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1F06FC516349B2A90FBDDE20 /* [CP] Embed Pods Frameworks */ = {
@@ -485,9 +548,40 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZiMuZu/Pods-ZiMuZu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AcknowList/AcknowList.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DTCoreText/DTCoreText.framework",
+				"${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Typist/Typist.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcknowList.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTCoreText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Typist.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -500,9 +594,40 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZiMuZuTests/Pods-ZiMuZuTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AcknowList/AcknowList.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DTCoreText/DTCoreText.framework",
+				"${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Typist/Typist.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcknowList.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTCoreText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Typist.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -530,13 +655,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZiMuZu-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1FB9BA40D573C4A3C63D7BA /* [CP] Copy Pods Resources */ = {
@@ -764,12 +892,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QXJB9XPNQ5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZiMuZu/Frameworks",
+				);
 				INFOPLIST_FILE = ZiMuZu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -779,12 +912,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QXJB9XPNQ5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZiMuZu/Frameworks",
+				);
 				INFOPLIST_FILE = ZiMuZu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangyangwei.ZiMuZu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

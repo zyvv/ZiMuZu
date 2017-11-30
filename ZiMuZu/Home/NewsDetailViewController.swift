@@ -19,6 +19,7 @@ class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDel
         }
     }
 
+    @available(iOS 11.0, *)
     lazy var htmlTextView: DTAttributedTextView = {
         let textView = DTAttributedTextView(frame: view.bounds)
         textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -83,7 +84,11 @@ class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDel
                     guard let data = news.content.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return }
                     let attributedString = NSAttributedString(htmlData: data, options: self.htmlStringAttributeds, documentAttributes: nil)
                     DispatchQueue.main.async {
-                        self.htmlTextView.attributedString = attributedString
+                        if #available(iOS 11.0, *) {
+                            self.htmlTextView.attributedString = attributedString
+                        } else {
+                            // Fallback on earlier versions
+                        }
                     }
                 }
                 
@@ -112,19 +117,27 @@ class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDel
         let predicate = NSPredicate(format: "contentURL == %@", url! as NSURL)
         
         var didUpdate = false
-        for oneAttachment in self.htmlTextView.attributedTextContentView.layoutFrame.textAttachments(with: predicate) {
-            guard let oneAttachment: DTTextAttachment = oneAttachment as? DTTextAttachment else {
-                return
+        if #available(iOS 11.0, *) {
+            for oneAttachment in self.htmlTextView.attributedTextContentView.layoutFrame.textAttachments(with: predicate) {
+                guard let oneAttachment: DTTextAttachment = oneAttachment as? DTTextAttachment else {
+                    return
+                }
+                if oneAttachment.originalSize.height == 0 {
+                    oneAttachment.originalSize = imageSize
+                    didUpdate = true
+                }
             }
-            if oneAttachment.originalSize.height == 0 {
-                oneAttachment.originalSize = imageSize
-                didUpdate = true
-            }
+        } else {
+            // Fallback on earlier versions
         }
         
         if didUpdate {
             DispatchQueue.main.async {
-                self.htmlTextView.relayoutText()
+                if #available(iOS 11.0, *) {
+                    self.htmlTextView.relayoutText()
+                } else {
+                    // Fallback on earlier versions
+                }
             }
         }
     }

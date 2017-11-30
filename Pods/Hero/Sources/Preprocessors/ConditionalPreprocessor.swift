@@ -24,7 +24,7 @@ import UIKit
 
 public struct HeroConditionalContext {
   internal weak var hero: HeroTransition!
-  internal weak var view: UIView!
+  public weak var view: UIView!
 
   public private(set) var isAppearing: Bool
 
@@ -74,8 +74,8 @@ public struct HeroConditionalContext {
 
 class ConditionalPreprocessor: BasePreprocessor {
   override func process(fromViews: [UIView], toViews: [UIView]) {
-    process(views:fromViews, appearing: false)
-    process(views:toViews, appearing: true)
+    process(views: fromViews, appearing: false)
+    process(views: toViews, appearing: true)
   }
 
   func process(views: [UIView], appearing: Bool) {

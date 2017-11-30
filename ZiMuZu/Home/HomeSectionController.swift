@@ -27,7 +27,10 @@ final class HomeSectionController: ListSectionController, ListAdapterDataSource,
 
     override func sizeForItem(at index: Int) -> CGSize {
         let width = collectionContext!.containerSize.width
-        return CGSize(width: width, height: (width - 20)/2.0)
+        if UI_USER_INTERFACE_IDIOM() == .phone {
+            return CGSize(width: width, height: (width - 20)/2.0)
+        }
+        return CGSize(width: width, height: (width - 20)/3.0)
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {

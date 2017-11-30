@@ -25,9 +25,9 @@ import UIKit
 extension CALayer {
   internal static var heroAddedAnimations: [(CALayer, String, CAAnimation)]? = {
     let swizzling: (AnyClass, Selector, Selector) -> Void = { forClass, originalSelector, swizzledSelector in
-      let originalMethod = class_getInstanceMethod(forClass, originalSelector)
-      let swizzledMethod = class_getInstanceMethod(forClass, swizzledSelector)
-        method_exchangeImplementations(originalMethod!, swizzledMethod!)
+      if let originalMethod = class_getInstanceMethod(forClass, originalSelector), let swizzledMethod = class_getInstanceMethod(forClass, swizzledSelector) {
+        method_exchangeImplementations(originalMethod, swizzledMethod)
+      }
     }
     let originalSelector = #selector(add(_:forKey:))
     let swizzledSelector = #selector(hero_add(anim:forKey:))
@@ -36,7 +36,9 @@ extension CALayer {
   }()
 
   @objc dynamic func hero_add(anim: CAAnimation, forKey: String?) {
-    CALayer.heroAddedAnimations?.append((self, forKey!, anim))
+    let copiedAnim = anim.copy() as! CAAnimation
+    copiedAnim.delegate = nil // having delegate resulted some weird animation behavior
+    CALayer.heroAddedAnimations?.append((self, forKey!, copiedAnim))
     hero_add(anim: anim, forKey: forKey)
   }
 }
@@ -94,10 +96,10 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
 
   func currentValue(key: String) -> Any? {
     if let key = overlayKeyFor(key: key) {
-      return overlayLayer?.value(forKeyPath: key)
+      return (overlayLayer?.presentation() ?? overlayLayer)?.value(forKeyPath: key)
     }
     if snapshot.layer.animationKeys()?.isEmpty != false {
-      return snapshot.layer.value(forKeyPath:key)
+      return snapshot.layer.value(forKeyPath: key)
     }
     return (snapshot.layer.presentation() ?? snapshot.layer).value(forKeyPath: key)
   }
@@ -150,12 +152,21 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
   func setSize(view: UIView, newSize: CGSize) {
     let oldSize = view.bounds.size
     if targetState.snapshotType != .noSnapshot {
-      for subview in view.subviews {
-        let center = subview.center
-        let size = subview.bounds.size
-        subview.center = CGPoint(x: center.x / oldSize.width * newSize.width, y: center.y / oldSize.height * newSize.height)
-        subview.bounds.size = size / oldSize * newSize
-        setSize(view: subview, newSize: size / oldSize * newSize)
+      if oldSize.width == 0 || oldSize.height == 0 || newSize.width == 0 || newSize.height == 0 {
+        for subview in view.subviews {
+          subview.center = newSize.center
+          subview.bounds.size = newSize
+          setSize(view: subview, newSize: newSize)
+        }
+      } else {
+        let sizeRatio = oldSize / newSize
+        for subview in view.subviews {
+          let center = subview.center
+          let size = subview.bounds.size
+          subview.center = center / sizeRatio
+          subview.bounds.size = size / sizeRatio
+          setSize(view: subview, newSize: size / sizeRatio)
+        }
       }
       view.bounds.size = newSize
     } else {
@@ -168,7 +179,7 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
     CALayer.heroAddedAnimations = []
 
     if let (stiffness, damping) = targetState.spring {
-      UIView.animate(withDuration: duration, delay: delay, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [.layoutSubviews, .allowUserInteraction], animations: animations, completion: nil)
+      UIView.animate(withDuration: duration, delay: delay, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: animations, completion: nil)
 
       let addedAnimations = CALayer.heroAddedAnimations!
       CALayer.heroAddedAnimations = nil
@@ -183,15 +194,13 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
         }
       }
     } else {
-      UIView.animate(withDuration: duration, delay: delay, options: [.layoutSubviews, .allowUserInteraction], animations: animations, completion: nil)
-
+      CATransaction.begin()
+      CATransaction.setAnimationTimingFunction(timingFunction)
+      UIView.animate(withDuration: duration, delay: delay, options: [], animations: animations, completion: nil)
+      CATransaction.commit()
       let addedAnimations = CALayer.heroAddedAnimations!
       CALayer.heroAddedAnimations = nil
-
-      for (layer, key, anim) in addedAnimations {
-        anim.timingFunction = timingFunction
-        self.addAnimation(anim, for: key, to: layer)
-      }
+      self.animations.append(contentsOf: addedAnimations)
     }
   }
 
@@ -204,7 +213,7 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
   func animate(key: String, beginTime: TimeInterval, duration: TimeInterval, fromValue: Any?, toValue: Any?) -> TimeInterval {
     let anim = getAnimation(key: key, beginTime: beginTime, duration: duration, fromValue: fromValue, toValue: toValue)
 
-    if let overlayKey = overlayKeyFor(key:key) {
+    if let overlayKey = overlayKeyFor(key: key) {
       addAnimation(anim, for: overlayKey, to: getOverlayLayer())
     } else {
       switch key {
@@ -217,8 +226,10 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
           addAnimation(anim.copy() as! CAAnimation, for: key, to: overlayLayer)
         }
       case "bounds.size":
-        let fromSize = (fromValue as? NSValue)!.cgSizeValue
-        let toSize = (toValue as? NSValue)!.cgSizeValue
+        guard let fromSize = (fromValue as? NSValue)?.cgSizeValue, let toSize = (toValue as? NSValue)?.cgSizeValue else {
+          addAnimation(anim, for: key, to: snapshot.layer)
+          break
+        }
 
         setSize(view: snapshot, newSize: fromSize)
         uiViewBasedAnimate(duration: anim.duration, delay: beginTime - currentTime) {
@@ -245,11 +256,11 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
         targetState.append(.scale(x:size.width / currentSize.width,
                                   y:size.height / currentSize.height))
       } else {
-        rtn["bounds.size"] = NSValue(cgSize:size)
+        rtn["bounds.size"] = NSValue(cgSize: size)
       }
     }
     if let position = targetState.position {
-      rtn["position"] = NSValue(cgPoint:position)
+      rtn["position"] = NSValue(cgPoint: position)
     }
     if let opacity = targetState.opacity, !(snapshot is UIVisualEffectView) {
       rtn["opacity"] = NSNumber(value: opacity)
@@ -373,21 +384,11 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
     return timeUntilStop + delay
   }
 
-  func seek(layer: CALayer, timePassed: TimeInterval) {
-    let timeOffset = timePassed - targetState.delay
-    for (key, anim) in layer.animations {
-      anim.speed = 0
-      anim.timeOffset = max(0, min(anim.duration - 0.01, timeOffset))
-      layer.removeAnimation(forKey: key)
-      layer.add(anim, forKey: key)
-    }
-  }
-
   override func seek(timePassed: TimeInterval) {
     let timeOffset = timePassed - targetState.delay
     for (layer, key, anim) in animations {
       anim.speed = 0
-      anim.timeOffset = max(0, min(anim.duration - 0.01, timeOffset))
+      anim.timeOffset = timeOffset.clamp(0, anim.duration)
       layer.removeAnimation(forKey: key)
       layer.add(anim, forKey: key)
     }

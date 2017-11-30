@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import AcknowList
 import IGListKit
+
 
 final class ProfileSection: NSObject {
     
@@ -105,10 +107,14 @@ class ProfileViewController: UIViewController, ListAdapterDataSource {
         }
         
     }
+    @IBAction func aboutButtonAction(_ sender: UIBarButtonItem) {
+        let path = Bundle.main.path(forResource: "Pods-ZiMuZu-acknowledgements", ofType: "plist")
+        let viewController = AcknowListViewController(acknowledgementsPlistPath: path)
+        viewController.view.backgroundColor = self.view.backgroundColor
+        navigationController?.pushViewController(viewController, animated: true)
+    }
         
     func emptyView(for listAdapter: ListAdapter) -> UIView? { return nil }
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

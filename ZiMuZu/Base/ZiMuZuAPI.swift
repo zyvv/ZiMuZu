@@ -13,27 +13,27 @@ import PKHUD
 
 let accesskey = "519f9cab85c8059d17544947k361a827"
 
-let customParameters = { () -> [String : String] in
+let customParameters = { () -> [String : Any] in
     var parameters = ["accesskey": accesskey,
                       "client": "1",
                       "g": "api/v2",
                       "m": "index"]
     if UserCenter.sharedInstance.isLogin {
         parameters["uid"] = UserCenter.sharedInstance.uid!
-        parameters["token"] = UserCenter.sharedInstance.userToken!
+        parameters["token"] = UserCenter.sharedInstance.uToken!
     }
     return parameters
 }()
 
-let endpointClosure: (ZiMuZu) -> Endpoint<ZiMuZu> = { (target: ZiMuZu) -> Endpoint<ZiMuZu> in
-    let url = target.baseURL.appendingPathComponent(target.path).absoluteString
-    if target.parameters != nil {
-        return Endpoint<ZiMuZu>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters).adding(newParameters:customParameters)
-    } else {
-        return Endpoint<ZiMuZu>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
-    }
-
-}
+//let endpointClosure: (ZiMuZu) -> Endpoint<ZiMuZu> = { (target: ZiMuZu) -> Endpoint<ZiMuZu> in
+//    let url = target.baseURL.appendingPathComponent(target.path).absoluteString
+//    if target.parameters != nil {
+//        return Endpoint<ZiMuZu>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, task: target.task, httpHeaderFields: target.headers).adding(newHTTPHeaderFields:customParameters)
+//    } else {
+//        return Endpoint<ZiMuZu>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, task: target.task, httpHeaderFields: target.headers)
+//    }
+//
+//}
 
 struct ResponsePlugin {}
 
@@ -75,7 +75,7 @@ extension ResponsePlugin: PluginType {
 
 let responsePlugin = ResponsePlugin()
 
-let networkActivityPlugin = NetworkActivityPlugin { state in
+let networkActivityPlugin = NetworkActivityPlugin { state, _  in
     if state == .began {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     } else {
@@ -83,8 +83,7 @@ let networkActivityPlugin = NetworkActivityPlugin { state in
     }
 }
 
-
-let zmzProvider = MoyaProvider(endpointClosure: endpointClosure, plugins: [responsePlugin, networkActivityPlugin])
+let zmzProvider = MoyaProvider<ZiMuZu>(plugins: [responsePlugin, networkActivityPlugin])
 
 public enum ZiMuZu {
     case tv_schedule()
@@ -137,33 +136,57 @@ extension ZiMuZu: TargetType {
 //        }
     }
     
-    public var parameters: [String : Any]? {
+//    public var parameters: [String : Any]? {
+//        switch self {
+//        case .tv_schedule():
+//            return ["a": "tv_schedule", "start": today(), "end": today()]
+//        case .top():
+//            return ["a": "top"]
+//        case .articleList(let page):
+//            return ["a": "article_list", "page": page]
+//        case .article(let id):
+//            return ["a": "article", "id": id]
+//        case .login(let account, let password):
+//            return ["a": "login", "account": account, "password": password]
+//        case .favlist(let page, let limit, let ft):
+//            return ["a": "fav_list", "page": page, "limit": limit, "ft": ft]
+//        case .search(let st, let k):
+//            return ["a": "search", "st": st, "k": k]
+//        case .hotkeyword():
+//            return nil
+//        }
+//    }
+//    
+    public var task: Task {
+        
+        func appendParameters(_ parameters: [String: Any]) -> [String: Any] {
+            return customParameters.merging(parameters, uniquingKeysWith: { (current, _) -> Any in
+                return current
+            })
+        }
+        
         switch self {
         case .tv_schedule():
-            return ["a": "tv_schedule", "start": today(), "end": today()]
+            return .requestParameters(parameters: appendParameters(["a": "tv_schedule", "start": today(), "end": today()]), encoding: URLEncoding.default)
         case .top():
-            return ["a": "top"]
+            return .requestParameters(parameters: appendParameters(["a": "top"]), encoding: URLEncoding.default)
         case .articleList(let page):
-            return ["a": "article_list", "page": page]
+            return .requestParameters(parameters: appendParameters(["a": "article_list", "page": page]), encoding: URLEncoding.default)
         case .article(let id):
-            return ["a": "article", "id": id]
+            return .requestParameters(parameters: appendParameters(["a": "article", "id": id]), encoding: URLEncoding.default)
         case .login(let account, let password):
-            return ["a": "login", "account": account, "password": password]
+            return .requestParameters(parameters: appendParameters(["a": "login", "account": account, "password": password]), encoding: URLEncoding.default)
         case .favlist(let page, let limit, let ft):
-            return ["a": "fav_list", "page": page, "limit": limit, "ft": ft]
+            return .requestParameters(parameters: appendParameters(["a": "fav_list", "page": page, "limit": limit, "ft": ft]), encoding: URLEncoding.default)
         case .search(let st, let k):
-            return ["a": "search", "st": st, "k": k]
+            return .requestParameters(parameters: appendParameters(["a": "search", "st": st, "k": k]), encoding: URLEncoding.default)
         case .hotkeyword():
-            return nil
+            return .requestPlain
         }
     }
     
     public var parameterEncoding: ParameterEncoding {
         return URLEncoding.default
-    }
-    
-    public var task: Task {
-        return .request
     }
 }
 

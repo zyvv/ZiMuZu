@@ -29,13 +29,17 @@ extension UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20)]
         navigationController?.navigationBar.tintColor = UIColor.white
         
-        navigationController?.navigationBar.prefersLargeTitles = true
-        if navigationController?.viewControllers.count == 1 {
-            navigationItem.largeTitleDisplayMode = .automatic
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            if navigationController?.viewControllers.count == 1 {
+                navigationItem.largeTitleDisplayMode = .automatic
+            } else {
+                navigationItem.largeTitleDisplayMode = .never
+            }
         } else {
-            navigationItem.largeTitleDisplayMode = .never
+            // Fallback on earlier versions
         }
-        
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+
     }
 }

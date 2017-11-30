@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SafariServices
+import SnapKit
 
 class NewsListTableViewController: UITableViewController {
 
@@ -33,6 +35,7 @@ class NewsListTableViewController: UITableViewController {
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(NewsListTableViewController.refreshData), for: .valueChanged)
         self.refreshControl = refreshControl
+        
     }
     
     @objc func refreshData() {
@@ -84,9 +87,17 @@ class NewsListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = NewsDetailViewController()
-        vc.news = dataArray?[indexPath.section]
-        navigationController?.pushViewController(vc, animated: true)
+//        let vc = NewsDetailViewController()
+//        vc.news = dataArray?[indexPath.row]
+//        navigationController?.pushViewController(vc, animated: true)
+        let news: News = dataArray![indexPath.row];
+        let config: SFSafariViewController.Configuration = SFSafariViewController.Configuration.init()
+        config.entersReaderIfAvailable = true
+        let url = "http://m.zimuzu.tv/article/\(news.id ?? "")"
+        let safariVC = SFSafariViewController(url: URL(string:url)!, configuration: config)
+        safariVC.preferredBarTintColor = navigationController?.navigationBar.barTintColor
+        safariVC.preferredControlTintColor = .white
+        self.present(safariVC, animated: true, completion: nil)
     }
     
 

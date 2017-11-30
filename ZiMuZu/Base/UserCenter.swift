@@ -10,36 +10,35 @@ import UIKit
 
 class UserCenter: NSObject {
     
-    let user_id = "user_id"
-    let user_token = "user_token"
-    let user_nickname = "user_nickname"
-    
     static let sharedInstance = UserCenter()
+    private let userId = "user_id"
+    private let userNickname = "user_nickname"
+    private let userToken = "user_token"
     
     var uid: String? {
         get {
-            return UserDefaults.standard.object(forKey: user_id) as! String?
+            return UserDefaults.standard.object(forKey: userId) as! String?
         }
-        set (newUid){
-            UserDefaults.standard.set(newUid, forKey: user_id)
+        set (newUid) {
+            UserDefaults.standard.set(newUid, forKey: userId)
         }
     }
     
-    var userToken: String? {
+    var uToken: String? {
         get {
-            return UserDefaults.standard.object(forKey: user_token) as! String?
+            return UserDefaults.standard.object(forKey: userToken) as! String?
         }
-        set (newUserToken){
-            UserDefaults.standard.set(newUserToken, forKey: user_token)
+        set (newUToken){
+            UserDefaults.standard.set(newUToken, forKey: userToken)
         }
     }
     
     var nickName: String? {
         get {
-            return UserDefaults.standard.object(forKey: user_nickname) as! String?
+            return UserDefaults.standard.object(forKey: userNickname) as! String?
         }
-        set {
-            UserDefaults.standard.set(nickName, forKey: user_nickname)
+        set (newNickName) {
+            UserDefaults.standard.set(newNickName, forKey: userNickname)
         }
     }
     
@@ -51,15 +50,15 @@ class UserCenter: NSObject {
     }
     
     func loginOut() {
-        UserDefaults.standard.removeObject(forKey: user_id)
-        UserDefaults.standard.removeObject(forKey: user_nickname)
-        UserDefaults.standard.removeObject(forKey: user_token)
+        UserDefaults.standard.removeObject(forKey: userId)
+        UserDefaults.standard.removeObject(forKey: userNickname)
+        UserDefaults.standard.removeObject(forKey: userToken)
     }
     
     func login(_ user: User) {
         self.uid = user.uid
         self.nickName = user.nickname
-        self.userToken = user.token
+        self.uToken = user.token
     }
     
     private override init() {}

@@ -12,7 +12,14 @@ import Kingfisher
 
 let newsSectionInsetsWidth: CGFloat = 20.0
 let newsMiniLineSpacing: CGFloat = 10.0
-var newsItemWidth: CGFloat = (kScreenWidth - 2 * newsSectionInsetsWidth)
+var newsItemWidth: CGFloat {
+    get {
+        if (UI_USER_INTERFACE_IDIOM() == .phone) {
+            return (kScreenWidth - 2 * newsSectionInsetsWidth)
+        }
+        return (kScreenWidth - 2 * newsSectionInsetsWidth) * 0.45
+    }
+}
 
 class HomeNewsEmbeddedSectionController: ListSectionController {
     private var newsList: HomeSectionList?

@@ -8,7 +8,28 @@
 
 import UIKit
 
+//<<<<<<< HEAD
+//private let reuseIdentifier = "TVCell"
+//
+//class TVListLayout: UICollectionViewFlowLayout {
+//    override init() {
+//        super.init()
+//        self.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+//        self.minimumInteritemSpacing = 15
+//        self.minimumLineSpacing = 10
+//        let width = min((kScreenWidth - 20 - 15 * 2) / 3.0, 200)
+//        self.itemSize = CGSize(width: width, height: width * (1/0.68) + 27)
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//}
+//
+//class TVListViewController: UICollectionViewController {
+//=======
 class TVListViewController: UITableViewController {
+//>>>>>>> c594d0791acf694587429ccc7959dc4109154c33
     
     var dataArray: [TV]? {
         didSet {

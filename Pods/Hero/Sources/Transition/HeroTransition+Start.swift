@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+import UIKit
 
 extension HeroTransition {
   open func start() {
@@ -28,7 +28,11 @@ extension HeroTransition {
     state = .starting
 
     if let toView = toView, let fromView = fromView {
-      toView.frame = fromView.frame
+      if let toViewController = toViewController, let transitionContext = transitionContext {
+        toView.frame = transitionContext.finalFrame(for: toViewController)
+      } else {
+        toView.frame = fromView.frame
+      }
       toView.setNeedsLayout()
       toView.layoutIfNeeded()
     }
@@ -46,7 +50,7 @@ extension HeroTransition {
     }
 
     // take a snapshot to hide all the flashing that might happen
-    fullScreenSnapshot = transitionContainer?.window?.snapshotView(afterScreenUpdates: true) ?? fromView?.snapshotView(afterScreenUpdates: true)
+    fullScreenSnapshot = transitionContainer?.window?.snapshotView(afterScreenUpdates: false) ?? fromView?.snapshotView(afterScreenUpdates: false)
     if let fullScreenSnapshot = fullScreenSnapshot {
       (transitionContainer?.window ?? transitionContainer)?.addSubview(fullScreenSnapshot)
     }
@@ -92,7 +96,7 @@ extension HeroTransition {
     }
     transitionContainer?.addSubview(container)
 
-    context = HeroContext(container:container)
+    context = HeroContext(container: container)
 
     for processor in processors {
       processor.hero = self

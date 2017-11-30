@@ -30,9 +30,7 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
         adapter.collectionView = collectionView
         adapter.dataSource = self
         
-        requestTVs()
-        requestTopList()
-        requestNewsList()
+        requestAllData()
         
     }
     
@@ -45,6 +43,22 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
     
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return data as [ListDiffable]
+    }
+    
+    func requestAllData() {
+        
+        let group = DispatchGroup()
+        group.enter()
+        self.requestTVs(group)
+        group.enter()
+        self.requestTopList(group)
+        group.enter()
+        self.requestNewsList(group)
+        group.notify(queue: DispatchQueue.main){
+            print("请求结束")
+        }
+        print("往下走")
+
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
@@ -66,8 +80,11 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
     func emptyView(for listAdapter: ListAdapter) -> UIView? { return nil }
     
     
-    func requestTVs() {
+    func requestTVs(_ group: DispatchGroup?) {
+        print("第一个请求开始")
         zmzProvider.request(.tv_schedule()) { result in
+            group?.leave()
+            print("接收第1个请求")
             let decoder = JSONDecoder()
             decoder.userInfo = [TVScheduleDataCodingOptions.key: TVScheduleDataCodingOptions.TVScheduleDataType.todayList]
             let todayList = handleResponse(decoder, type: TVSchedule.self, result: result)
@@ -76,10 +93,14 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
         }
     }
     
-    func requestTopList() {
+    func requestTopList(_ group: DispatchGroup?) {
+        print("第二个请求开始")
         zmzProvider.request(.top()) { result in
             do {
                 if case let .success(response) = result {
+
+                    print("接收第2个请求")
+                    group?.leave()
                     let decoder = JSONDecoder()
                     
                     decoder.userInfo = [TVScheduleDataCodingOptions.key: TVScheduleDataCodingOptions.TVScheduleDataType.favWeekList]
@@ -108,8 +129,11 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
         }
     }
     
-    func requestNewsList() {
+    func requestNewsList(_ group: DispatchGroup?) {
+        print("第三个请求开始")
         zmzProvider.request(.articleList(page:1)) { result in
+            print("接收第3个请求")
+            group?.leave()
             let newsList = handleResponse(nil, type: [News].self, result: result)
             self.data.append(HomeSectionList(list: newsList ?? [], title: "新闻资讯和剧评", handle: "更多"))
             self.adapter.performUpdates(animated: true, completion: nil)

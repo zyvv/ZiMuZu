@@ -19,7 +19,6 @@ class HomeListSectionController: ListSectionController, ListAdapterDataSource {
         return adapter
     }()
     
-    
     override func sizeForItem(at index: Int) -> CGSize {
         let width = collectionContext!.containerSize.width
         return CGSize(width: width, height: 60)

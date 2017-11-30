@@ -9,6 +9,7 @@
 import UIKit
 import Typist
 import Moya
+import SnapKit
 
 class LoginViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegate, LoginToolViewDelegate {
 
@@ -20,9 +21,14 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, UITextFieldDe
     
     lazy var loginToolView: LoginToolView = {
         let toolView = Bundle.main.loadNibNamed("LoginToolView", owner: self, options: nil)?.last as! LoginToolView
-        toolView.frame = CGRect(x: 0, y: kScreenHeight + loginToolViewHeight, width: view.frame.size.width, height: loginToolViewHeight)
         toolView.delegate = self
         view.addSubview(toolView)
+        toolView.snp.makeConstraints { (make) -> Void in
+            make.height.equalTo(loginToolViewHeight)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            make.width.equalTo(self.view)
+        }
+        
         return toolView
     }()
     
@@ -30,7 +36,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, UITextFieldDe
         super.viewDidLoad()
         viewConfig()
         navigationConfig()
-        navigationItem.largeTitleDisplayMode = .always
+        if #available(iOS 11.0, *) {
+            navigationItem.largeTitleDisplayMode = .always
+        } else {
+            // Fallback on earlier versions
+        }
         title = "登录"
     }
     
@@ -38,7 +48,10 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, UITextFieldDe
         super.viewWillAppear(animated)
         keyboard
             .on(event: .willChangeFrame, do: { (options) in
-                self.keyboardFrameChange(options.endFrame.minY)
+                self.keyboardFrameChange(options.endFrame.height)
+            })
+            .on(event: .willHide, do: { (options) in
+                self.keyboardFrameChange(0)
             })
             .start()
         emailTextField.becomeFirstResponder()
@@ -55,9 +68,12 @@ class LoginViewController: UIViewController, UIScrollViewDelegate, UITextFieldDe
         // Dispose of any resources that can be recreated.
     }
     
-    func keyboardFrameChange(_ top: CGFloat) {
+    func keyboardFrameChange(_ height: CGFloat) {
         UIView.animate(withDuration: 0.25) {
-            self.loginToolView.frame = CGRect(origin: CGPoint(x: self.loginToolView.frame.minX, y: top - self.loginToolViewHeight), size: self.loginToolView.frame.size)
+            self.loginToolView.snp.updateConstraints({ (make) -> Void in
+                make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-height)
+            })
+            self.view.layoutIfNeeded()
         }
     }
     

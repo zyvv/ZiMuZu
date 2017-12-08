@@ -2,13 +2,13 @@
 //  NewsListCell.swift
 //  ZiMuZu
 //
-//  Created by 张洋威 on 2017/8/9.
+//  Created by gakki's vi~ on 2017/12/8.
 //  Copyright © 2017年 zhangyangwei.com. All rights reserved.
 //
 
 import UIKit
 
-class NewsListCell: UITableViewCell {
+class NewsListCell: UICollectionViewCell {
 
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var newsType: UILabel!
@@ -23,10 +23,5 @@ class NewsListCell: UITableViewCell {
         posterImageView.layer.masksToBounds = true
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
-    
 }

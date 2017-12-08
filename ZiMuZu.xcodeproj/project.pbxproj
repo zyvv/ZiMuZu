@@ -35,8 +35,6 @@
 		C1073A111FCFF3C400E17F07 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A101FCFF3C400E17F07 /* QuartzCore.framework */; };
 		C1073A131FCFF3CB00E17F07 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1073A121FCFF3CB00E17F07 /* VideoToolbox.framework */; };
 		C10833321F3B00E000533C9D /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10833311F3B00E000533C9D /* NewsListTableViewController.swift */; };
-		C10833351F3B010F00533C9D /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10833331F3B010F00533C9D /* NewsListCell.swift */; };
-		C10833361F3B010F00533C9D /* NewsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C10833341F3B010F00533C9D /* NewsListCell.xib */; };
 		C129FCF71F38383800F3E629 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C129FCF61F38383800F3E629 /* HomeHeaderView.swift */; };
 		C129FCF91F38384B00F3E629 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C129FCF81F38384B00F3E629 /* HomeHeaderView.xib */; };
 		C132117F1F39C60A00D788AD /* TVListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132117E1F39C60A00D788AD /* TVListViewController.swift */; };
@@ -64,6 +62,10 @@
 		C197DC481F43EABD000891E5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197DC471F43EABD000891E5 /* LoginView.swift */; };
 		C197DC4A1F43EB29000891E5 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C197DC491F43EB29000891E5 /* LoginView.xib */; };
 		C197DC4D1F43F7EA000891E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197DC4B1F43F7EA000891E5 /* LoginViewController.swift */; };
+		C19AE66C1FDA6FFF00983C79 /* NewsListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19AE66B1FDA6FFF00983C79 /* NewsListLayout.swift */; };
+		C19AE66E1FDA920D00983C79 /* NewsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19AE66D1FDA920D00983C79 /* NewsListController.swift */; };
+		C19AE6711FDA927900983C79 /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19AE66F1FDA927900983C79 /* NewsListCell.swift */; };
+		C19AE6721FDA927900983C79 /* NewsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19AE6701FDA927900983C79 /* NewsListCell.xib */; };
 		C1B5817D1F4ADA7200A97154 /* TVDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5817C1F4ADA7200A97154 /* TVDetailViewController.swift */; };
 		C1B625091F3C30080020EA39 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B625081F3C30080020EA39 /* NewsDetailViewController.swift */; };
 		C1D8DC521F4E86C800A3D323 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8DC511F4E86C800A3D323 /* SearchTableViewController.swift */; };
@@ -128,8 +130,6 @@
 		C1073A101FCFF3C400E17F07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C1073A121FCFF3CB00E17F07 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		C10833311F3B00E000533C9D /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
-		C10833331F3B010F00533C9D /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
-		C10833341F3B010F00533C9D /* NewsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListCell.xib; sourceTree = "<group>"; };
 		C129FCF61F38383800F3E629 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		C129FCF81F38384B00F3E629 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		C132117E1F39C60A00D788AD /* TVListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVListViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +160,10 @@
 		C197DC471F43EABD000891E5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C197DC491F43EB29000891E5 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		C197DC4B1F43F7EA000891E5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C19AE66B1FDA6FFF00983C79 /* NewsListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListLayout.swift; sourceTree = "<group>"; };
+		C19AE66D1FDA920D00983C79 /* NewsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListController.swift; sourceTree = "<group>"; };
+		C19AE66F1FDA927900983C79 /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
+		C19AE6701FDA927900983C79 /* NewsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListCell.xib; sourceTree = "<group>"; };
 		C1B5817C1F4ADA7200A97154 /* TVDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVDetailViewController.swift; sourceTree = "<group>"; };
 		C1B625081F3C30080020EA39 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		C1D8DC511F4E86C800A3D323 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -342,10 +346,12 @@
 				C174E6D11F386EC800921434 /* NewsCell.xib */,
 				C132117E1F39C60A00D788AD /* TVListViewController.swift */,
 				C10833311F3B00E000533C9D /* NewsListTableViewController.swift */,
-				C10833331F3B010F00533C9D /* NewsListCell.swift */,
-				C10833341F3B010F00533C9D /* NewsListCell.xib */,
 				C1B625081F3C30080020EA39 /* NewsDetailViewController.swift */,
 				C1B5817C1F4ADA7200A97154 /* TVDetailViewController.swift */,
+				C19AE66B1FDA6FFF00983C79 /* NewsListLayout.swift */,
+				C19AE66D1FDA920D00983C79 /* NewsListController.swift */,
+				C19AE66F1FDA927900983C79 /* NewsListCell.swift */,
+				C19AE6701FDA927900983C79 /* NewsListCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -494,7 +500,6 @@
 				C174E6C91F3852E500921434 /* HomeListCell.xib in Resources */,
 				9727B43B1F30C08A00B271DF /* LaunchScreen.storyboard in Resources */,
 				C197DC4A1F43EB29000891E5 /* LoginView.xib in Resources */,
-				C10833361F3B010F00533C9D /* NewsListCell.xib in Resources */,
 				C197D6011F46C8B200CF2D34 /* FavoriteTVCell.xib in Resources */,
 				C174E6D31F386EC800921434 /* NewsCell.xib in Resources */,
 				C129FCF91F38384B00F3E629 /* HomeHeaderView.xib in Resources */,
@@ -504,6 +509,7 @@
 				C1D8DC561F4EA16E00A3D323 /* SeachHistoryHeaderView.xib in Resources */,
 				C1F7169C1F44200300029338 /* LoginToolView.xib in Resources */,
 				9727B4361F30C08A00B271DF /* Main.storyboard in Resources */,
+				C19AE6721FDA927900983C79 /* NewsListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,18 +705,20 @@
 				C197D6031F46E84A00CF2D34 /* FavoriteNewsTableViewController.swift in Sources */,
 				C1D8DC581F4EA70800A3D323 /* SearchResultTableViewController.swift in Sources */,
 				C15940E61F330EA100929B91 /* TV.swift in Sources */,
+				C19AE66E1FDA920D00983C79 /* NewsListController.swift in Sources */,
 				C174E6CD1F38688C00921434 /* News.swift in Sources */,
 				C197DC481F43EABD000891E5 /* LoginView.swift in Sources */,
 				C129FCF71F38383800F3E629 /* HomeHeaderView.swift in Sources */,
 				C1B625091F3C30080020EA39 /* NewsDetailViewController.swift in Sources */,
 				C174E6CB1F3866F400921434 /* HomeNewsSectionController.swift in Sources */,
-				C10833351F3B010F00533C9D /* NewsListCell.swift in Sources */,
 				C1916B381F4699E700F51362 /* Store.swift in Sources */,
+				C19AE66C1FDA6FFF00983C79 /* NewsListLayout.swift in Sources */,
 				C1D8DC521F4E86C800A3D323 /* SearchTableViewController.swift in Sources */,
 				C1B5817D1F4ADA7200A97154 /* TVDetailViewController.swift in Sources */,
 				C10040E61F31E86C00068142 /* ZiMuZuAPI.swift in Sources */,
 				C10833321F3B00E000533C9D /* NewsListTableViewController.swift in Sources */,
 				C197DC4D1F43F7EA000891E5 /* LoginViewController.swift in Sources */,
+				C19AE6711FDA927900983C79 /* NewsListCell.swift in Sources */,
 				C174E6D21F386EC800921434 /* NewsCell.swift in Sources */,
 				C1D8DC541F4EA16500A3D323 /* SeachHistoryHeaderView.swift in Sources */,
 				C174E6C81F3852E500921434 /* HomeListCell.swift in Sources */,

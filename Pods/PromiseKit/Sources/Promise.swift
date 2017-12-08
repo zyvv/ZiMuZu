@@ -476,7 +476,20 @@ public func firstly<T>(execute body: () throws -> Promise<T>) -> Promise<T> {
  - Note: At maximum 5 promises may be returned in a tuple
  - Note: If *any* of the tuple-provided promises reject, the returned promise is immediately rejected with that error.
  */
+
+/*
+ fileprivate func firstly<U, V>(execute body: () throws -> V, when: (V) -> Promise<U>) -> Promise<U> {
+    do {
+        return when(try body())
+    } catch {
+        return Promise(error: error)
+    }
+ }
+
+*/
+
 public func firstly<T, U>(execute body: () throws -> (Promise<T>, Promise<U>)) -> Promise<(T, U)> {
+
     return firstly(execute: body) { when(fulfilled: $0.0, $0.1) }
 }
 

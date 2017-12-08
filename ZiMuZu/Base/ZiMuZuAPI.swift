@@ -10,6 +10,7 @@ import Foundation
 import Moya
 import Result
 import PKHUD
+//import PromiseKit
 
 let accesskey = "519f9cab85c8059d17544947k361a827"
 

@@ -8,6 +8,7 @@
 
 import UIKit
 import IGListKit
+import PromiseKit
 
 final class HomeViewController: UIViewController, ListAdapterDataSource {
 

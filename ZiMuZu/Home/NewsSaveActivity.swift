@@ -31,7 +31,7 @@ class NewsSaveActivity: UIActivity {
     
     //按钮类型（分享按钮：在第一行，彩色，动作按钮：在第二行，黑白）
     override class var activityCategory: UIActivityCategory {
-        return .action
+        return .share
     }
     
     //是否显示分享按钮，这里一般根据用户是否授权,或分享内容是否正确等来决定是否要隐藏分享按钮

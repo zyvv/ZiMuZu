@@ -47,15 +47,15 @@ class FavoriteNewsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell", for: indexPath) as! NewsListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell", for: indexPath)
         
-        let news: FavoriteNews = (dataArray?[indexPath.section])!
-        cell.newsTitle.text = news.detail?.title
-        cell.newsType.text = news.detail?.type_cn
-        cell.newsIntro.text = news.detail?.intro
-        cell.posterImageView.kf.setImage(with: news.detail?.poster)
-        cell.postDate.text = news.detail?.datelineString
-        
+//        let news: FavoriteNews = (dataArray?[indexPath.section])!
+//        cell.newsTitle.text = news.detail?.title
+//        cell.newsType.text = news.detail?.type_cn
+//        cell.newsIntro.text = news.detail?.intro
+//        cell.posterImageView.kf.setImage(with: news.detail?.poster)
+//        cell.postDate.text = news.detail?.datelineString
+//        
         return cell
     }
     

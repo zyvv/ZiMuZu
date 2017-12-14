@@ -75,13 +75,13 @@ class SearchResultTableViewController: UITableViewController {
             return cell
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell", for: indexPath) as! NewsListCell
-        let news: News = dataArray[indexPath.row] as! News
-        cell.newsTitle.text = news.title
-        cell.newsType.text = news.type_cn
-        cell.newsIntro.text = news.intro
-        cell.posterImageView.kf.setImage(with: news.poster_b)
-        cell.postDate.text = news.datelineString
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell", for: indexPath)
+//        let news: News = dataArray[indexPath.row] as! News
+//        cell.newsTitle.text = news.title
+//        cell.newsType.text = news.type_cn
+//        cell.newsIntro.text = news.intro
+//        cell.posterImageView.kf.setImage(with: news.poster_b)
+//        cell.postDate.text = news.datelineString
         return cell
     }
     

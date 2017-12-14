@@ -15,8 +15,8 @@ class TVCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        poster.layer.cornerRadius = 2
-//        poster.layer.masksToBounds = true
+        poster.layer.cornerRadius = 8
+        poster.layer.masksToBounds = true
     }
 
 }

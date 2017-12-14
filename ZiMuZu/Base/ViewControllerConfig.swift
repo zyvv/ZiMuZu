@@ -15,6 +15,7 @@ let kScreenHeight = UIScreen.main.bounds.height
 extension UIViewController {
     
     func viewConfig() {
+//        let viewBackgroundColor: UIColor = UIColor(hex: "#F3F5FA")
         let viewBackgroundColor: UIColor = UIColor(hex: "#0f1011")
         view.backgroundColor = viewBackgroundColor
     }
@@ -24,7 +25,7 @@ extension UIViewController {
         navigationBarColor = navigationBarColor.alpha(0.76)
         navigationController?.navigationBar.barTintColor = navigationBarColor
         navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.shadowImage = nil
+        navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20)]
         navigationController?.navigationBar.tintColor = UIColor.white

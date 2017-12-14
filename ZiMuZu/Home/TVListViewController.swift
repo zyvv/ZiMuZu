@@ -26,10 +26,7 @@ import UIKit
 //    }
 //}
 //
-//class TVListViewController: UICollectionViewController {
-//=======
 class TVListViewController: UITableViewController {
-//>>>>>>> c594d0791acf694587429ccc7959dc4109154c33
     
     var dataArray: [TV]? {
         didSet {

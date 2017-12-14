@@ -75,7 +75,16 @@ class HomeNewsSectionController: ListSectionController, ListAdapterDataSource, L
             view.name = news.title
             view.handle = news.handle
             view.tapHandleButton {
-                let vc = NewsListTableViewController(style: .plain)
+                let layout = NewsListLayout()
+                layout.minimumLineSpacing = 25
+                layout.minimumInteritemSpacing = 25
+                layout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15)
+                layout.itemSize = CGSize(width: 1, height: 160)
+                if UI_USER_INTERFACE_IDIOM() == .phone {
+                    layout.itemSize = CGSize(width: 1, height: 130)
+                }
+                
+                let vc = NewsListController(collectionViewLayout: layout)
                 vc.title = self.news.title
                 vc.dataArray = self.news.list as? [News]
                 self.viewController?.navigationController?.pushViewController(vc, animated: true)

@@ -54,7 +54,9 @@ class NewsListLayout: UICollectionViewFlowLayout {
             let itemFrame = CGRect(x: itemLeft, y: itemTop, width: itemWidth, height: self.itemSize.height)
             let attributes: UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes(forCellWith: IndexPath(item: index, section: 0))
             attributes.frame = itemFrame
-            if self.column == currentColumnIndex {
+            cache.append(attributes)
+            
+            if self.column == currentColumnIndex + 1 {
                 currentColumnIndex = 0
                 currentLine += 1
             } else {
@@ -71,14 +73,19 @@ class NewsListLayout: UICollectionViewFlowLayout {
         }
         return CGSize(width: lastAttributes.frame.size.width, height: lastAttributes.frame.maxY + self.sectionInset.bottom)
     }
-    
+
+    override func layoutAttributesForItem(
+        at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        return cache[indexPath.item]
+    }
+
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        var layoutAttributes: [UICollectionViewLayoutAttributes]? = []
-        for attributes in cache {
-            if attributes.frame.intersects(rect) {
-                layoutAttributes?.append(attributes)
-            }
-        }
-        return layoutAttributes
+//        var visibleLayoutAttributes: [UICollectionViewLayoutAttributes]? = []
+//        for attributes in cache {
+////            if attributes.frame.intersects(rect) {
+//                visibleLayoutAttributes?.append(attributes)
+////            }
+//        }
+        return cache
     }
 }

@@ -17,6 +17,9 @@ def pods
     pod 'AcknowList'
     pod 'SQLite.swift', '~> 0.11.4'
     pod 'PromiseKit'
+    pod 'DeckTransition', '~> 2.0'
+    pod 'UIImageColors'
+#    pod 'TMDBSwift'
 end
 
 target :'ZiMuZu' do

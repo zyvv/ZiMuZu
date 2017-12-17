@@ -19,9 +19,13 @@ class HomeEmbeddedSectionController: ListSectionController {
         self.inset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
     }
     
+    // 返回电视剧cell的size
     override func sizeForItem(at index: Int) -> CGSize {
         let height = collectionContext?.containerSize.height ?? 0
-        return CGSize(width: (height - 27)*0.68, height: height)
+        if UI_USER_INTERFACE_IDIOM() == .phone {
+            return CGSize(width: (height - 27)*(5.0/6.0), height: height)
+        }
+        return CGSize(width: (height - 40)*(5.0/6.0), height: height)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
@@ -40,6 +44,11 @@ class HomeEmbeddedSectionController: ListSectionController {
     
     override func didUpdate(to object: Any) {
         tv = object as? TV
+    }
+    
+    override func didSelectItem(at index: Int) {
+        let vc = TVDetailViewController()
+        self.viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

@@ -95,12 +95,13 @@ public enum ZiMuZu {
     case favlist(page: Int, limit: Int, ft: String)
     case search(st: String, k: String)
     case hotkeyword()
+    case resource_item(item_id: String)
 }
 
 extension ZiMuZu: TargetType {
     public var sampleData: Data {
         switch self {
-        case .tv_schedule(), .top(), .articleList(_), .article(_), .login(_, _), .favlist(_, _, _), .search(_, _), .hotkeyword():
+        case .tv_schedule(), .top(), .articleList(_), .article(_), .login(_, _), .favlist(_, _, _), .search(_, _), .hotkeyword(), .resource_item(_):
             return "".data(using: String.Encoding.utf8)!
         }
     }
@@ -183,6 +184,8 @@ extension ZiMuZu: TargetType {
             return .requestParameters(parameters: appendParameters(["a": "search", "st": st, "k": k]), encoding: URLEncoding.default)
         case .hotkeyword():
             return .requestPlain
+        case .resource_item(let item_id):
+            return .requestParameters(parameters: appendParameters(["a": "resource_item", "id": item_id]), encoding: URLEncoding.default)
         }
     }
     

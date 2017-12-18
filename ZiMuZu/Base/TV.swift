@@ -13,6 +13,49 @@ struct HotKeyword: Decodable {
     let keyword: String
 }
 
+struct TVDetail: Decodable {
+    
+    struct Resource: Decodable {
+        let id: String?
+        let cnname: String?
+        let enname: String?
+        let aliasname: String?
+        let play_status: String?
+        let score: String?
+        let score_counts: String?
+        let rank: String?
+        let favorites: String?
+        let area: String?
+        let premiere: String?
+        let channel: String?
+        let zimuzu: String?
+        let views: String?
+        let category: [String?]?
+        let format: [String?]?
+        let lang: [String?]?
+//        let migu_music: s
+        let content: String?
+        let poster: URL?
+        let poster_n: URL?
+        let poster_b: URL?
+        let poster_m: URL?
+        let poster_s: URL?
+    }
+    
+    struct Season: Decodable {
+        let season: Int
+        let episode: [Int]?
+    }
+    
+    
+    
+    let share_url: URL?
+//    let comments_hot: Int
+    let resource: Resource?
+    let season: [Season?]?
+    let similar: [Resource?]?
+}
+
 final class SearchTVResult: NSObject, Decodable {
     let count: Int
     let list: [TV]?

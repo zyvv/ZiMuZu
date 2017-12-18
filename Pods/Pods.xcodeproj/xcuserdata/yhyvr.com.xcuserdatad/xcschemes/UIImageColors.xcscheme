@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '45214D8EC36F7ACD2EB6C7A7AA9CCB14'
-               BlueprintName = 'Pods-ZiMuZu'
+               BlueprintIdentifier = 'B8FF949AAADC341928425863EB8FB777'
+               BlueprintName = 'UIImageColors'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-ZiMuZu.framework'>
+               BuildableName = 'UIImageColors.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

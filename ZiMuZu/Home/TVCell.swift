@@ -18,10 +18,10 @@ class TVCell: UICollectionViewCell {
         
         poster.layer.masksToBounds = true
         if UI_USER_INTERFACE_IDIOM() == .pad {
-            poster.layer.cornerRadius = 10
+            poster.layer.cornerRadius = 8
             cnName.font = UIFont.systemFont(ofSize: 20)
         } else {
-            poster.layer.cornerRadius = 8
+            poster.layer.cornerRadius = 5
         }
     }
 

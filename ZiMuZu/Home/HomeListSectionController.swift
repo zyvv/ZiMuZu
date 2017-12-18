@@ -61,6 +61,7 @@ class HomeListSectionController: ListSectionController, ListAdapterDataSource {
         let vc = TVListViewController(style: .plain)
         vc.dataArray = tvs.list as? [TV]
         vc.title = tvs.title
+        
         self.viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

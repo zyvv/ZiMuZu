@@ -30,18 +30,21 @@ class TVListViewController: UITableViewController {
     
     var dataArray: [TV]? {
         didSet {
-            tableView?.reloadData()
+//            navigationController?.navigationBar.tintColor = UIColor.yellow
+//            tableView?.reloadData()
         }
     }
     
     override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    viewConfig()
-    //        navigationConfig()
-    tableView.separatorStyle = .none
-    tableView.backgroundColor = view.backgroundColor
-    tableView.register(UINib.init(nibName: "FavoriteTVCell", bundle: nil), forCellReuseIdentifier: "FavoriteTVCell")
+        super.viewDidLoad()
+        
+        viewConfig()
+        navigationConfig()
+    //        navigationItem.largeTitleDisplayMode = .never
+    //    navigationController?.navigationBar.tintColor = UIColor.yellow
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = view.backgroundColor
+        tableView.register(UINib.init(nibName: "FavoriteTVCell", bundle: nil), forCellReuseIdentifier: "FavoriteTVCell")
     }
     
     override func didReceiveMemoryWarning() {

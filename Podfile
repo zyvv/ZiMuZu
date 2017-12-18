@@ -19,6 +19,7 @@ def pods
     pod 'PromiseKit'
     pod 'DeckTransition', '~> 2.0'
     pod 'UIImageColors'
+#    pod 'KMNavigationBarTransition'
 #    pod 'TMDBSwift'
 end
 

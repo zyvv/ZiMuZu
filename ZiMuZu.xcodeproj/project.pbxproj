@@ -345,13 +345,13 @@
 				C174E6D01F386EC800921434 /* NewsCell.swift */,
 				C174E6D11F386EC800921434 /* NewsCell.xib */,
 				C132117E1F39C60A00D788AD /* TVListViewController.swift */,
-				C1B625081F3C30080020EA39 /* NewsDetailViewController.swift */,
 				C1B5817C1F4ADA7200A97154 /* TVDetailViewController.swift */,
 				C19AE66B1FDA6FFF00983C79 /* NewsListLayout.swift */,
 				C174D4CB1FE215C400D2DEBA /* NewsListController.swift */,
 				C19AE66F1FDA927900983C79 /* NewsListCell.swift */,
 				C19AE6701FDA927900983C79 /* NewsListCell.xib */,
 				C174D4CD1FE27CAE00D2DEBA /* NewsSaveActivity.swift */,
+				C1B625081F3C30080020EA39 /* NewsDetailViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -545,7 +545,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		1F06FC516349B2A90FBDDE20 /* [CP] Embed Pods Frameworks */ = {
@@ -678,7 +678,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F1FB9BA40D573C4A3C63D7BA /* [CP] Copy Pods Resources */ = {

@@ -185,7 +185,7 @@ extension ZiMuZu: TargetType {
         case .hotkeyword():
             return .requestPlain
         case .resource_item(let item_id):
-            return .requestParameters(parameters: appendParameters(["a": "resource_item", "id": item_id]), encoding: URLEncoding.default)
+            return .requestParameters(parameters: appendParameters(["a": "resource", "id": item_id]), encoding: URLEncoding.default)
         }
     }
     
@@ -230,7 +230,7 @@ func handleResponse<T>(_ decoder: JSONDecoder?, type: T.Type, result: Result<Moy
             }
         }
     } catch {
-        HUD.flash(.label("出现未知错误"), delay: 1.0)
+        HUD.flash(.label(error.localizedDescription), delay: 1.0)
         return nil
     }
     return nil

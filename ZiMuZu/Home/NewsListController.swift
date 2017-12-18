@@ -23,6 +23,7 @@ class NewsListController: UICollectionViewController, SFSafariViewControllerDele
         super.viewDidLoad()
 
         viewConfig()
+        navigationConfig()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

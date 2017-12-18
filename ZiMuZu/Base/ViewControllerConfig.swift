@@ -34,9 +34,9 @@ extension UIViewController {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
             if navigationController?.viewControllers.count == 1 {
-                navigationItem.largeTitleDisplayMode = .automatic
+                navigationItem.largeTitleDisplayMode = .always
             } else {
-                navigationItem.largeTitleDisplayMode = .never
+                navigationItem.largeTitleDisplayMode = .automatic
             }
         } else {
             // Fallback on earlier versions

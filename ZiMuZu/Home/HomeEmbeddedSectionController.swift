@@ -23,9 +23,9 @@ class HomeEmbeddedSectionController: ListSectionController {
     override func sizeForItem(at index: Int) -> CGSize {
         let height = collectionContext?.containerSize.height ?? 0
         if UI_USER_INTERFACE_IDIOM() == .phone {
-            return CGSize(width: (height - 27)*(5.0/6.0), height: height)
+            return CGSize(width: (height - 27)*(8.0/10.0), height: height)
         }
-        return CGSize(width: (height - 40)*(5.0/6.0), height: height)
+        return CGSize(width: (height - 50)*(8.0/10.0), height: height)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
@@ -48,6 +48,7 @@ class HomeEmbeddedSectionController: ListSectionController {
     
     override func didSelectItem(at index: Int) {
         let vc = TVDetailViewController()
+        vc.tv = tv
         self.viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

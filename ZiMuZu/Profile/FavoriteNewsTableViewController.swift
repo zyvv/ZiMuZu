@@ -115,9 +115,6 @@ class FavoriteNewsTableViewController: UITableViewController {
      }
      */
     
-    
-    
-    
     func requestFavoriteNewsList(_ page: Int) {
         zmzProvider.request(.favlist(page: page, limit: 10, ft: "article")) { result in
             if let newsList = handleResponse(nil, type: [FavoriteNews].self, result: result) {

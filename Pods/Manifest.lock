@@ -45,6 +45,7 @@ PODS:
   - PromiseKit/UIKit (4.5.0):
     - PromiseKit/CorePromise
   - Result (3.2.4)
+  - ShadowImageView (1.6.0)
   - SnapKit (4.0.0)
   - SQLite.swift (0.11.4):
     - SQLite.swift/standard (= 0.11.4)
@@ -63,6 +64,7 @@ DEPENDENCIES:
   - Moya (from `https://github.com/Moya/Moya.git`)
   - PKHUD (from `https://github.com/pkluz/PKHUD.git`, branch `release/swift4`)
   - PromiseKit
+  - ShadowImageView
   - SnapKit (~> 4.0.0)
   - SQLite.swift (~> 0.11.4)
   - Typist
@@ -108,11 +110,12 @@ SPEC CHECKSUMS:
   PKHUD: 351011b853e6b942e7ee8ad335864cc84c787241
   PromiseKit: 9c1d9f6d7b65e3951a90bea7f407c56972be5d8e
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  ShadowImageView: c8cadd7e3e1e6a8e52a02e944a59bbbb048f2a5d
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
   Typist: 31a3eb9d6b97ea28e0e247bb8b14ed23fe624170
   UIImageColors: 1f891e1a3224efebb01ad476df3a5aed4220ee24
 
-PODFILE CHECKSUM: 0234ec05318777f5f886f9ff6ccdd02190171282
+PODFILE CHECKSUM: 766adcfc709145336e40a8e7909ca3af5cffc3d5
 
 COCOAPODS: 1.2.0.beta.3

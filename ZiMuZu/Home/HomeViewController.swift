@@ -25,6 +25,7 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
 
         self.viewConfig()
         self.navigationConfig()
+//        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         self.navigationItem.title = "热门"
         collectionView.backgroundColor = UIColor.clear
         view.addSubview(collectionView)
@@ -33,6 +34,11 @@ final class HomeViewController: UIViewController, ListAdapterDataSource {
         
         requestAllData()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     override func viewDidLayoutSubviews() {

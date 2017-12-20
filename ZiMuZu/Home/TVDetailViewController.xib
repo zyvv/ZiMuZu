@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TVDetailViewController" customModule="ZiMuZu" customModuleProvider="target">
+            <connections>
+                <outlet property="backItem" destination="hBj-rU-g3c" id="buS-Gf-ayJ"/>
+                <outlet property="collectionView" destination="1jK-6f-vaY" id="I0Y-g2-Unm"/>
+                <outlet property="fakeNavigationBar" destination="D53-Iu-JN0" id="NF6-bV-P55"/>
+                <outlet property="statusColorView" destination="VDq-dU-Kyt" id="irW-kj-pVW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDq-dU-Kyt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1jK-6f-vaY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kb7-3n-zdR">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="tZ5-d3-g0q"/>
+                        <outlet property="delegate" destination="-1" id="DOa-VV-sjn"/>
+                    </connections>
+                </collectionView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D53-Iu-JN0">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <items>
+                        <navigationItem leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="PrT-he-r20">
+                            <barButtonItem key="leftBarButtonItem" title="返回" image="navi_back" style="plain" id="hBj-rU-g3c">
+                                <inset key="imageInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="backItemAction:" destination="-1" id="D4B-bw-BVw"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="D53-Iu-JN0" firstAttribute="top" secondItem="VDq-dU-Kyt" secondAttribute="bottom" id="3Rp-7G-fIU"/>
+                <constraint firstItem="D53-Iu-JN0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="551-pH-o91"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1jK-6f-vaY" secondAttribute="bottom" id="7Z9-Tm-jUg"/>
+                <constraint firstItem="D53-Iu-JN0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HAV-A2-Vs4"/>
+                <constraint firstItem="VDq-dU-Kyt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JoX-y3-ArA"/>
+                <constraint firstItem="1jK-6f-vaY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PPn-lv-mLV"/>
+                <constraint firstItem="D53-Iu-JN0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ph0-YB-k4R"/>
+                <constraint firstItem="1jK-6f-vaY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W7o-hK-VZ1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1jK-6f-vaY" secondAttribute="trailing" id="ebf-83-t5y"/>
+                <constraint firstAttribute="trailing" secondItem="VDq-dU-Kyt" secondAttribute="trailing" id="fgu-Ko-NLZ"/>
+                <constraint firstItem="VDq-dU-Kyt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oqz-hF-Mjk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-101.5" y="36.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="navi_back" width="14" height="22"/>
+    </resources>
+</document>

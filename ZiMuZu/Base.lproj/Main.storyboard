@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OFe-fD-NeE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OFe-fD-NeE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="711.20000000000005" y="127.28635682158921"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="z45-bb-dAI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rgP-76-VZM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rgP-76-VZM" customClass="BaseNavigationController" customModule="ZiMuZu" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tabbar_home" id="RJB-kY-aSS">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="-910" y="127"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="fRS-6x-jYS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="waa-uY-bve" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="waa-uY-bve" customClass="BaseNavigationController" customModule="ZiMuZu" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tabbar_search" id="aSL-v9-Zni">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="948" y="851.42428785607206"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="PCU-HS-xE0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H0K-vA-Css" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H0K-vA-Css" customClass="BaseNavigationController" customModule="ZiMuZu" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tabbar_profile" id="QOL-zT-vjA">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
@@ -290,10 +290,10 @@
             </objects>
             <point key="canvasLocation" x="711" y="1780"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="n8G-uQ-ReA">
             <objects>
-                <navigationController storyboardIdentifier="LoginViewControllerNavi" automaticallyAdjustsScrollViewInsets="NO" id="o6x-0V-izM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginViewControllerNavi" automaticallyAdjustsScrollViewInsets="NO" id="o6x-0V-izM" customClass="BaseNavigationController" customModule="ZiMuZu" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5zL-Tb-bk3">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -310,8 +310,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tabbar_home" width="24" height="18"/>
-        <image name="tabbar_profile" width="22" height="22"/>
-        <image name="tabbar_search" width="23" height="23"/>
+        <image name="tabbar_home" width="25" height="25"/>
+        <image name="tabbar_profile" width="25" height="25"/>
+        <image name="tabbar_search" width="25" height="24"/>
     </resources>
 </document>

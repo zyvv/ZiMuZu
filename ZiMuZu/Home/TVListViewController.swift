@@ -40,6 +40,7 @@ class TVListViewController: UITableViewController {
         
         viewConfig()
         navigationConfig()
+//        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
     //        navigationItem.largeTitleDisplayMode = .never
     //    navigationController?.navigationBar.tintColor = UIColor.yellow
         tableView.separatorStyle = .none

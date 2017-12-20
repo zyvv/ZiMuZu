@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CBCD45BA77F3ACE5099D572E99C15744'
-               BlueprintName = 'PromiseKit'
+               BlueprintIdentifier = '5D058940638DBC745BEEFB08DAD74AAC'
+               BlueprintName = 'ShadowImageView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'PromiseKit.framework'>
+               BuildableName = 'ShadowImageView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

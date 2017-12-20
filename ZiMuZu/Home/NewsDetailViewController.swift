@@ -12,13 +12,15 @@ import DTCoreText
 //import Hero
 
 class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDelegate, DTLazyImageViewDelegate {
-
+    
+        
     var news: News? {
         didSet {
             requestNewsDetail()
         }
     }
-
+    
+    
     @available(iOS 11.0, *)
     lazy var htmlTextView: DTAttributedTextView = {
         let textView = DTAttributedTextView(frame: view.bounds)
@@ -48,16 +50,16 @@ class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDel
     
     lazy var htmlStringAttributeds: [String: Any] = {
         
-
+        
         let maxImageSize = CGSize(width: view.bounds.size.width - 20, height: view.bounds.size.height - 20)
         return [NSTextSizeMultiplierDocumentOption: NSNumber(floatLiteral: 1.0),
-                                                    DTMaxImageSize: NSValue(cgSize: maxImageSize),
-                                                    DTDefaultTextColor: UIColor.white,
-                                                    DTAttachmentParagraphSpacingAttribute: 25,
-                                                    DTDefaultFirstLineHeadIndent:15.0,
-                                                    DTDefaultLineHeightMultiplier: 0.8,
-//                                                    DTWillFlushBlockCallBack: self.callBackBlock,
-                                                    DTDefaultFontSize: NSNumber(floatLiteral: 15.0)]
+                DTMaxImageSize: NSValue(cgSize: maxImageSize),
+                DTDefaultTextColor: UIColor.white,
+                DTAttachmentParagraphSpacingAttribute: 25,
+                DTDefaultFirstLineHeadIndent:15.0,
+                DTDefaultLineHeightMultiplier: 0.8,
+                //                                                    DTWillFlushBlockCallBack: self.callBackBlock,
+            DTDefaultFontSize: NSNumber(floatLiteral: 15.0)]
     }()
     
     
@@ -66,10 +68,10 @@ class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDel
         viewConfig()
         navigationConfig()
         extendedLayoutIncludesOpaqueBars = true
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -141,17 +143,17 @@ class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDel
             }
         }
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 //
 //extension String {
@@ -163,4 +165,5 @@ class NewsDetailViewController: UIViewController, DTAttributedTextContentViewDel
 //        return html
 //    }
 //}
+
 

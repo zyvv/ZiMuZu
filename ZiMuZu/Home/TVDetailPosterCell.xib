@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TVDetailPosterCell" id="gTV-IL-0wX" customClass="TVDetailPosterCell" customModule="ZiMuZu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="655" height="362"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="655" height="362"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Obn-h7-S7W">
+                        <rect key="frame" x="202.5" y="56" width="250" height="250"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="Ano-9j-fQt"/>
+                            <constraint firstAttribute="width" constant="250" id="ffN-Kd-ygV"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="0.36470588240000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Obn-h7-S7W" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="3Y1-Sm-Bew"/>
+                <constraint firstItem="Obn-h7-S7W" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="VGN-yQ-B4y"/>
+            </constraints>
+            <size key="customSize" width="655" height="362"/>
+            <connections>
+                <outlet property="posterImageView" destination="Obn-h7-S7W" id="GJ7-Va-1Ee"/>
+            </connections>
+            <point key="canvasLocation" x="-6.5" y="113"/>
+        </collectionViewCell>
+    </objects>
+</document>

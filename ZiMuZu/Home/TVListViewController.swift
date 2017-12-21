@@ -66,19 +66,26 @@ class TVListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteTVCell", for: indexPath) as? FavoriteTVCell else {
-    fatalError()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteTVCell", for: indexPath) as? FavoriteTVCell else {
+        fatalError()
+        }
+        
+        let favoriteTV: TV = dataArray![indexPath.section] as TV
+        cell.posterImageView.kf.setImage(with: favoriteTV.poster)
+    //    cell.typeLabel.text = favoriteTV.channel_cn
+        cell.nameLabel.text = favoriteTV.title
+    //    cell.stateLabel.text = favoriteTV.play_status
+    //    cell.scoreLabel.text = favoriteTV.score
+            cell.scoreCountLabel.text = "#\(indexPath.section + 1)"
+        
+        return cell
     }
     
-    let favoriteTV: TV = dataArray![indexPath.section] as TV
-    cell.posterImageView.kf.setImage(with: favoriteTV.poster)
-//    cell.typeLabel.text = favoriteTV.channel_cn
-    cell.nameLabel.text = favoriteTV.title
-//    cell.stateLabel.text = favoriteTV.play_status
-//    cell.scoreLabel.text = favoriteTV.score
-        cell.scoreCountLabel.text = "#\(indexPath.section + 1)"
-    
-    return cell
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tv = dataArray![indexPath.section] as TV
+        let vc = TVDetailViewController()
+        vc.tv = tv
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

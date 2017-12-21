@@ -15,6 +15,8 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
     
     let posterCellID = "TVDetailPosterCell"
     let rateCellID = "TVDetailRateCell"
+    let alertCellID = "TVDetailAlertCell"
+    
     var posterColors: (background: UIColor, primary: UIColor, secondary: UIColor, detail: UIColor)? = nil
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -26,13 +28,6 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
                 return
             }
             self.title = tv?.cnname
-            
-            /*
-             public var background: UIColor!
-             public var primary: UIColor!
-             public var secondary: UIColor!
-             public var detail: UIColor!
-             */
             posterImageColors(poster: tv?.poster) { (imageColors) in
                 self.posterColors = imageColors
                 self.view.backgroundColor = imageColors?.primary
@@ -74,6 +69,7 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
 //        collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.register(UINib.init(nibName: posterCellID, bundle: nil), forCellWithReuseIdentifier: posterCellID)
         collectionView.register(UINib.init(nibName: rateCellID, bundle: nil), forCellWithReuseIdentifier: rateCellID)
+        collectionView.register(UINib.init(nibName: alertCellID, bundle: nil), forCellWithReuseIdentifier: alertCellID)
 
     }
     
@@ -135,7 +131,7 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
 
 extension TVDetailViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -149,6 +145,11 @@ extension TVDetailViewController: UICollectionViewDataSource {
             let cell: TVDetailRateCell = collectionView.dequeueReusableCell(withReuseIdentifier: rateCellID, for: indexPath) as! TVDetailRateCell
             cell.tvDetail = self.tvDetail
             return cell
+        case 2:
+            let cell: TVDetailAlertCell = collectionView.dequeueReusableCell(withReuseIdentifier: alertCellID, for: indexPath) as! TVDetailAlertCell
+            return cell
+            
+            
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rateCellID, for: indexPath)
             return cell
@@ -163,7 +164,9 @@ extension TVDetailViewController: UICollectionViewDelegateFlowLayout {
         case 0: // poster
             return CGSize(width: collectionView.frame.width, height: 300)
         case 1: // rate
-            return CGSize(width: collectionView.frame.width, height: 130)
+            return CGSize(width: collectionView.frame.width, height: 135)
+        case 2:
+            return CGSize(width: collectionView.frame.width, height: 44)
         default:
             return CGSize(width: collectionView.frame.width, height: 300)
         }

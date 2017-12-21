@@ -24,6 +24,7 @@ class TVDetailRateCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         self.backgroundColor = UIColor(hex: "#0f1011")
+//        self.backgroundColor = UIColor.orange
         titleLabel.adjustsFontSizeToFitWidth = true
         enNameLabel.adjustsFontSizeToFitWidth = true
     }
@@ -43,7 +44,8 @@ class TVDetailRateCell: UICollectionViewCell {
         let statusParagraphStyle = NSMutableParagraphStyle()
         statusParagraphStyle.lineSpacing = 5
         statusParagraphStyle.alignment = .left
-        let statusAttributes = [NSAttributedStringKey.foregroundColor: UIColor(hex: "#B9B9B9"), NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.paragraphStyle: statusParagraphStyle]
+        // #B9B9B9
+        let statusAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.paragraphStyle: statusParagraphStyle]
         if statusString.length > 0 {
             statusString.setAttributes(statusAttributes, range: NSMakeRange(0, statusString.length))
             statusTextView.attributedText = statusString

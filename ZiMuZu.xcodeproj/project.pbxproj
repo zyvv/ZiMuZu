@@ -12,6 +12,8 @@
 		9727B4381F30C08A00B271DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9727B4371F30C08A00B271DF /* Assets.xcassets */; };
 		9727B43B1F30C08A00B271DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9727B4391F30C08A00B271DF /* LaunchScreen.storyboard */; };
 		9727B4511F30C08A00B271DF /* ZiMuZuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9727B4501F30C08A00B271DF /* ZiMuZuUITests.swift */; };
+		97C5B37D1FEBF8D100CF8182 /* TVDetailAlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C5B37B1FEBF8D100CF8182 /* TVDetailAlertCell.swift */; };
+		97C5B37E1FEBF8D100CF8182 /* TVDetailAlertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97C5B37C1FEBF8D100CF8182 /* TVDetailAlertCell.xib */; };
 		97D4EBAF1F36A3C00067E25D /* HomeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EBAE1F36A3C00067E25D /* HomeSectionController.swift */; };
 		97D4EBB21F36A4070067E25D /* TVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EBB01F36A4070067E25D /* TVCell.swift */; };
 		97D4EBB31F36A4070067E25D /* TVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D4EBB11F36A4070067E25D /* TVCell.xib */; };
@@ -114,6 +116,8 @@
 		9727B44C1F30C08A00B271DF /* ZiMuZuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiMuZuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9727B4501F30C08A00B271DF /* ZiMuZuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiMuZuUITests.swift; sourceTree = "<group>"; };
 		9727B4521F30C08A00B271DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97C5B37B1FEBF8D100CF8182 /* TVDetailAlertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVDetailAlertCell.swift; sourceTree = "<group>"; };
+		97C5B37C1FEBF8D100CF8182 /* TVDetailAlertCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVDetailAlertCell.xib; sourceTree = "<group>"; };
 		97D4EBAE1F36A3C00067E25D /* HomeSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionController.swift; sourceTree = "<group>"; };
 		97D4EBB01F36A4070067E25D /* TVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCell.swift; sourceTree = "<group>"; };
 		97D4EBB11F36A4070067E25D /* TVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVCell.xib; sourceTree = "<group>"; };
@@ -371,6 +375,8 @@
 				C131DC201FEA5B2D00A3F7D7 /* TVDetailPosterCell.xib */,
 				C131DC231FEA629F00A3F7D7 /* TVDetailRateCell.swift */,
 				C131DC241FEA629F00A3F7D7 /* TVDetailRateCell.xib */,
+				97C5B37B1FEBF8D100CF8182 /* TVDetailAlertCell.swift */,
+				97C5B37C1FEBF8D100CF8182 /* TVDetailAlertCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -526,6 +532,7 @@
 				C174E6D31F386EC800921434 /* NewsCell.xib in Resources */,
 				C129FCF91F38384B00F3E629 /* HomeHeaderView.xib in Resources */,
 				97D4EBB31F36A4070067E25D /* TVCell.xib in Resources */,
+				97C5B37E1FEBF8D100CF8182 /* TVDetailAlertCell.xib in Resources */,
 				C10739F81FCFAC5B00E17F07 /* Pods-ZiMuZu-acknowledgements.plist in Resources */,
 				9727B4381F30C08A00B271DF /* Assets.xcassets in Resources */,
 				C131DC1A1FEA4F5B00A3F7D7 /* TVDetailViewController.xib in Resources */,
@@ -746,6 +753,7 @@
 				C197DC481F43EABD000891E5 /* LoginView.swift in Sources */,
 				C129FCF71F38383800F3E629 /* HomeHeaderView.swift in Sources */,
 				C174E6CB1F3866F400921434 /* HomeNewsSectionController.swift in Sources */,
+				97C5B37D1FEBF8D100CF8182 /* TVDetailAlertCell.swift in Sources */,
 				C1916B381F4699E700F51362 /* Store.swift in Sources */,
 				C19AE66C1FDA6FFF00983C79 /* NewsListLayout.swift in Sources */,
 				C131DC191FEA4F5B00A3F7D7 /* TVDetailViewController.swift in Sources */,

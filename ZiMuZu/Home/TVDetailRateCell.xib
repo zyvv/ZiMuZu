@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIc-Tu-BNk">
-                        <rect key="frame" x="15" y="20" width="484" height="31.5"/>
+                        <rect key="frame" x="15" y="20" width="474" height="31.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="vgl-l6-BLx"/>
                         </constraints>
@@ -36,8 +36,8 @@
                             <constraint firstAttribute="width" secondItem="KNc-fW-ALx" secondAttribute="height" multiplier="1:1" id="m7e-SV-Xo4"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jif-hH-NGx">
-                        <rect key="frame" x="10" y="74.5" width="489" height="60.5"/>
+                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jif-hH-NGx">
+                        <rect key="frame" x="10" y="74.5" width="484" height="60.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -60,8 +60,8 @@
                 <constraint firstItem="KNc-fW-ALx" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ABi-Hc-Nxm"/>
                 <constraint firstItem="OIc-Tu-BNk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="ALU-pi-h8b"/>
                 <constraint firstAttribute="bottom" secondItem="Jif-hH-NGx" secondAttribute="bottom" constant="5" id="IDG-Aq-mBu"/>
-                <constraint firstItem="KNc-fW-ALx" firstAttribute="leading" secondItem="Jif-hH-NGx" secondAttribute="trailing" constant="5" id="T9a-By-U7F"/>
-                <constraint firstItem="KNc-fW-ALx" firstAttribute="leading" secondItem="OIc-Tu-BNk" secondAttribute="trailing" constant="5" id="X8p-VP-z0S"/>
+                <constraint firstItem="KNc-fW-ALx" firstAttribute="leading" secondItem="Jif-hH-NGx" secondAttribute="trailing" constant="10" id="T9a-By-U7F"/>
+                <constraint firstItem="KNc-fW-ALx" firstAttribute="leading" secondItem="OIc-Tu-BNk" secondAttribute="trailing" constant="15" id="X8p-VP-z0S"/>
                 <constraint firstItem="Jif-hH-NGx" firstAttribute="top" secondItem="fGu-3w-iPP" secondAttribute="bottom" constant="4" id="XKY-E8-4Nv"/>
                 <constraint firstItem="fGu-3w-iPP" firstAttribute="top" secondItem="OIc-Tu-BNk" secondAttribute="bottom" constant="2" id="gEv-gV-dlR"/>
                 <constraint firstAttribute="trailing" secondItem="KNc-fW-ALx" secondAttribute="trailing" constant="20" id="pgs-J9-9R5"/>

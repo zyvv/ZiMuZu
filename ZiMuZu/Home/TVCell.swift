@@ -15,7 +15,7 @@ class TVCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        cnName.adjustsFontSizeToFitWidth = true
         poster.layer.masksToBounds = true
         if UI_USER_INTERFACE_IDIOM() == .pad {
             poster.layer.cornerRadius = 8

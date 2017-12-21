@@ -9,14 +9,16 @@
 import UIKit
 import UIImageColors
 import Kingfisher
+import Hue
 
 class TVDetailViewController: UIViewController, UICollectionViewDelegate {
     
     let posterCellID = "TVDetailPosterCell"
     let rateCellID = "TVDetailRateCell"
-    var posterColors: UIImageColors? = nil
+    var posterColors: (background: UIColor, primary: UIColor, secondary: UIColor, detail: UIColor)? = nil
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var rightItem: UIBarButtonItem!
     
     var tv: TV? {
         didSet {
@@ -34,12 +36,12 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
             posterImageColors(poster: tv?.poster) { (imageColors) in
                 self.posterColors = imageColors
                 self.view.backgroundColor = imageColors?.primary
-//                self.fakeNavigationBar.barTintColor = imageColors?.background
-                //                self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: imageColors?.primary ?? UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20)]
-//                self.fakeNavigationBar.tintColor = imageColors?.primary
                 self.backItem.tintColor = imageColors?.detail
-                
-                //                self.navigationController?.navigationBar.setBackgroundImage(UIImage(color: imageColors?.background ?? UIColor.yellow), for: .default)
+                self.rightItem.tintColor = imageColors?.detail
+                self.statusColorView.backgroundColor = imageColors?.background
+                self.view.backgroundColor = imageColors?.background
+                UIApplication.shared.statusBarStyle = (imageColors?.background.isDark ?? true) ? .lightContent : .default
+
             }
             requestTVDetail(itemId: itemId)
         }
@@ -85,6 +87,11 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -101,7 +108,7 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
         }
     }
     
-    func posterImageColors(poster: URL?, imageColors: @escaping ((UIImageColors?) -> Void)) {
+    func posterImageColors(poster: URL?, imageColors: @escaping (((background: UIColor, primary: UIColor, secondary: UIColor, detail: UIColor)?) -> Void)) {
         guard let posterCacheURL: URL = poster else {
             return
         }
@@ -109,10 +116,15 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
             let ratio = cacheImage.size.width/cacheImage.size.height
             let r_width: CGFloat = 50
             let scaleDownSize = CGSize(width: r_width, height: r_width/ratio)
-            cacheImage.getColors(scaleDownSize: scaleDownSize, completionHandler: imageColors)
+            imageColors(cacheImage.colors(scaleDownSize: scaleDownSize))
         } else {
             KingfisherManager.shared.downloader.downloadImage(with: posterCacheURL, retrieveImageTask: nil, options: nil, progressBlock: nil) { (image, error, _, _) in
-                imageColors(image?.getColors())
+                if let image = image {
+                    let ratio = image.size.width/image.size.height
+                    let r_width: CGFloat = 50
+                    let scaleDownSize = CGSize(width: r_width, height: r_width/ratio)
+                    imageColors(image.colors(scaleDownSize: scaleDownSize))
+                }
             }
         }
         
@@ -123,33 +135,40 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
 
 extension TVDetailViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item == 0 {
+        switch indexPath.item {
+        case 0: // poster
             let cell: TVDetailPosterCell = collectionView.dequeueReusableCell(withReuseIdentifier: posterCellID, for: indexPath) as! TVDetailPosterCell
-            cell.backgroundColor = self.posterColors?.primary
-            if let poster = self.tvDetail?.resource?.poster_n {
-                cell.posterImageView.kf.setImage(with: poster)
-            } else {
-                cell.posterImageView.kf.setImage(with: self.tvDetail?.resource?.poster_b)
-            }
+            cell.tvDetail = self.tvDetail
+            cell.posterColors = self.posterColors
+            return cell
+        case 1: // rate
+            let cell: TVDetailRateCell = collectionView.dequeueReusableCell(withReuseIdentifier: rateCellID, for: indexPath) as! TVDetailRateCell
+            cell.tvDetail = self.tvDetail
+            return cell
+        default:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rateCellID, for: indexPath)
             return cell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rateCellID, for: indexPath)
-        return cell
+
     }
 }
 
 extension TVDetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 300)
+        switch indexPath.item {
+        case 0: // poster
+            return CGSize(width: collectionView.frame.width, height: 300)
+        case 1: // rate
+            return CGSize(width: collectionView.frame.width, height: 130)
+        default:
+            return CGSize(width: collectionView.frame.width, height: 300)
+        }
     }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//
-//    }
-//
+
 //    @available(iOS 6.0, *)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0

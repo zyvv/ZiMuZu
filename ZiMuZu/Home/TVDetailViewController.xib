@@ -14,6 +14,7 @@
                 <outlet property="backItem" destination="hBj-rU-g3c" id="buS-Gf-ayJ"/>
                 <outlet property="collectionView" destination="1jK-6f-vaY" id="I0Y-g2-Unm"/>
                 <outlet property="fakeNavigationBar" destination="D53-Iu-JN0" id="NF6-bV-P55"/>
+                <outlet property="rightItem" destination="xH9-de-Iit" id="2Iq-VT-CQC"/>
                 <outlet property="statusColorView" destination="VDq-dU-Kyt" id="irW-kj-pVW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,7 +28,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1jK-6f-vaY">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1jK-6f-vaY">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kb7-3n-zdR">
@@ -51,6 +52,9 @@
                                 <connections>
                                     <action selector="backItemAction:" destination="-1" id="D4B-bw-BVw"/>
                                 </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" systemItem="action" id="xH9-de-Iit">
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </navigationItem>
                     </items>

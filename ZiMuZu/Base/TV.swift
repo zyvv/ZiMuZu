@@ -28,6 +28,7 @@ struct TVDetail: Decodable {
         let area: String?
         let premiere: String?
         let channel: String?
+        let channel_cn: String?
         let zimuzu: String?
         let views: String?
         let category: [String?]?

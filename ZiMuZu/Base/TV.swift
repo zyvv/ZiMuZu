@@ -13,7 +13,7 @@ struct HotKeyword: Decodable {
     let keyword: String
 }
 
-struct TVDetail: Decodable {
+final class TVDetail: NSObject, Decodable {
     
     struct Resource: Decodable {
         let id: String?
@@ -50,11 +50,28 @@ struct TVDetail: Decodable {
     
     
     
-    let share_url: URL?
+    var share_url: URL?
 //    let comments_hot: Int
     let resource: Resource?
     let season: [Season?]?
     let similar: [Resource?]?
+    
+    override init() {
+        self.share_url = nil
+        self.resource = nil
+        self.season = nil
+        self.similar = nil
+    }
+}
+
+extension TVDetail: ListDiffable {
+    func diffIdentifier() -> NSObjectProtocol {
+        return self
+    }
+    
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        return self === object ? true : self.isEqual(object)
+    }
 }
 
 final class SearchTVResult: NSObject, Decodable {

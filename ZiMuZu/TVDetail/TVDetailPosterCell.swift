@@ -25,8 +25,8 @@ class TVDetailPosterCell: UICollectionViewCell {
     
     var tvDetail: TVDetail? {
         didSet {
-            if let _tvDetail = tvDetail {
-                let imageURL = ((_tvDetail.resource?.poster_n) != nil) ? (_tvDetail.resource?.poster_n)! : (_tvDetail.resource?.poster_b)!
+            if let resource = tvDetail?.resource {
+                let imageURL = ((resource.poster_n) != nil) ? (resource.poster_n)! : (resource.poster_b)!
                 KingfisherManager.shared.downloader.downloadImage(with: imageURL, retrieveImageTask: nil, options: nil, progressBlock: nil, completionHandler: { (image, error, _, _) in
 //                    if let _image = image {
                         self.posterView.image = image

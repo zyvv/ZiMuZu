@@ -10,17 +10,23 @@ import UIKit
 import UIImageColors
 import Kingfisher
 import Hue
+import IGListKit
 
-class TVDetailViewController: UIViewController, UICollectionViewDelegate {
+class TVDetailViewController: UIViewController, ListAdapterDataSource {
     
     let posterCellID = "TVDetailPosterCell"
     let rateCellID = "TVDetailRateCell"
     let alertCellID = "TVDetailAlertCell"
+    let descCellID = "TVDetailDescCell"
     
     var posterColors: (background: UIColor, primary: UIColor, secondary: UIColor, detail: UIColor)? = nil
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var rightItem: UIBarButtonItem!
+    
+    lazy var adapter: ListAdapter = {
+        return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
+    }()
     
     var tv: TV? {
         didSet {
@@ -44,7 +50,7 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
     
     var tvDetail: TVDetail? {
         didSet {
-            self.collectionView .reloadData()
+            self.adapter.performUpdates(animated: true, completion: nil)
         }
     }
     
@@ -58,19 +64,19 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewConfig()
-//        fakeNavigationBar.barTintColor = self.view.backgroundColor
+
         fakeNavigationBar.setBackgroundImage(UIImage(), for: .default)
         fakeNavigationBar.shadowImage = UIImage()
         fakeNavigationBar.backgroundColor = UIColor.clear
         statusColorView.backgroundColor = fakeNavigationBar.backgroundColor
-//        fakeNavigationBar.barTintColor = UIColor.clear
         
-//        let layout = UICollectionViewFlowLayout()
-//        collectionView.setCollectionViewLayout(layout, animated: false)
-        collectionView.register(UINib.init(nibName: posterCellID, bundle: nil), forCellWithReuseIdentifier: posterCellID)
-        collectionView.register(UINib.init(nibName: rateCellID, bundle: nil), forCellWithReuseIdentifier: rateCellID)
-        collectionView.register(UINib.init(nibName: alertCellID, bundle: nil), forCellWithReuseIdentifier: alertCellID)
+        adapter.collectionView = collectionView
+        adapter.dataSource = self
 
+//        collectionView.register(UINib.init(nibName: posterCellID, bundle: nil), forCellWithReuseIdentifier: posterCellID)
+//        collectionView.register(UINib.init(nibName: rateCellID, bundle: nil), forCellWithReuseIdentifier: rateCellID)
+//        collectionView.register(UINib.init(nibName: alertCellID, bundle: nil), forCellWithReuseIdentifier: alertCellID)
+//        collectionView.register(UINib.init(nibName: descCellID, bundle: nil), forCellWithReuseIdentifier: descCellID)
     }
     
     override func viewDidLayoutSubviews() {
@@ -95,6 +101,23 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
     @IBAction func backItemAction(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    // MARK: ListAdapterDataSource
+    
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        
+        if let _tvDetail = tvDetail {
+            return [_tvDetail, _tvDetail, _tvDetail] as [ListDiffable]
+        }
+        return []
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        let sectionController = TVDetailSectionController()
+        return sectionController
+    }
+    
+    func emptyView(for listAdapter: ListAdapter) -> UIView? { return nil }
     
     func requestTVDetail(itemId: String) {
         zmzProvider.request(.resource_item(item_id: itemId)) { result in
@@ -129,9 +152,10 @@ class TVDetailViewController: UIViewController, UICollectionViewDelegate {
 
 }
 
+/*
 extension TVDetailViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -148,8 +172,15 @@ extension TVDetailViewController: UICollectionViewDataSource {
         case 2:
             let cell: TVDetailAlertCell = collectionView.dequeueReusableCell(withReuseIdentifier: alertCellID, for: indexPath) as! TVDetailAlertCell
             return cell
-            
-            
+        case 3:
+            let cell: TVDetailDescCell = collectionView.dequeueReusableCell(withReuseIdentifier: descCellID, for: indexPath) as! TVDetailDescCell
+            cell.tvDetail = self.tvDetail
+            cell.updateDescCellHeight {
+                let indexPath = NSIndexPath(item: 3, section: 0)
+                let context = UICollectionViewFlowLayout.invalidationContextClass
+//                let context = self.collectionView.collectionViewLayout.inv
+            }
+            return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rateCellID, for: indexPath)
             return cell
@@ -166,7 +197,9 @@ extension TVDetailViewController: UICollectionViewDelegateFlowLayout {
         case 1: // rate
             return CGSize(width: collectionView.frame.width, height: 135)
         case 2:
-            return CGSize(width: collectionView.frame.width, height: 44)
+            return CGSize(width: collectionView.frame.width, height: 30)
+        case 3:
+            return CGSize(width: collectionView.frame.width, height: 100)
         default:
             return CGSize(width: collectionView.frame.width, height: 300)
         }
@@ -181,12 +214,6 @@ extension TVDetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-
-    //    @available(iOS 6.0, *)
-//    optional public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize
-//
-//    @available(iOS 6.0, *)
-//    optional public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize
 }
-
+*/
 

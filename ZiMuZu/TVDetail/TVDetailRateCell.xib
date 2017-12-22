@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNc-fW-ALx">
-                        <rect key="frame" x="504" y="30" width="80" height="80"/>
+                        <rect key="frame" x="504" y="47" width="80" height="80"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="jjB-Bq-BfJ"/>
@@ -57,13 +57,13 @@
                 <constraint firstItem="Jif-hH-NGx" firstAttribute="leading" secondItem="OIc-Tu-BNk" secondAttribute="leading" constant="-5" id="0Yd-Az-MBd"/>
                 <constraint firstItem="KNc-fW-ALx" firstAttribute="leading" secondItem="fGu-3w-iPP" secondAttribute="trailing" constant="5" id="0yG-zv-OuS"/>
                 <constraint firstItem="OIc-Tu-BNk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="A3J-bf-kSc"/>
-                <constraint firstItem="KNc-fW-ALx" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ABi-Hc-Nxm"/>
                 <constraint firstItem="OIc-Tu-BNk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="ALU-pi-h8b"/>
                 <constraint firstAttribute="bottom" secondItem="Jif-hH-NGx" secondAttribute="bottom" constant="5" id="IDG-Aq-mBu"/>
                 <constraint firstItem="KNc-fW-ALx" firstAttribute="leading" secondItem="Jif-hH-NGx" secondAttribute="trailing" constant="10" id="T9a-By-U7F"/>
                 <constraint firstItem="KNc-fW-ALx" firstAttribute="leading" secondItem="OIc-Tu-BNk" secondAttribute="trailing" constant="15" id="X8p-VP-z0S"/>
                 <constraint firstItem="Jif-hH-NGx" firstAttribute="top" secondItem="fGu-3w-iPP" secondAttribute="bottom" constant="4" id="XKY-E8-4Nv"/>
                 <constraint firstItem="fGu-3w-iPP" firstAttribute="top" secondItem="OIc-Tu-BNk" secondAttribute="bottom" constant="2" id="gEv-gV-dlR"/>
+                <constraint firstItem="KNc-fW-ALx" firstAttribute="bottom" secondItem="Jif-hH-NGx" secondAttribute="bottom" constant="-8" id="gIW-Rc-epR"/>
                 <constraint firstAttribute="trailing" secondItem="KNc-fW-ALx" secondAttribute="trailing" constant="20" id="pgs-J9-9R5"/>
                 <constraint firstItem="fGu-3w-iPP" firstAttribute="leading" secondItem="OIc-Tu-BNk" secondAttribute="leading" id="qNv-Rk-e2c"/>
             </constraints>

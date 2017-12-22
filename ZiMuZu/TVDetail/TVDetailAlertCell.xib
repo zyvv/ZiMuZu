@@ -20,24 +20,34 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距离下集播放还有2天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zle-nA-5Da">
-                        <rect key="frame" x="15" y="0.0" width="157" height="80"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <rect key="frame" x="15" y="0.0" width="137" height="80"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBB-qJ-QeL">
-                        <rect key="frame" x="180" y="29" width="22" height="22"/>
+                        <rect key="frame" x="160" y="29" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="CBB-qJ-QeL" secondAttribute="height" multiplier="1:1" id="qo9-Ih-rA7"/>
                         </constraints>
                         <state key="normal" image="tv_detail_addreminder"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sM6-8j-Dix">
+                        <rect key="frame" x="0.0" y="29" width="4" height="22"/>
+                        <color key="backgroundColor" red="1" green="0.36470588240000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="4" id="N7i-wM-uMD"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="sM6-8j-Dix" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="9ga-2L-H5g"/>
                 <constraint firstAttribute="bottom" secondItem="zle-nA-5Da" secondAttribute="bottom" id="A3O-LD-EW3"/>
+                <constraint firstItem="sM6-8j-Dix" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CH7-DQ-hZM"/>
                 <constraint firstItem="zle-nA-5Da" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="RvV-nP-9Bm"/>
                 <constraint firstItem="CBB-qJ-QeL" firstAttribute="centerY" secondItem="zle-nA-5Da" secondAttribute="centerY" id="XDs-xI-hb4"/>
+                <constraint firstItem="sM6-8j-Dix" firstAttribute="height" secondItem="CBB-qJ-QeL" secondAttribute="height" id="hPQ-xo-kcc"/>
                 <constraint firstItem="CBB-qJ-QeL" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="qdR-Sa-Dob"/>
                 <constraint firstItem="CBB-qJ-QeL" firstAttribute="leading" secondItem="zle-nA-5Da" secondAttribute="trailing" constant="8" id="seT-wp-jom"/>
                 <constraint firstItem="zle-nA-5Da" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="waK-UV-hGX"/>

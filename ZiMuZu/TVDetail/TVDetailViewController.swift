@@ -73,10 +73,6 @@ class TVDetailViewController: UIViewController, ListAdapterDataSource {
         adapter.collectionView = collectionView
         adapter.dataSource = self
 
-//        collectionView.register(UINib.init(nibName: posterCellID, bundle: nil), forCellWithReuseIdentifier: posterCellID)
-//        collectionView.register(UINib.init(nibName: rateCellID, bundle: nil), forCellWithReuseIdentifier: rateCellID)
-//        collectionView.register(UINib.init(nibName: alertCellID, bundle: nil), forCellWithReuseIdentifier: alertCellID)
-//        collectionView.register(UINib.init(nibName: descCellID, bundle: nil), forCellWithReuseIdentifier: descCellID)
     }
     
     override func viewDidLayoutSubviews() {
@@ -151,69 +147,4 @@ class TVDetailViewController: UIViewController, ListAdapterDataSource {
 
 
 }
-
-/*
-extension TVDetailViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch indexPath.item {
-        case 0: // poster
-            let cell: TVDetailPosterCell = collectionView.dequeueReusableCell(withReuseIdentifier: posterCellID, for: indexPath) as! TVDetailPosterCell
-            cell.tvDetail = self.tvDetail
-            cell.posterColors = self.posterColors
-            return cell
-        case 1: // rate
-            let cell: TVDetailRateCell = collectionView.dequeueReusableCell(withReuseIdentifier: rateCellID, for: indexPath) as! TVDetailRateCell
-            cell.tvDetail = self.tvDetail
-            return cell
-        case 2:
-            let cell: TVDetailAlertCell = collectionView.dequeueReusableCell(withReuseIdentifier: alertCellID, for: indexPath) as! TVDetailAlertCell
-            return cell
-        case 3:
-            let cell: TVDetailDescCell = collectionView.dequeueReusableCell(withReuseIdentifier: descCellID, for: indexPath) as! TVDetailDescCell
-            cell.tvDetail = self.tvDetail
-            cell.updateDescCellHeight {
-                let indexPath = NSIndexPath(item: 3, section: 0)
-                let context = UICollectionViewFlowLayout.invalidationContextClass
-//                let context = self.collectionView.collectionViewLayout.inv
-            }
-            return cell
-        default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rateCellID, for: indexPath)
-            return cell
-        }
-
-    }
-}
-
-extension TVDetailViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch indexPath.item {
-        case 0: // poster
-            return CGSize(width: collectionView.frame.width, height: 300)
-        case 1: // rate
-            return CGSize(width: collectionView.frame.width, height: 135)
-        case 2:
-            return CGSize(width: collectionView.frame.width, height: 30)
-        case 3:
-            return CGSize(width: collectionView.frame.width, height: 100)
-        default:
-            return CGSize(width: collectionView.frame.width, height: 300)
-        }
-    }
-
-//    @available(iOS 6.0, *)
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-}
-*/
 

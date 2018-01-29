@@ -33,7 +33,7 @@ class TVDetailDescCell: UICollectionViewCell {
     }
     
     static var singleLineHeight: CGFloat {
-        return (font.pointSize + font.capHeight) * 3
+        return font.lineHeight * 3 + 10.6 // ?
     }
     
     static func textHeight(_ text: String, width: CGFloat) -> CGFloat {

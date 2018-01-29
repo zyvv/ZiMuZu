@@ -18,18 +18,53 @@
                 <rect key="frame" x="0.0" y="0.0" width="349" height="72"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkk-ab-3vV">
-                        <rect key="frame" x="35" y="22" width="62" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="在线观看"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkg-9Y-F5R">
-                        <rect key="frame" x="234" y="22" width="62" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="资源下载"/>
-                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysu-jA-BpP">
+                        <rect key="frame" x="0.0" y="0.0" width="174.5" height="72"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkk-ab-3vV">
+                                <rect key="frame" x="56" y="21" width="62" height="30"/>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="在线观看">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bkk-ab-3vV" firstAttribute="centerX" secondItem="ysu-jA-BpP" secondAttribute="centerX" id="UJ1-Z7-otJ"/>
+                            <constraint firstItem="Bkk-ab-3vV" firstAttribute="centerY" secondItem="ysu-jA-BpP" secondAttribute="centerY" id="sj3-wf-wFV"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdM-1o-Z4N">
+                        <rect key="frame" x="174.5" y="0.0" width="174.5" height="72"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkg-9Y-F5R">
+                                <rect key="frame" x="55.5" y="21" width="62" height="30"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="资源下载">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jkg-9Y-F5R" firstAttribute="centerX" secondItem="PdM-1o-Z4N" secondAttribute="centerX" id="GGg-Yw-zG0"/>
+                            <constraint firstItem="Jkg-9Y-F5R" firstAttribute="centerY" secondItem="PdM-1o-Z4N" secondAttribute="centerY" id="JeU-hc-6fj"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="PdM-1o-Z4N" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="57J-bW-pqf"/>
+                <constraint firstItem="ysu-jA-BpP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6QS-6s-5qM"/>
+                <constraint firstAttribute="bottom" secondItem="ysu-jA-BpP" secondAttribute="bottom" id="Bhr-go-jzw"/>
+                <constraint firstItem="PdM-1o-Z4N" firstAttribute="width" secondItem="ysu-jA-BpP" secondAttribute="width" id="YzC-fX-rb3"/>
+                <constraint firstAttribute="trailing" secondItem="PdM-1o-Z4N" secondAttribute="trailing" id="d7H-NZ-RaO"/>
+                <constraint firstItem="ysu-jA-BpP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eYb-QE-bsN"/>
+                <constraint firstAttribute="bottom" secondItem="PdM-1o-Z4N" secondAttribute="bottom" id="gwW-oD-JBz"/>
+                <constraint firstItem="PdM-1o-Z4N" firstAttribute="leading" secondItem="ysu-jA-BpP" secondAttribute="trailing" id="mxh-Va-T8G"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="349" height="72"/>
             <point key="canvasLocation" x="-42.5" y="12"/>
